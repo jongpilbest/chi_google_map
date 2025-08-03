@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { FaVideo } from "react-icons/fa";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={ `  flex flex-col  h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="w-full h-10 flex items-center px-20 bg-white">
+          <FaVideo style={{
+            color:'#7B7AE7'
+          }}></FaVideo>
+          <p className="font-sans font-bold text-sm mx-2">Video Map</p>
+        </header>
+       
         {children}
+      
       </body>
     </html>
   );
