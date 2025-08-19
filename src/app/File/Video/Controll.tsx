@@ -6,7 +6,7 @@ import { write_new_url, Loading_state } from '@/app/Redux/store';
 import OpenAI from "openai";
 import { NextResponse } from "next/server";
 
-import{Fetch_post} from '../api_call/fetch'
+
 
 
 export default function Controll() {
@@ -31,10 +31,11 @@ export default function Controll() {
          //const processResult = await backend_process;
          //dispatch(Loading_state(processResult.message));
 
+          // 현재 여기서 실행해서 정보를 받는게 별로임. 구글 있는 곳에서 url 클릭할때마다 sse 실행하게 useEffect 를 사용하라고 함
 
-         
-         const type_script= await Fetch_post("http://localhost:8000/script",url_youtube.current?.value )
-         console.log(type_script)
+
+          
+
        
 
 

@@ -39,7 +39,7 @@ export default function Intro() {
       </div>
     </div>
      <History></History>
-    <div className="w-full flex-[2] gap-x-4 flex rounded-lg ">
+    <div className="w-full flex-[1.4] gap-x-4 flex rounded-lg ">
        <Generate></Generate>
       <div className="flex-[4] bg-white rounded-xl  "></div>
     </div>
