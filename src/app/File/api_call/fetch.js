@@ -1,6 +1,4 @@
 
-import { useSelector, useDispatch } from 'react-redux';
-import {Loaing} from   '@/app/Redux/store';
 
 export async  function  http_connect (url , fetch_data ,method){
 

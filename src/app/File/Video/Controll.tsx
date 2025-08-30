@@ -1,12 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import { IoIosSend } from 'react-icons/io';
 import { useDispatch } from 'react-redux';
-import { write_new_url, Loading_state } from '@/app/Redux/store';
-import OpenAI from "openai";
-import { NextResponse } from "next/server";
+import { write_new_url } from '@/app/Redux/store';
+import {http_connect} from '../../File/api_call/fetch'
 
-
+import { Loading_state } from '@/app/Redux/store';
 
 
 export default function Controll() {
@@ -22,15 +21,14 @@ export default function Controll() {
 
 
    try {
-     console.log(url_youtube.current?.value,'경로란?')
      if( url_youtube.current?.value){
     
         //  console.log(result,'제대로 다운이 돴는지 확인해봐 ')
          //dispatch(Loading_state(true))
-         //const backend_process=  Fetch_post("http://localhost:8000/process-video",url_youtube.current?.value);
+         //const backend_process=  http_connect("http://localhost:8000/process-video",url_youtube.current?.value,'POST');
          //const processResult = await backend_process;
          //dispatch(Loading_state(processResult.message));
-
+////
           // 현재 여기서 실행해서 정보를 받는게 별로임. 구글 있는 곳에서 url 클릭할때마다 sse 실행하게 useEffect 를 사용하라고 함
 
 
@@ -81,17 +79,17 @@ export default function Controll() {
   return (
     <div className="h-10 flex gap-7 items-center justify-end">
       <button
-        className="w-6 h-6 rounded-4xl flex items-center justify-center"
-        style={{ backgroundColor: '#7B7AE7' }}
+        className="w-5 h-5 rounded-4xl flex items-center justify-center bg-gray-500"
+    
       >
-        <SlArrowLeft className="text-white h-3" />
+        <SlArrowLeft className="text-white h-2" />
       </button>
 
       <button
-        className="w-6 h-6 rounded-4xl flex items-center justify-center"
-        style={{ backgroundColor: '#9C6CFE' }}
+        className="w-5 h-5 rounded-4xl flex items-center justify-center bg-gray-500"
+      
       >
-        <SlArrowRight className="text-white h-3" />
+        <SlArrowRight className="text-white h-2" />
       </button>
 
       <div className="flex items-center rounded-lg">
@@ -102,7 +100,7 @@ export default function Controll() {
           className="text-sm h-6 px-9 text-gray-800 bg-white"
         />
         <button className="bg-white" onClick={handleSubmit}>
-          <IoIosSend className="text-gray-400" />
+          <IoIosSend className="text-gray-500" />
         </button>
       </div>
     </div>

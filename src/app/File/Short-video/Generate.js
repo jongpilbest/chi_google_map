@@ -6,8 +6,8 @@ export default function Generate() {
         <textarea className=" w-full rounded-md text-sm  flex-[3]">
     
         </textarea>
-        <button  className =" text-sm text-white   w-full h-6  rounded-md" style={{ backgroundColor:'#7B7AE7'}}>
-          Generate short version
+        <button  className =" text-sm text-white   w-full h-6  rounded-md" style={{ backgroundColor:'#A29BFE'}}>
+        Find Location
         </button>
       </div>
   )

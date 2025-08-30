@@ -5,11 +5,12 @@ import { change_video_chapter } from '@/app/Redux/store';
 type HistoryListProps = {
   nzmd: string;
   timeline: number;
+  index: number
 };
 
 
 
-export default function History_list({nzmd, timeline}:HistoryListProps) {
+export default function History_list({nzmd, timeline,index}:HistoryListProps) {
 
  const dispatch = useDispatch();
  
@@ -27,11 +28,12 @@ export default function History_list({nzmd, timeline}:HistoryListProps) {
   return (
    <div 
     onClick={()=>change_video(timeline)}
-   className="w-[16%] h-[80%] bg-gray-100 mx-1 px-5 flex gap-5 items-center justify-between ">
- <p className='text-xs font-bold font-sans '> {nzmd}  </p>
+   className="  flex-1  h-[80%] bg-gray-100 mx-1 px-5 flex gap-5 items-center justify-between ">
+    <p className='text-xs'>{index}</p>
+ <p className='text-xs font-bold font-sans  truncate '> {nzmd}  </p>
       <button
      
-      style={{ backgroundColor: '#9C6CFE' }}
+      style={{ backgroundColor: '#A29BFE' }}
       className=' rounded-sm px-2 '> <p className=' text-white  text-sm'> {chnage_number(timeline)}</p></button>
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaVideo } from "react-icons/fa";
-import UseHook from '../Use_hook/Hook';
+
 
 import History_list from './History_list';
 import { useState,useEffect } from 'react';
@@ -34,16 +34,17 @@ useEffect(()=>{
     
    className="w-full   bg-white rounded-lg flex-[0.7] flex">
       <div className="w-12 bg-white h-full flex items-center  justify-center rounded-md ">
-         <FaVideo className="text-gray-300 "></FaVideo>
+         <FaVideo className="text-gray-500 "></FaVideo>
       </div>
       <div className=' w-[100%] flex items-center justify-center overflow-x-auto '> 
-        <UseHook ></UseHook>
+
         
         <div className='min-w-[100%]  h-[100%] flex items-center overflow-x-auto '  >
    {
     place&&
-    place.map((el)=>{
+    place.map((el,index)=>{
        return <History_list 
+       index={index}
        key={el.startTime}
        nzmd={el.googlePlace} timeline={el.startTime} ></History_list>
     })

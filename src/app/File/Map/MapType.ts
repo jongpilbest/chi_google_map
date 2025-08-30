@@ -8,5 +8,6 @@ export type Place ={
   location: {
     lat:number,
     lng:number
-  }
+  },
+  id:string
 }

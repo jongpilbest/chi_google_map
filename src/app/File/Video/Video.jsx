@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useRef, useState, useCallback } from "react";
+import { useRef } from "react";
 import { useSelector } from "react-redux";
 
 
@@ -16,8 +16,12 @@ export default function Page() {
 
 
   return (
-  <>
-  </> 
+    <div className=" flex-[5]  rounded-lg bg-white" >
+     <VideoPlayer
+       ref={playerRef}
+       url={youtube_link}
+     />
+   </div>
   );
 }
 

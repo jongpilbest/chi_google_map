@@ -19,6 +19,11 @@ import Controller from './File/Video/Controll'
 import History from './File/VideoHistory/History'
 import Generate from './File/Short-video/Generate'
 import Videopage from './File/Video/Video'
+import Map_Contorller from "./File/Contorller/Map_Contorller";
+import Fike_list from './File/Short-video/Find_list';
+import Find_inner from './File/Short-video/FInd_list_inner'
+
+
 export default function Intro() {
 
 
@@ -30,18 +35,22 @@ export default function Intro() {
   <div className="h-full px-20  bg-gray-100 pb-10 flex flex-col gap-y-5">
     <div className="w-full  flex-[4.6] flex flex-col ">
      <Controller></Controller>
-      <div className=" flex-1  flex  gap-x-5  "> 
-        <div className=" w-12 bg-white rounded-lg"> </div>
-          
-          
+      <div className=" flex-1  flex  gap-x-5   "> 
+         
+          <Map_Contorller></Map_Contorller>
           <Videopage></Videopage>
            <Mappage></Mappage>
+
+           
       </div>
     </div>
      <History></History>
     <div className="w-full flex-[1.4] gap-x-4 flex rounded-lg ">
        <Generate></Generate>
-      <div className="flex-[4] bg-white rounded-xl  "></div>
+      <div className="flex-[4] bg-white rounded-xl flex  ">
+   
+         <Find_inner></Find_inner>
+      </div>
     </div>
   </div>
 </div>
