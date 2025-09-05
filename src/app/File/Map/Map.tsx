@@ -8,23 +8,23 @@ ControlPosition
 import { useEffect,useState ,useCallback , useRef} from 'react';
 import {Place} from './MapType'
 import Direction from './Direction';
+import Zoom_in from './Zoom_in';
+import { useDispatch,useSelector,shallowEqual  } from 'react-redux';
 
-import { useDispatch,useSelector } from 'react-redux';
-import { Make_Marker } from './Make_Marker';
 import {AutocompleteCustom} from '../auto_search/autocomletecomponent'
 import Autocomplete_Result from '../auto_search/Autocomplete_Result';
-import { toggleMark} from '@/app/Redux/store';
+
+import Marker_set from './Marker_set';
+    const color:string[]= ['#A29BFE','#A29BFE','#F08AF4','#F08AF4']
+
 export default function Mappage() {
-  const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null);
 
-  const [selectedMark, setselectedMark] = useState<string[]>([]);
-  const dispatch = useDispatch();
 
-    const [comment, setcomment]=useState<Place[]>([]);
-    const color= useMemo(()=> ['#A29BFE','#A29BFE','#FAFF68','#F08AF4'],[])
+    //const [comment, setcomment]=useState<Place[]>([]);
 
-    // 여기 선언해놨구나..
-    
+
+  const current_index = useSelector((state: any) => state.url.url_current_index);
+
   const [selectedPlace, setSelectedPlace] =
     useState<google.maps.places.Place | null>(null);
     
@@ -32,58 +32,13 @@ export default function Mappage() {
    //데이터가 증가하게 하고 그게 색으로 변하게 하는지???? 이런것좀 체크 부탁요 
     // 경로에요
    const polylinesRef = useRef<google.maps.Polyline[]>([]);
-
-
-   //마커에요
-   const markersRef = useRef<google.maps.marker.AdvancedMarkerElement[][]>([]);
-
-
-   const youtube_link = useSelector((state: any) => state.url.url);
-    // 유투브 링크 
+   const Check_check= useSelector((state: any) => state.contorller.Check_check);
  
 
-    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark);
-    const Check_check= useSelector((state: any) => state.contorller.Check_check);
-    const show_search= useSelector((state: any) => state.contorller.show_search);
-
-   // 여기 부분 고치기 
-
-
-    useEffect(()=>{
-    
-     if(youtube_link){
-      const eventsource= new EventSource(`http://localhost:8000/script?video_url=${encodeURIComponent(youtube_link)}`)
-     eventsource.onmessage=(event)=>{
-      let comment=  JSON.parse(event.data);
-      // 여기서 데이터 가 들어오면 함수호출로 해도 되겠네.. 
-      setcomment(comment)
-           //change_color()
-
-     }
-
-    //if (data.done) {
-    //  eventsource.close(); // ✅ 결과 다 받으면 닫기 --> 우선은 "실시간으로 한다고 가정하고 .. 열어놓은거임"
-    //  return;
-    //}
-     eventsource.onerror= (error)=>{
-      eventsource.close();
-     }
-  
-     return ()=>{
-      eventsource.close();
-     }
-     }
-  
-    },[youtube_link])
-
-   
-    const AggregatePin= useCallback((id:string)=>{
-    dispatch(toggleMark(id))
-    },[])
 
     useEffect(()=>{
 
-      // cehck_check 사실이면 이전꺼 색 다 죽여줘 polylinesRef.current[0].setOptions({ strokeColor: '#808080' });
+      // 사용자의 맞춤 경로 때문에 발생하는 초록색 Direction 부분
       if(Check_check){
         polylinesRef.current.map((el)=>{
           el.setOptions({ strokeColor: '#808080',strokeOpacity: 0.2  });
@@ -91,52 +46,59 @@ export default function Mappage() {
       }
       else{
         polylinesRef.current.map((el,index)=>{
-          el.setOptions({ strokeColor:'#9C6CFE' ,strokeOpacity: 0.8 ,  });
+          if(index==current_index) {
+             el.setOptions({ strokeColor:color[index+1] ,strokeOpacity: 0.8   });
+          }
+          else{
+              el.setOptions({ strokeColor: '#808080',strokeOpacity: 0.2  });
+          }
         })
 
       }
 
-      // false 이면 다시 색 돌아오게 해줘
-
-
-    },[Check_check])
+    },[Check_check,current_index])
 
 
 
-    const placeMarkers = useMemo(() => {
 
- // 여기 그 selectedPlaceId 때문에 useMemo 으로 잡은거임 
+    // mark 안에 넣나 안넣나 확인부탁 
+
+    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark );
+  
+    const comment= useSelector((state:any)=>state.data_store.location_data,shallowEqual ) as any[];
+    
+    const lastComment = comment[comment.length - 1];
+//url_current_index
+
+
+     
+   // 여기 부분 고치기 
+
+
+
+
+  
+
+  
+  
+
+
+
+
+
+
+
+
  
-    return comment.map((place, index) => (
-      <Make_Marker
-        describe={ place.describe}
-        index={index}
-        key={place.id || index}
-        id={place.id}
-        marking={Mark_Pin_set.includes(place.id)}
-        selected={place.id === selectedPlaceId}
-        locaiton={place.location}
-        onClick={() => setSelectedPlaceId(place.id)}
-        PinonClick={()=>AggregatePin(place.id) }
-      />
-    ));
-
-  // 여기 바로 되는걸로 됬네.. 여기를 함수를 파서 잡아봐 
-
-  }, [comment, selectedPlaceId,Mark_Pin_set]);
-
-
-
-
-
-  const handleMapClick = useCallback(() => {
-    setSelectedPlaceId(null);
-  },[]);
-
 
   const filteredComment = useMemo(() => {
-  return comment.flat().filter((el)=>Mark_Pin_set.includes(el.id))
-}, [ comment, Mark_Pin_set, Check_check]);
+    // 여기서 문제였군 .. 
+   if(comment.length>0){
+   
+     return   comment.flat().filter((el)=>Mark_Pin_set.has(el.id))    
+   } 
+
+  }, [Mark_Pin_set, Check_check]);
 
 
    const API_KEY = 'AIzaSyBkXahoUxLe2LROntj84Lra95YI-BXqunc';
@@ -147,7 +109,6 @@ export default function Mappage() {
      <APIProvider 
      apiKey={API_KEY}>
        <Map
-        onClick={handleMapClick}
          mapId='c6ee764519ee05b0d0b9fec4'
          colorScheme='LIGHT'
          defaultCenter={{lat: 35.68, lng: 139.69}}
@@ -157,13 +118,21 @@ export default function Mappage() {
 
      mapTypeControl={false}
        >
-         {placeMarkers}
-      <Direction  key="base" color={color[polylinesRef.current.length]} check={true} comment={comment}  polylinesRef={polylinesRef}
-       ></Direction>
-      {
-        Check_check&&<Direction color='#4DD599' key="filtered" check={false}  comment={filteredComment} polylinesRef={polylinesRef}
-         ></Direction>
-      }
+        <Zoom_in></Zoom_in>
+        
+
+        <Marker_set comment={comment}></Marker_set>
+     
+         {
+          comment.length>1&&  lastComment  && 
+           <Direction  key="base" color={color[polylinesRef.current.length+1]} check={true} comment={lastComment}  polylinesRef={polylinesRef}
+           ></Direction>
+          }
+            {
+            Check_check&&<Direction color='#4DD599' key="filtered" check={false}  comment={filteredComment} polylinesRef={polylinesRef}
+             ></Direction>
+           }
+
    
        {
          
@@ -213,3 +182,11 @@ export default function Mappage() {
  // </AdvancedMarker>
  //        }) }
 //
+
+//
+//      <Direction  key="base" color={color[polylinesRef.current.length]} check={true} comment={comment}  polylinesRef={polylinesRef}
+//       ></Direction>
+//      {
+//        Check_check&&<Direction color='#4DD599' key="filtered" check={false}  comment={filteredComment} polylinesRef={polylinesRef}
+//         ></Direction>
+//      }

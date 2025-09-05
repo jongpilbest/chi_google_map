@@ -9,7 +9,7 @@ export async  function  http_connect (url , fetch_data ,method){
        body: JSON.stringify({ video_url: fetch_data} ),
      });
      const result = await res.json();
-    console.log('백엔드에서 받은 결과좀 보여줘 ',result )
+
     return result
    }
    catch(e){

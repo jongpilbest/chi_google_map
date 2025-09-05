@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/File/Use_hook/Hook.jsx", "src/app/chart/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/File/Use_hook/Hook.jsx", "src/app/chart/page.jsx", "src/app/File/Map/SpiderProvider.jsx", "src/app/File/Map/Spideerfy.jsx"],
   "exclude": ["node_modules"]
 }

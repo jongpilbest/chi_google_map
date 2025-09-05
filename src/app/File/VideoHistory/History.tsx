@@ -11,13 +11,15 @@ import{http_connect} from '../api_call/fetch'
 
 export default function History() {
   
- const youtube_link = useSelector((state: any) => state.url.url);
+const youtube_link = useSelector((state: any) => state.url.url_current);
      const [place, setplace]= useState<Place[]>([]);
+    
 // 그럼 여기에 스피너를 돌려야되는데.. 이게 그 데이터 주면 그때부터 돌아가는거 할려면.. 뭔가 음...
 const fetchData = async (youtube_link:string) => {
+
   const output_data = await http_connect('http://localhost:8000/timeline', youtube_link, "POST")
-  console.log(output_data,'데이터요')
   setplace(output_data.message)
+ 
 }
 
 useEffect(()=>{

@@ -13,15 +13,15 @@ import {store } from './Redux/store'
 import { Provider } from 'react-redux';
 
  // 버튼 아이콘
-
+import Find from "./File/Short-video/Find";
 import Mappage from './File/Map/Map'
 import Controller from './File/Video/Controll'
 import History from './File/VideoHistory/History'
-import Generate from './File/Short-video/Generate'
+
 import Videopage from './File/Video/Video'
 import Map_Contorller from "./File/Contorller/Map_Contorller";
-import Fike_list from './File/Short-video/Find_list';
-import Find_inner from './File/Short-video/FInd_list_inner'
+
+
 
 
 export default function Intro() {
@@ -45,13 +45,7 @@ export default function Intro() {
       </div>
     </div>
      <History></History>
-    <div className="w-full flex-[1.4] gap-x-4 flex rounded-lg ">
-       <Generate></Generate>
-      <div className="flex-[4] bg-white rounded-xl flex  ">
-   
-         <Find_inner></Find_inner>
-      </div>
-    </div>
+     <Find></Find>
   </div>
 </div>
 </Provider>

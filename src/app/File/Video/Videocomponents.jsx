@@ -9,9 +9,6 @@ const VideoPlayer = forwardRef(function VideoPlayer({ url }, ref) {
     const youtube_link = useSelector((state) => state.url.current_video);
     ref.current?.seekTo(youtube_link, "seconds"); 
 
-
-
-
   return (
     <ReactPlayer
       ref={ref}

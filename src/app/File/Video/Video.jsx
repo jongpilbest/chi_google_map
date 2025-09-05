@@ -12,8 +12,7 @@ const VideoPlayer = dynamic(() => import("./Videocomponents"), {
 
 export default function Page() {
   const playerRef = useRef(null);
-   const youtube_link = useSelector((state) => state.url.url);
-
+  const youtube_link = useSelector((state) => state.url.url_current);
 
   return (
     <div className=" flex-[5]  rounded-lg bg-white" >
@@ -24,11 +23,4 @@ export default function Page() {
    </div>
   );
 }
-
-//   <div className=" flex-[5]  rounded-lg bg-white" >
-   //   <VideoPlayer
-   //     ref={playerRef}
-   //     url={youtube_link}
-   //   />
-   // </div>
 

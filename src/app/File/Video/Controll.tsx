@@ -1,108 +1,57 @@
 import React, { useRef } from 'react';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
-import { IoIosSend } from 'react-icons/io';
-import { useDispatch } from 'react-redux';
-import { write_new_url } from '@/app/Redux/store';
-import {http_connect} from '../../File/api_call/fetch'
 
-import { Loading_state } from '@/app/Redux/store';
-
+import { useDispatch,useSelector } from 'react-redux';
+import { url_plus, url_out } from '@/app/Redux/store';
+import Youtube_link_input from './Youtube_link_input'
 
 export default function Controll() {
  const dispatch = useDispatch();
- const url_youtube= useRef<HTMLInputElement>(null);
- 
-// const openai = new OpenAI({
-// // apiKey: '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'
-//});
 
-  const handleSubmit = async () => {
-    dispatch(write_new_url(url_youtube.current?.value))
+ const check_list = useSelector((state:any) => state.url.url_list);
 
-
-   try {
-     if( url_youtube.current?.value){
-    
-        //  console.log(result,'제대로 다운이 돴는지 확인해봐 ')
-         //dispatch(Loading_state(true))
-         //const backend_process=  http_connect("http://localhost:8000/process-video",url_youtube.current?.value,'POST');
-         //const processResult = await backend_process;
-         //dispatch(Loading_state(processResult.message));
-////
-          // 현재 여기서 실행해서 정보를 받는게 별로임. 구글 있는 곳에서 url 클릭할때마다 sse 실행하게 useEffect 를 사용하라고 함
-
-
-          
-
-       
+ const url_current_index=  useSelector((state:any) => state.url.url_current_index);
 
 
 
-          //이거 경로 버튼 누르면 바뀌는걸로 하면될거 같은데 그러면 경로를 또 따로 저장해놔야될듯
-        // url_youtube.current.value = '';
- 
-  
-     }
-      
+  const url_index_change= function(name:string){
 
-   //  const res = await fetch("/api/transcript", {
-   //  method: "POST",
-   //  headers: { "Content-Type": "application/json" },
-   //  body: JSON.stringify({ videoId: url_youtube.current?.value }),
-   //});
-   // const data = await res.json();
-//
-//
-   //    const chatCompletion = await openai.chat.completions.create({
-   //   model: "gpt-4", // 또는 "gpt-3.5-turbo"
-   //   messages: [
-   //     { role: "system", content: "You are a helpful assistant." },
-   //     { role: "user", content: data },
-   //   ],
-   // });
-
-
+   if(name=="up"){
+    if(url_current_index+1<=check_list.length)
+    dispatch(url_out({
+      "up":true,
+      "down":false
+    }))
    }
-   catch(error:any){
-    return 
+   else{
+    if(url_current_index-1>=0)
+      dispatch(url_out({
+      "up":false,
+      "down":true
+    }))
    }
-    
-  
 
-    // 1. redux 에 값을 저장해야지 video componet 에서 변경이 가능
-    // 2. 링크 -> youtube script 을 선언해서 대본을 불러옴
-    // 3. 대본 -> chatgpt 을 사용해서 요약 / =>  reudx 에 다시 저장 해서 map 으로 전달
-
-
-  };
+  }
 
   return (
     <div className="h-10 flex gap-7 items-center justify-end">
       <button
-        className="w-5 h-5 rounded-4xl flex items-center justify-center bg-gray-500"
+      onClick={()=>url_index_change("down")}
+        className="w-5 h-5 rounded-4xl flex items-center justify-center bg-gray-500 hover:bg-[#A29BFE]"
     
       >
-        <SlArrowLeft className="text-white h-2" />
+        <SlArrowLeft className="text-white h-2 " />
       </button>
 
       <button
-        className="w-5 h-5 rounded-4xl flex items-center justify-center bg-gray-500"
+      onClick={()=>url_index_change("up")}
+        className="w-5 h-5 rounded-4xl flex items-center justify-center bg-gray-500 hover:bg-[#A29BFE]"
       
       >
         <SlArrowRight className="text-white h-2" />
       </button>
 
-      <div className="flex items-center rounded-lg">
-        <input
-          
-          ref={url_youtube}
-          placeholder="Please enter a YouTube link"
-          className="text-sm h-6 px-9 text-gray-800 bg-white"
-        />
-        <button className="bg-white" onClick={handleSubmit}>
-          <IoIosSend className="text-gray-500" />
-        </button>
-      </div>
+      <Youtube_link_input></Youtube_link_input>
     </div>
   );
 }

@@ -13,13 +13,16 @@
     "@reduxjs/toolkit": "^2.8.2",
     "@vis.gl/react-google-maps": "^1.5.4",
     "next": "15.4.4",
+    "npm-overlapping-marker-spiderfier": "^1.0.3",
     "openai": "^5.10.2",
+    "overlapping-marker-spiderfier": "^1.1.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-google-charts": "^5.2.1",
     "react-icons": "^5.5.0",
     "react-player": "^2.11.0",
     "react-redux": "^9.2.0",
+    "ts-overlapping-marker-spiderfier": "^1.0.3",
     "youtube-transcript": "^1.2.1"
   },
   "devDependencies": {

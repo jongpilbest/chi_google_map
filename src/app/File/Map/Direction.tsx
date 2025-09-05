@@ -18,17 +18,7 @@ interface Prop{
 }
 
 
- function Direction({ comment,polylinesRef,color,check}:Prop ){
-
- 
-  const [DirectionService, setDirectionService] = useState<google.maps.DirectionsService>();
-  const [Directionrender,setDirectionRender]=useState<google.maps.DirectionsRenderer>();
-
-   const map= useMap();
-   const routeLibrary= useMapsLibrary('routes')
-   
-
-  function splitWaypointsIntoSegments(waypoints:Place[], maxWaypointsPerRequest:number) {
+function splitWaypointsIntoSegments(waypoints:Place[], maxWaypointsPerRequest:number) {
   var segments = [];
   for (var i = 0; i < waypoints.length; i += maxWaypointsPerRequest - 1) {
     var segment = waypoints.slice(i, Math.min(i + maxWaypointsPerRequest, waypoints.length));
@@ -37,12 +27,19 @@ interface Prop{
   return segments;
    }
 
+
+ function Direction({ comment,polylinesRef,color,check}:Prop ){
+
+
+  const [DirectionService, setDirectionService] = useState<google.maps.DirectionsService>();
+  const [Directionrender,setDirectionRender]=useState<google.maps.DirectionsRenderer>();
+
+   const map= useMap();
+   const routeLibrary= useMapsLibrary('routes')
+  
   const segments = splitWaypointsIntoSegments(comment, 20); 
   
     
-
-
-
    useEffect(()=>{
    if(!map || !routeLibrary) return
     setDirectionService(new routeLibrary.DirectionsService())
@@ -51,9 +48,10 @@ interface Prop{
 
 useEffect(() => {
   if (!DirectionService || !Directionrender) return;
- console.log('안녕')
+  console.log('몇번이나 re-render 됬니?')
   let polyline: google.maps.Polyline | null = null;
-
+  // 여기에 이미 내가 해놨네 
+  
   if (polylinesRef.current.length > 0) {
     polylinesRef.current[polylinesRef.current.length - 1].setOptions({
       strokeColor: "#808080",
@@ -71,9 +69,10 @@ useEffect(() => {
         });
       }
 
+
       return DirectionService.route({
-        origin: segment[0],
-        destination: segment[segment.length - 1],
+        origin: segment[0]!,
+        destination: segment[segment.length - 1]!,
         waypoints: waypts,
         optimizeWaypoints: !check,
         travelMode: google.maps.TravelMode.WALKING,
