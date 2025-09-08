@@ -11,7 +11,8 @@ export type Place ={
   },
   id:string,
   index?:number,
-  color?:string
+  color?:string,
+  emozi?:string
 }
 
 

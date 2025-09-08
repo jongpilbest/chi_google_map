@@ -13,7 +13,7 @@ import {Place} from './MapType'
 type place_plus= Place&{
   opacity:number
 }
-
+const colors = ["#f87171", "#fb923c", "#facc15", "#4ade80"];
 import Map_viewer from './Map_viewer';
 
 export function Make_Marker({ location,id,describe,index,color,opacity }: place_plus) {
@@ -21,8 +21,10 @@ export function Make_Marker({ location,id,describe,index,color,opacity }: place_
 
    const [selet_mark, setselected_mark] = useState<boolean>(false);
 
-   const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark).has(id);
-      
+   // 수정할거 
+   const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark)
+   const indexWithId = Mark_Pin_set.findIndex((set: any) => {
+   return set.has(id)});
    const handleMarkerClick = ()=>{
    
       setselected_mark((el)=>!el)
@@ -42,14 +44,14 @@ export function Make_Marker({ location,id,describe,index,color,opacity }: place_
         <AdvancedMarker
           ref={markerRef}
           position={location}
-         style={{ opacity:Mark_Pin_set?1 :opacity }}
+         style={{ opacity:indexWithId>=0?1 :opacity }}
       onClick={handleMarkerClick}  
         >
           <Pin
-    background={Mark_Pin_set?"#4DD599":color}
+    background={indexWithId>=0?colors[indexWithId]:color}
     glyphColor="#FFFFFF"
     borderColor="#FFFFFF"
-    scale={Mark_Pin_set?1:0.7}
+    scale={indexWithId>=0?0.8:0.7}
 
     glyph={index?.toString()}
   />

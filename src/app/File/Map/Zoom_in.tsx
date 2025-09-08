@@ -12,7 +12,6 @@ const map = useMap();
 const place= useSelector((state: any) => state.data_store.zoom_in_place);
 
       
-console.log(place)
   //state.zoom_in_place= filter_data
 // 여기 부분에 넣어줘 이때 데이터를 걍 그......쩝 fiter 해달라고 하는게 날거같은데 
 

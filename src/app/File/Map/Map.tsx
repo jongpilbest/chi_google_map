@@ -15,7 +15,9 @@ import {AutocompleteCustom} from '../auto_search/autocomletecomponent'
 import Autocomplete_Result from '../auto_search/Autocomplete_Result';
 
 import Marker_set from './Marker_set';
-    const color:string[]= ['#A29BFE','#A29BFE','#F08AF4','#F08AF4']
+const color:string[]= ['#A29BFE','#A29BFE','#F08AF4','#F08AF4']
+const colors_root = ["#f87171", "#fb923c", "#facc15", "#4ade80"];
+
 
 export default function Mappage() {
 
@@ -32,6 +34,8 @@ export default function Mappage() {
    //데이터가 증가하게 하고 그게 색으로 변하게 하는지???? 이런것좀 체크 부탁요 
     // 경로에요
    const polylinesRef = useRef<google.maps.Polyline[]>([]);
+
+
    const Check_check= useSelector((state: any) => state.contorller.Check_check);
  
 
@@ -39,66 +43,46 @@ export default function Mappage() {
     useEffect(()=>{
 
       // 사용자의 맞춤 경로 때문에 발생하는 초록색 Direction 부분
-      if(Check_check){
-        polylinesRef.current.map((el)=>{
-          el.setOptions({ strokeColor: '#808080',strokeOpacity: 0.2  });
-        })
-      }
-      else{
+      // 경로를 이제 지우지 말까.?
+
+      // 경로 바꾸는거 
+ 
         polylinesRef.current.map((el,index)=>{
           if(index==current_index) {
-             el.setOptions({ strokeColor:color[index+1] ,strokeOpacity: 0.8   });
+             el.setOptions({ strokeColor:color[index+1] ,strokeOpacity: 0.8  });
           }
           else{
-              el.setOptions({ strokeColor: '#808080',strokeOpacity: 0.2  });
+              el.setOptions({ strokeColor: color[index],strokeOpacity: 0.2  });
           }
         })
 
-      }
+      
 
-    },[Check_check,current_index])
+    },[Check_check])
 
 
 
 
     // mark 안에 넣나 안넣나 확인부탁 
 
-    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark );
+     // 수정할거
+    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark )
+    const Find_index_mark_pin =  useSelector((state: any) => state.contorller.select_mark_index )
   
-    const comment= useSelector((state:any)=>state.data_store.location_data,shallowEqual ) as any[];
-    
-    const lastComment = comment[comment.length - 1];
-//url_current_index
-
-
-     
-   // 여기 부분 고치기 
-
-
-
-
-  
-
-  
-  
-
-
-
-
-
-
-
-
+    const comment= useSelector((state:any)=>state.data_store.location_data,shallowEqual) as any[];
  
+
+
 
   const filteredComment = useMemo(() => {
     // 여기서 문제였군 .. 
    if(comment.length>0){
-   
-     return   comment.flat().filter((el)=>Mark_Pin_set.has(el.id))    
+     //Mark_Pin_set 수정할거 
+     // 여기 true 인 인덱스만 뽑아
+     return  comment.flat().filter((el)=>Mark_Pin_set[Find_index_mark_pin].has(el.id))    
    } 
 
-  }, [Mark_Pin_set, Check_check]);
+  }, [ Mark_Pin_set,Find_index_mark_pin]);
 
 
    const API_KEY = 'AIzaSyBkXahoUxLe2LROntj84Lra95YI-BXqunc';
@@ -123,15 +107,11 @@ export default function Mappage() {
 
         <Marker_set comment={comment}></Marker_set>
      
-         {
-          comment.length>1&&  lastComment  && 
-           <Direction  key="base" color={color[polylinesRef.current.length+1]} check={true} comment={lastComment}  polylinesRef={polylinesRef}
-           ></Direction>
-          }
+     
             {
-            Check_check&&<Direction color='#4DD599' key="filtered" check={false}  comment={filteredComment} polylinesRef={polylinesRef}
+            Check_check&&<Direction color={colors_root[Find_index_mark_pin]} key="filtered" check={true}  comment={filteredComment} polylinesRef={polylinesRef}
              ></Direction>
-           }
+             }
 
    
        {
@@ -183,10 +163,7 @@ export default function Mappage() {
  //        }) }
 //
 
-//
-//      <Direction  key="base" color={color[polylinesRef.current.length]} check={true} comment={comment}  polylinesRef={polylinesRef}
-//       ></Direction>
-//      {
-//        Check_check&&<Direction color='#4DD599' key="filtered" check={false}  comment={filteredComment} polylinesRef={polylinesRef}
-//         ></Direction>
-//      }
+//  경로 
+//comment.length>1&&  lastComment  && 
+//           <Direction  key="base" color={color[polylinesRef.current.length+1]} check={true} comment={lastComment}  polylinesRef={polylinesRef}
+//           ></Direction>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useState } from 'react';
 import {
 
@@ -11,19 +11,49 @@ import { FaRobot } from "react-icons/fa6";
 import { MdOutlineCancel } from "react-icons/md";
 import { toggleMark} from '@/app/Redux/store';
 
+
 import { useDispatch,useSelector } from 'react-redux';
 import {Place} from './MapType'
 type MapViewerProps = Place & {
   handleMarkerClick: () => void; // id를 받아서 void 리턴하는 함수,
   marker: google.maps.marker.AdvancedMarkerElement | null
 };
+
+
+const colors = ["text-red-400", "text-orange-400", "text-yellow-400","text-green-400"];
+
+
 export default function Map_viewer({id,describe ,handleMarkerClick ,marker}:MapViewerProps  ) {
 
   
 
 
-   const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark).has(id);
+   const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark);
+   // 이거 우선은 배열안에 new set 으로 만들어야되나? 
 
+
+   const Maek_pin= useMemo(()=>{
+    return Mark_Pin_set.map((set: Set<string>, index: number) => (
+    <IoMdPin
+      key={index}
+      onClick={() =>{
+  dispatch(
+          toggleMark({
+            id: id,
+            index: index,
+          })
+        )
+        console.log(id)
+
+      }
+      
+      }
+      className={`text-lg ${
+        set.has(id) ? colors[index] : "text-gray-500"
+      }`}
+    />
+  ));
+   },[Mark_Pin_set])
 
 
   const dispatch= useDispatch()
@@ -45,11 +75,13 @@ export default function Map_viewer({id,describe ,handleMarkerClick ,marker}:MapV
                     </div> 
 
                     <div className='flex gap-2'>
-                             
-                 <IoMdPin 
-                 onClick={()=>  dispatch(toggleMark(id))}
-                 className={`text-lg ${Mark_Pin_set ? "text-[#4DD599]" : "text-gray-500"}`}></IoMdPin>
 
+
+                       {
+                        Mark_Pin_set.length>0 && Maek_pin
+                       }      
+              
+      
                  <MdOutlineCancel  
                  className='text-lg hover:text-[#4DD599]'
                  onClick={handleMarkerClick} />

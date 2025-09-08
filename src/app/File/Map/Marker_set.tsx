@@ -16,12 +16,12 @@ export default function Marker_set({ comment }: any) {
   const markers = useMemo(() => {
     return comment.flatMap((group: Place[], i: number) => {
       let colorCode: [string, number] = ['', 0]
-      
+  
       if (i === 0) colorCode = ['#FFD166', 1]
-      else if (i > 0 && i < current_index) colorCode = ['#808080', 0.4]
+      else if (i > 0 && i < current_index) colorCode = [color[i], 0.4]
       else if (i=== current_index ) colorCode = [color[i], 1]
       else if (comment.length-1 > current_index && i > current_index)
-        colorCode = ['#808080', 0.4]
+        colorCode = [color[i], 0.5]
 
       return group.map((el, index) => (
         <Make_Marker

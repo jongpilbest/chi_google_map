@@ -43,12 +43,14 @@ useEffect(()=>{
         
         <div className='min-w-[100%]  h-[100%] flex items-center overflow-x-auto '  >
    {
-    place&&
+    place.length>0&&
     place.map((el,index)=>{
        return <History_list 
        index={index}
        key={el.startTime}
-       nzmd={el.googlePlace} timeline={el.startTime} ></History_list>
+       nzmd={el.googlePlace} 
+       timeline={el.startTime}
+       emozi={el.emozi} ></History_list>
     })
    }
         </div>

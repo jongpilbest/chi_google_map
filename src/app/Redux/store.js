@@ -1,6 +1,7 @@
 // store.js
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
+
 import { enableMapSet } from "immer";
 
 enableMapSet(); // ✅ Immer에 Map/Set 지원 켜기
@@ -48,7 +49,6 @@ const counterSlice = createSlice({
       state.url_current_index = Math.max(0, state.url_current_index-1);
     }
     state.url_current = state.url_list[state.url_current_index] ?? null;
-  
      // index 을 얘내가 아나?
    }
  
@@ -60,25 +60,34 @@ const controllerSlice= createSlice({
   initialState:{
  
    Check_check: false,
+   select_mark_index:0,
    cancel_check:false,
-   selectedMark:new Set() ,
+   selectedMark:[new Set(),new Set(), new Set(), new Set()] ,
    showDirection: false,
    show_search:false
   },
   reducers:{
+      
+    change_selected_mark(state,action){
+      state.select_mark_index=action.payload
+    },
 
      change_check_Check(state,action){
-      state.Check_check= action.payload
-      // 여기 클릭하면? --> 열리는 곳 지우면 안됨
+      state.Check_check= !state.Check_check
       
      },
-
+     add_Selected_mark(state,action){
+      // 나중에 쓸거 지금 바빠서 못함
+      state.selectedMark.add(new Set());
+     }
+     ,
     toggleMark(state, action) {
-      const id = action.payload;
-          if (state.selectedMark.has(id)) {
-       state.selectedMark.delete(id);   // 있으면 제거
+      const id = action.payload.id;
+      const index= action.payload.index
+       if (state.selectedMark[index].has(id)) {
+       state.selectedMark[index].delete(id);   // 있으면 제거
      } else {
-       state.selectedMark.add(id);      // 없으면 추가
+       state.selectedMark[index].add(id);      // 없으면 추가
      }
     },
      clearDirection(state) {
@@ -90,7 +99,6 @@ const controllerSlice= createSlice({
           state.show_search= action.payload
           state.Check_check=false;
           // toggle 이니까 이딴식으로 해도 상관없는거 아님?
-
        } 
 
     }
@@ -141,7 +149,7 @@ const data_store_slice= createSlice({
 
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
-export const{chanage_pin_Check, change_check_Check,clearDirection,toggleMark ,change_search_state}= controllerSlice.actions;
+export const{chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
 export const {data_Store_change,filter_data_location}= data_store_slice.actions
 export const store = configureStore({
   reducer: {

@@ -34,7 +34,7 @@ export default function RootLayout({
           <FaVideo style={{
             color:'#7B7AE7'
           }}></FaVideo>
-          <p className="font-sans font-bold text-sm mx-2">Video Map</p>
+          <p className="font-sans font-bold text-sm mx-2">Video Lens</p>
         </header>
        
         {children}
