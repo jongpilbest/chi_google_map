@@ -98,7 +98,7 @@ useEffect(() => {
 
   // ✅ useEffect cleanup
   return () => {
-    if (polyline&& check==false) {
+    if (polyline&& check==true) {
 
       polyline.setMap(null); // 자기 자신 polyline만 삭제
       //polylinesRef.current = polylinesRef.current.filter((p) => p !== polyline);

@@ -18,7 +18,7 @@ export default function Page() {
     <div className=" flex-[5]  rounded-lg bg-white" >
      <VideoPlayer
        ref={playerRef}
-       url={youtube_link}
+       url={`https://www.youtube.com/watch?v=${youtube_link}`}
      />
    </div>
   );

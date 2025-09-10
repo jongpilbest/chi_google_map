@@ -1,0 +1,440 @@
+[
+  {
+    "startTime": "36.286",
+    "endTime": "90.507",
+    "place": "도쿄 하라주쿠 BREAD, ESPRESSO &",
+    "googlePlace": "도쿄 하라주쿠 BREAD, ESPRESSO &",
+    "describe": "오모테산도 근처 인기 카페. 철판 프렌치토스트로 유명, 커피·라떼베이스 판매",
+    "realname": "의심됨",
+    "emozi": "🍞☕️🔥",
+    "location": {
+      "lat": 35.669772460415324,
+      "lng": 139.71260198463446
+    },
+    "id": "ChIJe1SE-emNGGARvfPabpFuGMg",
+     "category": "food"
+  },
+  {
+    "startTime": "95.220",
+    "endTime": "98.598",
+    "place": "도쿄 하라주쿠 Brandy Melville Harajuku",
+    "googlePlace": "Brandy Melville Harajuku",
+    "describe": "하라주쿠 쇼핑 스트리트에 위치한 여성 캐주얼 의류 매장",
+    "realname": "확실함",
+    "emozi": "🛍️👗✨",
+    "location": {
+      "lat": 35.6718015,
+      "lng": 139.7097292
+    },
+    "id": "ChIJe1SE-emNGGARvfPabpFuGMg",
+      "category": "shopping"
+
+  },
+  {
+    "startTime": "100.85",
+    "endTime": "104.01",
+    "place": "하라주쿠 도리",
+    "googlePlace": "Harajuku Street",
+    "describe": "남성복과 빈티지 상점이 많은 거리",
+    "IsRealName": "확실함",
+    "location": {
+      "lat": 35.6708989,
+      "lng": 139.7077015
+    },
+    "id": "ChIJlVne8bqMGGARtX5O6ojMvsI",
+    "emozi": "🛍️ 🚶 🏬 ",
+      "category": "shopping"
+  },
+  {
+    "startTime": "108.274",
+    "endTime": "110.612",
+    "place": "도쿄 하라주쿠 BEAMS RECORDS",
+    "googlePlace": "BEAMS RECORDS",
+    "describe": "하라주쿠에 위치한 빔즈 레코드 매장",
+    "realname": "확실함",
+    "emozi": "🎵💿🛍️",
+    "location": {
+      "lat": 35.6716373,
+      "lng": 139.7081792
+    },
+    "id": "ChIJkb_yMaOMGGARCgFISnwKQIQ",
+      "category": "shopping"
+  },
+  {
+    "startTime": "110.819",
+    "endTime": "115.740",
+    "place": "도쿄 하라주쿠 BEAMS WOMEN HARAJUKU",
+    "googlePlace": "BEAMS WOMEN HARAJUKU",
+    "describe": "하라주쿠의 빔즈 여성복 전문 매장",
+    "realname": "확실함",
+    "emozi": "👗👜✨",
+    "location": {
+      "lat": 35.6716447,
+      "lng": 139.708186
+    },
+    "id": "ChIJ0-iVqmGNGGARCna3MxLa5EA",
+      "category": "shopping"
+  },
+  {
+    "startTime": "155.363",
+    "endTime": "235.902",
+    "place": "도쿄 오모테산도 Tokyu Plaza Omotesando Harajuku (새 동관 포함)",
+    "googlePlace": "Tokyo Harajuku Tokyu Plaza Omotesando Harajuku",
+    "describe": "라포레 하라주쿠 맞은편 대형 쇼핑몰. 옥상 테라스, 카페 ‘HARA-PA’, 지올리띠 젤라토 입점",
+    "realname": "의심됨",
+    "emozi": "🛍️🍨🌿",
+    "location": {
+      "lat": 35.6687294,
+      "lng": 139.7059549
+    },
+    "id": "ChIJj0CdfaSMGGAROHhLfxE208o",
+      "category": "food"
+  },
+  {
+    "startTime": "240.323",
+    "endTime": "277.402",
+    "place": "도쿄 하라주쿠 마리온 크레페 다케시타도리",
+    "googlePlace": "도쿄 시부야구 하라주쿠 타케시타도리 마리온 크레페",
+    "describe": "다케시타도리의 대표 크레페 노점. 오래된 단골집으로 언급",
+    "realname": "의심됨",
+    "emozi": "🥞🍓🎉",
+    "location": {
+      "lat": 35.6712605,
+      "lng": 139.7048981
+    },
+    "id": "ChIJPft3N7uMGGAReOEjLwqJIm0",
+     "category": "food"
+
+  },
+  {
+    "startTime": "301.301",
+    "endTime": "362.362",
+    "place": "도쿄 니시아자부 Gonpachi Nishi-Azabu",
+    "googlePlace": "Gonpachi Nishi-Azabu",
+    "describe": "영화 ‘킬빌’ 영감의 무대로 유명한 이자카야. 꼬치 구이 오픈 그릴",
+    "realname": "확실함",
+    "emozi": "🍢🍶🔥",
+    "location": {
+      "lat": 35.6601742,
+      "lng": 139.7235797
+    },
+    "id": "ChIJEwlemnqLGGARhwMuRpwpkBI",
+     "category": "food"
+  },
+  {
+    "startTime": "470.511",
+    "endTime": "515.556",
+    "place": "도쿄 긴자 UNIQLO Ginza",
+    "googlePlace": "UNIQLO Ginza",
+    "describe": "유니클로 UTT(티셔츠 커스터마이즈) 체험. 대기표로 15분 슬롯 운영",
+    "realname": "확실함",
+    "emozi": "👕🧵🛍️",
+    "location": {
+      "lat": 35.6702448,
+      "lng": 139.7634686
+    },
+    "id": "ChIJb9MHbuaLGGAR0xi-noU25UU",
+      "category": "shopping"
+  },
+  {
+    "startTime": "518.017",
+    "endTime": "569.569",
+    "place": "도쿄 긴자 Henri Charpentier Ginza Maison",
+    "googlePlace": "Henri Charpentier Ginza Maison",
+    "describe": "디저트로 유명한 프랑스 과자 브랜드 살롱. 미니멀한 잔과 파인다이닝급 서비스",
+    "realname": "확실함",
+    "emozi": "🍰☕️🎀",
+    "location": {
+      "lat": 35.6712228,
+      "lng": 139.7664859
+    },
+    "id": "ChIJu2-DAeeLGGARUZipC7OFRmA",
+     "category": "food"
+  },
+  {
+    "startTime": "583.833",
+    "endTime": "641.390",
+    "place": "도쿄 롯폰기 국립신미술관",
+    "googlePlace": "The National Art Center, Tokyo",
+    "describe": "유려한 유리 파사드와 내부 카페·가구가 인상적인 미술관",
+    "realname": "확실함",
+    "emozi": "🖼️🏛️🌞",
+    "location": {
+      "lat": 35.665289,
+      "lng": 139.726374
+    },
+    "id": "ChIJP-vO9nuLGGARGJ2q8uryJUA",
+     "category": "sightseeing"
+  },
+  {
+    "startTime": "648.898",
+    "endTime": "715.423",
+    "place": "도쿄 아오야마 SHARE GREEN MINAMI AOYAMA",
+    "googlePlace": "Share Green Minami Aoyama",
+    "describe": "카페·플라워숍·넓은 잔디 정원이 있는 복합문화공간",
+    "realname": "확실함",
+    "emozi": "🌿☕️🌼",
+    "location": {
+      "lat": 35.6688258,
+      "lng": 139.7247161
+    },
+    "id": "ChIJM2L_HKaLGGARiOXFtfKKMEM",
+      "category": "sightseeing"
+  },
+  {
+    "startTime": "722.972",
+    "endTime": "775.858",
+    "place": "도쿄 시부야 이마리",
+    "googlePlace": "Imari Shibuya",
+    "describe": "시부야의 오코노미야키 전문점. 오마카세 코스 제공, 좌석 협소",
+    "realname": "확실함",
+    "emozi": "🥢🥞🔥",
+    "location": {
+      "lat": 35.6562668,
+      "lng": 139.7009788
+    },
+    "id": "ChIJMTLcTZuLGGAR7-P_xIvN_IY",
+     "category": "food"
+  },
+  {
+    "startTime": "806.305",
+    "endTime": "822.154",
+    "place": "도쿄 요요기 Camelback Sandwich & Espresso",
+    "googlePlace": "CAMELBACK sandwich & espresso",
+    "describe": "요요기공원 인근 인기 샌드위치·에스프레소 바. 굿즈 판매",
+    "realname": "확실함",
+    "emozi": "🥪☕️🧡",
+    "location": {
+      "lat": 35.665578,
+      "lng": 139.6922285
+    },
+    "id": "ChIJx4PWoLKMGGARLkqKeMuy6h8",
+     "category": "food"
+  },
+  {
+    "startTime": "824.49",
+    "endTime": "840.51",
+    "place": "후글렌",
+    "googlePlace": "Fuglen Tokyo",
+    "describe": "카멜백 샌드위치 옆에 위치한 카페",
+    "IsRealName": "확실함",
+    "location": {
+      "lat": 35.6666181,
+      "lng": 139.6923999
+    },
+    "id": " ChIJrWB6lbKMGGARp0QB0mMSNe4",
+    "emozi": "☕ 🪑",
+     "category": "food"
+  },
+  {
+    "startTime": "850.641",
+    "endTime": "910.367",
+    "place": "도쿄 하라주쿠 요요기공원",
+    "googlePlace": "Yoyogi Park",
+    "describe": "도쿄 중심 대형 공원. 피크닉, 그늘/잔디존 이용",
+    "realname": "확실함",
+    "emozi": "🌳🧺☀️",
+    "location": {
+      "lat": 35.6700649,
+      "lng": 139.6949656
+    },
+    "id": "ChIJMwpiebSMGGARPr_454zHvDQ",
+    
+   "category": "sightseeing"
+  },
+  {
+    "startTime": "1070.903",
+    "endTime": "1086.293",
+    "place": "도쿄 우에노 국립서양미술관",
+    "googlePlace": "The National Museum of Western Art",
+    "describe": "우에노공원 내 미술관. 방문일 휴관",
+    "realname": "확실함",
+    "emozi": "🏛️🎨🚫",
+    "location": {
+      "lat": 35.7153869,
+      "lng": 139.7758138
+    },
+    "id": "ChIJf8xB-pyOGGARizzhlNTcI7s",
+      "category": "sightseeing"
+  },
+  {
+    "startTime": "1092.591",
+    "endTime": "1210.334",
+    "place": "도쿄 우에노 도쿄도美術館（東京都美術館）",
+    "googlePlace": "Tokyo Metropolitan Art Museum",
+    "describe": "우에노공원 내 대형 미술관. 현장표 구매 대기, 독특한 건물과 계단, 일부 촬영 가능 전시",
+    "realname": "확실함",
+    "emozi": "🖼️🏛️🌳",
+    "location": {
+      "lat": 35.7172113,
+      "lng": 139.7729387
+    },
+    "id": "ChIJb_o7HiiMGGARUKu8uO7fGIQ",
+      "category": "sightseeing"
+  },
+  {
+    "startTime": "1210.334",
+    "endTime": "1242.199",
+    "place": "도쿄 우에노 불명 카페 (연꽃정원 근처, 흡연 가능·웨이팅)",
+    "googlePlace": "도쿄 우에노 딘앤델루카 우에노점",
+    "describe": "우에노공원 연꽃 연못 인근 카페 시도(흡연 가능 안내, 대기 길어 입장 실패)",
+    "realname": "의심됨",
+    "emozi": "☕️🚬⏳",
+    "location": {
+      "lat": 35.7087296,
+      "lng": 139.7741538
+    },
+    "id": "ChIJs-soi56OGGARvvSyPcqIups",
+     "category": "food"
+  },
+  {
+    "startTime": "1242.199",
+    "endTime": "1282.864",
+    "place": "도쿄 우에노 DEAN & DELUCA 카페",
+    "googlePlace": "DEAN & DELUCA Cafe parco_ya Ueno",
+    "describe": "체인 카페, 쾌적한 좌석과 디저트가 인상적. 브런치/디저트 즐김",
+    "realname": "의심됨",
+    "emozi": "🍰☕️🥐",
+    "location": {
+      "lat": 35.70728875421766,
+      "lng": 139.77335343637907
+    },
+    "id": "ChIJh7iJ_R-MGGARk32pRTmYtIM",
+     "category": "food"
+  },
+  {
+    "startTime": "1282.87",
+    "endTime": "1330.37",
+    "place": "아키하바라",
+    "googlePlace": "Akihabara",
+    "describe": "애니, 만화, 전자기기의 성지",
+    "IsRealName": "확실함",
+    "location": {
+      "lat": 35.6996473,
+      "lng": 139.7713703
+    },
+    "id": "ChIJzdWdgh2MGGARh4kg2pVZL3c",
+    "emozi": "🎮 🖥️ 📀",
+      "category": "shopping"
+  },
+  {
+    "startTime": "1332.247",
+    "endTime": "1445.36",
+    "place": "도쿄 아사쿠사 산자마에 미소주",
+    "googlePlace": "MISOJYU",
+    "describe": "아사쿠사 센소지 근처 된장국 전문점. 대기 후 입장, 소금밥과 반찬 주문",
+    "realname": "확실함",
+    "emozi": "🍚🍲🥢",
+    "location": {
+      "lat": 35.7116123,
+      "lng": 139.7937274
+    },
+    "id": "ChIJUcu5UUCPGGARC_4_okxXI8w",
+      "category": "food"
+  },
+  {
+    "startTime": "1437.477",
+    "endTime": "1477.893",
+    "place": "도쿄 아사쿠사 산리오 기프트 게이트 아사쿠사점",
+    "googlePlace": "Sanrio Gift Gate Asakusa",
+    "describe": "미소쥬 맞은편 캐릭터 샵. 헬로키티 50주년 굿즈 구경",
+    "realname": "의심됨",
+    "emozi": "🎀🐱🛍️",
+    "location": {
+      "lat": 35.71170004711709,
+      "lng": 139.79499909774626
+    },
+    "id": "ChIJ0zfByHGPGGARHC7LMPjhGX0",
+      "category": "shopping"
+  },
+  {
+    "startTime": "1516.89",
+    "endTime": "1560.976",
+    "place": "도쿄 아사쿠사 카파바시도구가이",
+    "googlePlace": "Kappabashi Dougu Street",
+    "describe": "주방도구 거리. 음식 모형, 램프, 주방용품 상점들 둘러봄",
+    "realname": "확실함",
+    "emozi": "🍳🔪🧂",
+    "location": {
+      "lat": 35.7105754,
+      "lng": 139.7881209
+    },
+    "id": "ChIJXYV-6JWOGGAR85vIZbM1RCE",
+      "category": "shopping"
+  },
+  {
+    "startTime": "1589.504",
+    "endTime": "1614.988",
+    "place": "도쿄 오차노미즈 JR 오차노미즈역 철교 포인트",
+    "googlePlace": "Ochanomizu Station",
+    "describe": "스즈메의 문단속 촬영 성지 느낌의 철교 터널뷰. 열차 동시 통과 감상",
+    "realname": "확실함",
+    "emozi": "🚆📸🌉",
+    "location": {
+      "lat": 35.6997175,
+      "lng": 139.7644404
+    },
+    "id": "ChIJebf-6hmMGGARH8tTXnEen_Y",
+      "category": "sightseeing"
+  },
+  {
+    "startTime": "1676.049",
+    "endTime": "1705.161",
+    "place": "도쿄 키치조지 Flamingo (빈티지 숍)",
+    "googlePlace": "Flamingo Kichijoji",
+    "describe": "키치조지의 인기 빈티지샵. 깔끔한 디스플레이와 양호한 컨디션",
+    "realname": "확실함",
+    "emozi": "👗🧥🛍️",
+    "location": {
+      "lat": 35.7007476,
+      "lng": 139.5784292
+    },
+    "id": "ChIJE8JmjjfuGGAR5-Z-dr7ba0o",
+      "category": "shopping"
+  },
+  {
+    "startTime": "1953.66",
+    "endTime": "2006.462",
+    "place": "도쿄 키치조지 구피(빈티지 스웨트/맨투맨)",
+    "googlePlace": "NEW YORK JOE EXCHANGE",
+    "describe": "키치조지 공원 입구 인근 빈티지 거리의 캐주얼 의류숍. 합리적 가격대",
+    "realname": "의심됨",
+    "location": {
+      "lat": 35.66621362458917,
+      "lng": 139.67458605465998
+    },
+    "id": "ChIJI_aZ32rzGGARhjQlOeV4oB0",
+    "emozi": "👕🧢🛒",
+      "category": "shopping"
+  },
+  {
+    "startTime": "2009.674",
+    "endTime": "2086.0",
+    "place": "도쿄 키치조지 ひき肉と米 (히키니쿠토 코메)",
+    "googlePlace": "Hikiniku to Kome Kichijoji",
+    "describe": "숯불 함바그 정식 전문점. 하이볼/맥주와 곁들임, 가니쉬·계란·된장국 포함",
+    "realname": "확실함",
+    "emozi": "🍖🍚🥢",
+    "location": {
+      "lat": 35.7058316,
+      "lng": 139.5777871
+    },
+    "id": "ChIJqdnczB3vGGARH6a7Qauu5CY",
+      "category": "food"
+  },
+  {
+    "startTime": "2103.518",
+    "endTime": "2111.275",
+    "place": "도쿄 불명 앙리 샤르팡티에 매장",
+    "googlePlace": "도쿄 긴자 앙리 샤르팡티에 긴자 메종",
+    "describe": "귀가길 디저트 테이크아웃. 바께트류/구움과자 전문 프랑스 디저트 브랜드",
+    "realname": "의심됨",
+    "emozi": "🍪🍰🎁",
+    "location": {
+      "lat": 35.6733711,
+      "lng": 139.7682337
+    },
+    "id": "ChIJU4dl_OOLGGAR4K-HHbIdWXY",
+      "category": "food"
+  }
+]

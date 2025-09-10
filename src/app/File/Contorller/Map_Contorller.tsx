@@ -2,11 +2,17 @@ import React from 'react'
 
 import { MdOutlineCheckCircle } from "react-icons/md";
 
-import { MdOutlineCancel } from "react-icons/md";
+
+
+
+
 
 import { useDispatch } from 'react-redux';
 import { change_selected_mark , change_check_Check,clearDirection} from '@/app/Redux/store';
-import { LuMapPinPlus } from 'react-icons/lu';
+
+
+
+
 import { useSelector } from 'react-redux';
 
 const colors = ["bg-red-300", "bg-orange-300", "bg-yellow-300","bg-green-300"];
@@ -41,12 +47,16 @@ export default function Map_Contorller() {
 
 
   return (
-     <div className="w-12 p-2 h-auto min-h-[150px] max-h-[200px]  
-                bg-white rounded-lg flex flex-col justify-around items-center ">
+     <div    className={`
+    w-12 p-2 flex-none
+    ${check_check_confirm ? "h-50" : "h-20"}
+    bg-white rounded-lg flex flex-col justify-around items-center
+  `}
+  >
    
      <MdOutlineCheckCircle  onClick={()=> click_method("Check")} className={` ${
     check_check_confirm ? "text-[#4DD599]" : "text-gray-500"
-  } text-lg hover:text-[var(--purple)]`} />
+  } text-lg hover:text-[#4DD599]`} />
 
 {check_check_confirm && colors.map((el, index) => (
   <button 
