@@ -33,7 +33,7 @@ const send_text= async function(text:any){
 
 
   return (
- <div className="w-full flex-[1.4] gap-x-4 flex rounded-lg   h-40    ">
+ <div className="w-full flex-[1.3] gap-x-4 flex rounded-lg   h-40    ">
        <Generate send_text={send_text}></Generate>
       <div className="flex-[4] bg-white rounded-xl flex gap-4 p-4 flex-row overflow-x-auto  ">
         

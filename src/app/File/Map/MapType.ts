@@ -12,7 +12,9 @@ export type Place ={
   id:string,
   index?:number,
   color?:string,
-  emozi?:string
+  emozi?:string,
+  category?:string,
+  image?: string[] | null;
 }
 
 

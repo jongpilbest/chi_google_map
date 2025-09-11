@@ -7,11 +7,12 @@ type HistoryListProps = {
   emozi: string | any;
   index: number;
   timeline: number |any;
+  image: string[] | any;
 };
 
+import Image from 'next/image';
 
-
-export default function History_list({nzmd,timeline ,emozi,index}:HistoryListProps) {
+export default function History_list({nzmd,timeline ,emozi,image}:HistoryListProps) {
 
  const dispatch = useDispatch();
  
@@ -25,21 +26,35 @@ export default function History_list({nzmd,timeline ,emozi,index}:HistoryListPro
 
   return (
  <div 
-  onClick={() => change_video(timeline)}
-  className="flex-1 h-[80%] bg-gray-100 mx-1 px-5 flex gap-5 items-center justify-between"
->
-  {/* index 번호 */}
-  <p className="text-xs">{index}</p>
+    onClick={() => change_video(timeline)}
+    className="relative group flex-1 h-[80%] bg-gray-100 mx-1 px-3 flex gap-5 items-center justify-between"
+  >
+    {/* hover 하면 이미지가 absolute로 나타남 */}
+    <div className="absolute  h-[100%] w-full hidden group-hover:block ">
+    <Image 
+        alt="리스트의 이미지"
+        src={image[0]} 
+        width={140}
+        height={20}
+        className="rounded-md shadow-lg"
+      />
+    </div>
 
-  {/* 텍스트 + 이모지 한 줄 */}
-  <p className="text-xs font-bold font-sans  whitespace-nowrap">
-    {nzmd}
-  </p>
-  <p className=' whitespace-nowrap text-xl'> {emozi}</p>
- 
- 
-</div>
+    {/* 텍스트 + 이모지 한 줄 */}
+    <p className="text-xs font-bold font-sans whitespace-nowrap">
+      {nzmd}
+    </p>
+    <p className="whitespace-nowrap text-lg">{emozi}</p>
+  </div>
 
 
   )
 }
+
+//<Image 
+//        alt="리스트의 이미지"
+//        src={image[0]} 
+//        width={120} 
+//        height={80}
+//        className="rounded-md shadow-lg"
+//      />

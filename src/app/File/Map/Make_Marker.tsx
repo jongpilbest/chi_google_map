@@ -8,15 +8,35 @@ useAdvancedMarkerRef,
   Pin
 } from "@vis.gl/react-google-maps";
 
+//음식
+import './custom-advanced-marker.css';
+import { PiBowlFoodFill } from "react-icons/pi";
+
+//쇼핑
+import { PiShoppingCartFill } from "react-icons/pi";
+
+
+//볼거리
+
+import { PiMapPinLineFill } from "react-icons/pi";
+
 
 import {Place} from './MapType'
 type place_plus= Place&{
   opacity:number
 }
-const colors = ["#f87171", "#fb923c", "#facc15", "#4ade80"];
+const colors = ["bg-[#f87171]", "bg-[#fb923c]", "bg-[#facc15]", "bg-[#4ade80]"];
 import Map_viewer from './Map_viewer';
 
-export function Make_Marker({ location,id,describe,index,color,opacity }: place_plus) {
+function Choose_mark(category_name:string){
+  if(category_name=="shooping") return <PiShoppingCartFill></PiShoppingCartFill>
+  else if (category_name=="food") return <PiBowlFoodFill></PiBowlFoodFill>
+  else return <PiMapPinLineFill></PiMapPinLineFill>
+}
+
+
+
+export function Make_Marker({ location,id,describe,category,color,opacity }: place_plus) {
     const [markerRef, marker] = useAdvancedMarkerRef();
 
    const [selet_mark, setselected_mark] = useState<boolean>(false);
@@ -47,14 +67,23 @@ export function Make_Marker({ location,id,describe,index,color,opacity }: place_
          style={{ opacity:indexWithId>=0?1 :opacity }}
       onClick={handleMarkerClick}  
         >
-          <Pin
-    background={indexWithId>=0?colors[indexWithId]:color}
-    glyphColor="#FFFFFF"
-    borderColor="#FFFFFF"
-    scale={indexWithId>=0?0.8:0.7}
+          
+   <div className={`flex flex-col items-center group cursor-pointer radius
+   
+    `}>
+    {/* 동그라미 부분 */}
+    <div className="flex items-center justify-center w-6 h-6 rounded-full bg-white text-white shadow-md transition-transform group-hover:scale-110">
+      <div className={`flex   ${indexWithId>=0?colors[indexWithId]:`bg-[${color}]`}  w-5  h-5 items-center justify-center rounded-3xl `}>
+       
+    {Choose_mark(category)}
+        </div>
+  
+    </div>
 
-    glyph={index?.toString()}
-  />
+
+ 
+  </div>
+
   </AdvancedMarker>
 
 

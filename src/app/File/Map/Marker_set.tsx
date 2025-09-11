@@ -30,6 +30,7 @@ export default function Marker_set({ comment }: any) {
           index={index}
           id={el.id}
           location={el.location}
+          category={el.category}
           color={colorCode[0]}
           opacity={colorCode[1]}
         />
