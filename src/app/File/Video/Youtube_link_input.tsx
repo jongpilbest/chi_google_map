@@ -14,71 +14,71 @@ export function extractVideoId(url: string): string | null {
 export default function Youtube_link_input() {
   const dispatch = useDispatch();
   const url_youtube = useRef<HTMLInputElement | null>(null);
- const handleSubmit = async () => {
-    if (!url_youtube.current) return;
-
-    const link = url_youtube.current.value;
-
-    if (!check_list.includes(link)) {
-      check_list.push(link);
-      dispatch(url_plus(link));
-
-      const eventsource = new EventSource(
-        `http://localhost:8000/script?video_url=${encodeURIComponent(link)}`
-      );
-
-      eventsource.onmessage = (event) => {
-        const comment_data = JSON.parse(event.data);
-
-        dispatch(
-          data_Store_change({
-            index: 2,
-            data: comment_data,
-          })
-        );
-      };
-
-      eventsource.onerror = (error) => {
-        eventsource.close();
-      };
-    } else {
-      console.log("이미 추가된 링크입니다.");
-    }
-  };
-
-//  const handleSubmit = async () => {
+// const handleSubmit = async () => {
 //    if (!url_youtube.current) return;
 //
-//    const link = extractVideoId(url_youtube.current.value);
+//    const link = url_youtube.current.value;
 //
-//    if (link&& !check_list.includes(link)) {
+//    if (!check_list.includes(link)) {
 //      check_list.push(link);
 //      dispatch(url_plus(link));
+//
+//      const eventsource = new EventSource(
+//        `http://localhost:8000/script?video_url=${encodeURIComponent(link)}`
+//      );
+//
+//      eventsource.onmessage = (event) => {
+//        const comment_data = JSON.parse(event.data);
+//
+//        dispatch(
+//          data_Store_change({
+//            index: 2,
+//            data: comment_data,
+//          })
+//        );
+//      };
+//
+//      eventsource.onerror = (error) => {
+//        eventsource.close();
+//      };
+//    } else {
+//      console.log("이미 추가된 링크입니다.");
+//    }
+//  };
+
+  const handleSubmit = async () => {
+    if (!url_youtube.current) return;
+
+    const link = extractVideoId(url_youtube.current.value);
+
+    if (link&& !check_list.includes(link)) {
+      check_list.push(link);
+      dispatch(url_plus(link));
 
        
   
 
       // 여기 배포 할때만
 
-   //     try {
-   //       const res = await fetch(`/Data/${link}/summary.json`);
-   //       const comment_data = await res.json(); // 바로 JSON 파싱
-   // 
-   //       dispatch(
-   //         data_Store_change({
-   //           index: 2,
-   //           data: comment_data,
-   //         })
-   //       );
-   //    } catch (err) {
-   //   console.error("❌ JSON 불러오기 실패:", err);
-   //     }
+     try {
+       const res = await fetch(`/Data/${link}/summary.json`);
+       const comment_data = await res.json(); // 바로 JSON 파싱
+ 
+       dispatch(
+         data_Store_change({
+           index: 2,
+           data: comment_data,
+         })
+       );
+    } catch (err) {
+   console.error("❌ JSON 불러오기 실패:", err);
+     }
     
       
- //   } else {
- //     console.log("이미 추가된 링크입니다.");
- //   }
- // };
+    } else {
+      console.log("이미 추가된 링크입니다.");
+    }
+  };
 
   return (
     <div className="flex items-center rounded-lg">
