@@ -1,14 +1,6 @@
 "use client";
 
 
-import { useEffect, useState, useRef, useCallback } from "react";
-const trees = [
-  { name: "Oak, English", lat: 43.64, lng: -79.41, key: "A" },
-  { name: "Maple", lat: 43.65, lng: -79.42, key: "B" },
-  // ...더 많은 나무들
-];
-// [{ name: "Oak, English", lat: 43.64, lng: -79.41, key: "ABCD" }]
-
 import {store } from './Redux/store'
 import { Provider } from 'react-redux';
 
@@ -55,11 +47,3 @@ const queryClient = new QueryClient();
 </Provider>
   );
 }
-
-
-function addZoneLayer ()  {
-  //if(!map.getMapCapabilities().isDataDrivenStylingAvailable)return;
-
-
-};
-
