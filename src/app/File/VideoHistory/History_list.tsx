@@ -31,13 +31,7 @@ export default function History_list({nzmd,timeline ,emozi,image}:HistoryListPro
   >
     {/* hover 하면 이미지가 absolute로 나타남 */}
     <div className="absolute  h-[100%] w-full hidden group-hover:block ">
-    <Image 
-        alt="리스트의 이미지"
-        src={image[0]} 
-        width={140}
-        height={20}
-        className="rounded-md shadow-lg"
-      />
+   
     </div>
 
     {/* 텍스트 + 이모지 한 줄 */}
@@ -56,5 +50,15 @@ export default function History_list({nzmd,timeline ,emozi,image}:HistoryListPro
 //        src={image[0]} 
 //        width={120} 
 //        height={80}
+//        className="rounded-md shadow-lg"
+//      />
+
+
+
+// <Image 
+//        alt="리스트의 이미지"
+//        src={image[0]} 
+//        width={140}
+//        height={20}
 //        className="rounded-md shadow-lg"
 //      />

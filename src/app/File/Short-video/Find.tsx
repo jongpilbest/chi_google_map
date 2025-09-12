@@ -18,10 +18,25 @@ const[store_list,setstore_list]=useState([
   ])
 
     const mutation = useMutation({
-    mutationFn: (text: any) =>
-      http_connect("http://localhost:8000/find_location", text.value, "POST"),
-  });
+  mutationFn: async (text: any) => {
+    const res = await fetch("/api/find_location", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ video_url: text.value }),
+    });
 
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+
+    // 🔥 여기서 JSON 변환
+    const data = await res.json();
+    return data;
+  },
+});
+
+
+  console.log(mutation,'데이터 뭐고 ')
 
 
 const send_text= async function(text:any){
@@ -35,13 +50,14 @@ const send_text= async function(text:any){
   return (
  <div className="w-full flex-[1.3] gap-x-4 flex rounded-lg   h-40    ">
        <Generate send_text={send_text}></Generate>
-      <div className="flex-[4] bg-white rounded-xl flex gap-4 p-4 flex-row overflow-x-auto  ">
+      <div className="flex-[4] bg-white rounded-xl flex gap-4 p-3 flex-row overflow-x-auto  ">
         
               {mutation.isPending && <AiOutlineLoading3Quarters className="animate-spin text-2xl text-[#A29BFE]"/>}
 
         { mutation.isSuccess&&
-          Array.isArray(mutation.data)&&mutation.data.length>0 && mutation.data.map((el:any)=><Find_inner 
+          Array.isArray(mutation.data)&&mutation.data.length>0 && mutation.data.map((el,index:any)=><Find_inner 
           key={el.googlePlace}
+          index={index}
           store={el}></Find_inner>)
         }
          

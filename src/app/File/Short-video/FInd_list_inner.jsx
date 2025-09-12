@@ -8,7 +8,7 @@ import { IoSearchSharp } from "react-icons/io5";
 import { useDispatch } from 'react-redux'
 import {filter_data_location} from '../../Redux/store'
 
-export default function FInd_list_inner({store,key}) {
+export default function FInd_list_inner({store,key,index}) {
 const dispatch= useDispatch()
 
 // onclick 하면 줌 그쪽으로 가게 해봐 
@@ -25,7 +25,7 @@ const google_map_zoom_in= function(){
 
   
         <div 
-        key={key}
+          key={`${store.googleplace ?? "no-place"}-${index}`}
         className=' group relative w-[350px]  shrink-0 h-full bg-gray-100  gap-2  '>
                  
                 <div className="absolute
