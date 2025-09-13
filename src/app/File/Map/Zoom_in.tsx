@@ -20,7 +20,7 @@ const place= useSelector((state: any) => state.data_store.zoom_in_place);
   // adjust the viewport of the map when the place is changed
   useEffect(() => {
     if (!map || !place) return;
-  console.log(place)
+  
 if (place!=null&&place[0].location) {
   const bounds = new google.maps.LatLngBounds();
   bounds.extend(place[0].location);

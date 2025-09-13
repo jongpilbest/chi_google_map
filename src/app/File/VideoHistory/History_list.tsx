@@ -27,11 +27,18 @@ export default function History_list({nzmd,timeline ,emozi,image}:HistoryListPro
   return (
  <div 
     onClick={() => change_video(timeline)}
-    className="relative group flex-1 h-[80%] bg-gray-100 mx-1 px-3 flex gap-5 items-center justify-between"
+    className="relative group flex-1 h-[80%] bg-gray-100 mx-1 px-3   flex gap-5 items-center justify-between"
   >
     {/* hover 하면 이미지가 absolute로 나타남 */}
     <div className="absolute  h-[100%] w-full hidden group-hover:block ">
    
+      <Image 
+        alt="리스트의 이미지"
+        src={image} 
+        width={140}
+        height={20}
+        className="rounded-md shadow-lg"
+      />
     </div>
 
     {/* 텍스트 + 이모지 한 줄 */}

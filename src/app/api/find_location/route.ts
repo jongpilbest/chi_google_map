@@ -12,9 +12,10 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const question = body.video_url;
+    const country= body.country
 
     // RAG 기반 프롬프트 생성 (Python `build_prompt_place_text`에 해당)
-    const answer = await buildPromptPlaceText(question);
+    const answer = await buildPromptPlaceText(question,country);
 
     const resp = await client.chat.completions.create({
       model: "gpt-5",
@@ -29,7 +30,7 @@ export async function POST(req: Request) {
     }
 
     const parsed = JSON.parse(content);
-    console.log(parsed.results,'결과좀')
+
     return NextResponse.json(parsed.results);
   } catch (e: any) {
     return NextResponse.json({ error: e.message }, { status: 500 });

@@ -1,95 +1,5 @@
 [
   {
-    "startTime": "104.56",
-    "endTime": "120.0",
-    "place": "뉴욕 맨해튼 록펠러 센터",
-    "googlePlace": "Rockefeller Center",
-    "describe": "스케이트 링크와 크리스마스 트리로 유명한 장소",
-    "realname": "확실함",
-    "emozi": "⛸️🎄",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7587402,
-      "lng": -73.9786736
-    },
-    "id": "ChIJ9U1mz_5YwokRosza1aAk0jM"
-  },
-  {
-    "startTime": "122.0",
-    "endTime": "136.16",
-    "place": "뉴욕 맨해튼 브로드웨이",
-    "googlePlace": "Broadway",
-    "describe": "세계적인 공연이 열리는 극장 지구",
-    "realname": "확실함",
-    "emozi": "🎭🎶",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7593724,
-      "lng": -73.9851694
-    },
-    "id": "ChIJOSMjjVlWwokRnpaTPyaFi9o"
-  },
-  {
-    "startTime": "138.56",
-    "endTime": "151.92",
-    "place": "뉴욕 맨해튼 메트로폴리탄 미술관",
-    "googlePlace": "The Metropolitan Museum of Art",
-    "describe": "세계적인 예술 작품을 소장한 대형 미술관",
-    "realname": "확실함",
-    "emozi": "🖼️🏛️",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7794366,
-      "lng": -73.963244
-    },
-    "id": "ChIJb8Jg9pZYwokR-qHGtvSkLzs"
-  },
-  {
-    "startTime": "154.64",
-    "endTime": "169.599",
-    "place": "뉴욕 맨해튼 자유의 여신상",
-    "googlePlace": "Statue of Liberty",
-    "describe": "미국의 상징적인 조각상, 리버티 아일랜드에 위치",
-    "realname": "확실함",
-    "emozi": "🗽🚢",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.6892494,
-      "lng": -74.04450039999999
-    },
-    "id": "ChIJPTacEpBQwokRKwIlDXelxkA"
-  },
-  {
-    "startTime": "176.72",
-    "endTime": "191.92",
-    "place": "뉴욕 맨해튼 원 월드 전망대",
-    "googlePlace": "One World Observatory",
-    "describe": "9/11 메모리얼과 함께 있는 전망대",
-    "realname": "확실함",
-    "emozi": "🌆🕊️",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7130062,
-      "lng": -74.013173
-    },
-    "id": "ChIJTWE_0BtawokRVJNGH5RS448"
-  },
-  {
-    "startTime": "194.959",
-    "endTime": "206.239",
-    "place": "뉴욕 맨해튼 월 스트리트",
-    "googlePlace": "Wall Street",
-    "describe": "금융의 중심지, 유명한 차징 불 동상",
-    "realname": "확실함",
-    "emozi": "💹🐂",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7060675,
-      "lng": -74.0089046
-    },
-    "id": "ChIJq8ztWxZawokRAa61A_Ddsiw"
-  },
-  {
     "startTime": "21.6",
     "endTime": "46.399",
     "place": "뉴욕 맨해튼 타임스퀘어",
@@ -102,352 +12,8 @@
       "lat": 40.7579747,
       "lng": -73.9855426
     },
-    "id": "ChIJmQJIxlVYwokRLgeuocVOGVU"
-  },
-  {
-    "startTime": "221.84",
-    "endTime": "231.28",
-    "place": "뉴욕 맨해튼 배터리 파크",
-    "googlePlace": "Battery Park",
-    "describe": "항구를 내려다보는 조용한 공원",
-    "realname": "확실함",
-    "emozi": "🌳🌅",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.70293119999999,
-      "lng": -74.0153603
-    },
-    "id": "ChIJraKL-BJawokREpxDmF5GcL4"
-  },
-  {
-    "startTime": "233.36",
-    "endTime": "247.92",
-    "place": "뉴욕 브루클린 브루클린 브리지",
-    "googlePlace": "Brooklyn Bridge",
-    "describe": "맨해튼과 브루클린을 연결하는 상징적인 다리",
-    "realname": "확실함",
-    "emozi": "🌉🚶‍♂️",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7060855,
-      "lng": -73.9968643
-    },
-    "id": "ChIJK3vOQyNawokRXEa9errdJiU"
-  },
-  {
-    "startTime": "252.0",
-    "endTime": "264.4",
-    "place": "뉴욕 브루클린 덤보",
-    "googlePlace": "DUMBO",
-    "describe": "트렌디한 갤러리와 카페가 있는 지역",
-    "realname": "확실함",
-    "emozi": "📸☕",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7033164,
-      "lng": -73.9881451
-    },
-    "id": "ChIJ-7A-bzFawokRw8mvHCzZsc4"
-  },
-  {
-    "startTime": "266.4",
-    "endTime": "275.36",
-    "place": "뉴욕 브루클린 브루클린 브리지 파크",
-    "googlePlace": "Brooklyn Bridge Park",
-    "describe": "이스트 강을 따라 위치한 공원, 맨해튼 전망",
-    "realname": "확실함",
-    "emozi": "🌳🚴‍♀️",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7022422,
-      "lng": -73.9958601
-    },
-    "id": "ChIJjaFpo0ZawokRBcOFUZ13CaE"
-  },
-  {
-    "startTime": "279.12",
-    "endTime": "286.8",
-    "place": "뉴욕 브루클린 Williamsburg",
-    "googlePlace": "Williamsburg",
-    "describe": "빈티지 숍, 스트리트 아트, 인디 음악 공연장, 트렌디한 카페가 있는 지역",
-    "realname": "확실함",
-    "emozi": "🛍️🎨🎶",
-    "category": "sightseeing",
-    "location": {
-      "lat": 37.2757305,
-      "lng": -76.7098049
-    },
-    "id": "ChIJG6qVRAqJsIkRqg4WXhcwS8E"
-  },
-  {
-    "startTime": "289.12",
-    "endTime": "294.32",
-    "place": "뉴욕 브루클린 Prospect Park",
-    "googlePlace": "Prospect Park",
-    "describe": "브루클린의 센트럴 파크, 자연 경관이 아름다운 공원",
-    "realname": "확실함",
-    "emozi": "🌳🌿🏞️",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.6602037,
-      "lng": -73.9689558
-    },
-    "id": "ChIJQwRohxBbwokRmHrfAMb3ixc"
-  },
-  {
-    "startTime": "296.32",
-    "endTime": "301.36",
-    "place": "뉴욕 브루클린 Brooklyn Museum",
-    "googlePlace": "Brooklyn Museum",
-    "describe": "다양하고 인상적인 예술과 역사 컬렉션을 소장한 박물관",
-    "realname": "확실함",
-    "emozi": "🖼️🏛️🎨",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.6712062,
-      "lng": -73.9636306
-    },
-    "id": "ChIJyTmcRApbwokR-oXJRqpVI8Y"
-  },
-  {
-    "startTime": "302.8",
-    "endTime": "311.12",
-    "place": "뉴욕 퀸즈 Flushing Meadows Corona Park",
-    "googlePlace": "Flushing Meadows Corona Park",
-    "describe": "아이코닉한 유니스피어가 있는 대규모 공원",
-    "realname": "확실함",
-    "emozi": "🌐🏞️🎡",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7400625,
-      "lng": -73.8406875
-    },
-    "id": "ChIJ-2Yhwn9gwokR4Wwy6GgsPRM"
-  },
-  {
-    "startTime": "311.12",
-    "endTime": "315.36",
-    "place": "뉴욕 퀸즈 Queen's Museum",
-    "googlePlace": "Queens Museum",
-    "describe": "세계 박람회를 개최했던 장소, 다양한 전시가 있는 박물관",
-    "realname": "확실함",
-    "emozi": "🏛️🖼️🌍",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.745914,
-      "lng": -73.8467247
-    },
-    "id": "ChIJmWMJBtBfwokR5qK7waLcgAM"
-  },
-  {
-    "startTime": "315.36",
-    "endTime": "317.919",
-    "place": "뉴욕 퀸즈 New York Hall of Science",
-    "googlePlace": "New York Hall of Science",
-    "describe": "과학과 기술을 체험할 수 있는 박물관",
-    "realname": "확실함",
-    "emozi": "🔬🧪🧬",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7472583,
-      "lng": -73.8516925
-    },
-    "id": "ChIJG2aZ1wT2wokRzz-VKP0lkJg"
-  },
-  {
-    "startTime": "317.919",
-    "endTime": "320.88",
-    "place": "뉴욕 퀸즈 USA Billy Jean King National Tennis Center",
-    "googlePlace": "USTA Billie Jean King National Tennis Center",
-    "describe": "미국 오픈 테니스 대회가 열리는 장소",
-    "realname": "확실함",
-    "emozi": "🎾🏟️🇺🇸",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7499978,
-      "lng": -73.8469958
-    },
-    "id": "ChIJA77QN9lfwokRRmMsefeNEbA"
-  },
-  {
-    "startTime": "320.88",
-    "endTime": "328.639",
-    "place": "뉴욕 아스토리아 Museum of the Moving Image",
-    "googlePlace": "Museum of the Moving Image",
-    "describe": "영화와 TV의 역사와 기술을 다루는 박물관",
-    "realname": "확실함",
-    "emozi": "🎥📺🎞️",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7563454,
-      "lng": -73.9239496
-    },
-    "id": "ChIJAx_yUCVfwokRQ2xEBIWV21g"
-  },
-  {
-    "startTime": "330.72",
-    "endTime": "340.08",
-    "place": "뉴욕 잭슨 하이츠",
-    "googlePlace": "Jackson Heights",
-    "describe": "다양한 문화와 음식을 경험할 수 있는 지역",
-    "realname": "확실함",
-    "emozi": "🍛🌮🍜",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7556818,
-      "lng": -73.8830701
-    },
-    "id": "ChIJK2m0kaFfwokRSjJ-sU_mc-U"
-  },
-  {
-    "startTime": "342.72",
-    "endTime": "350.32",
-    "place": "뉴욕 브롱스 Yankee Stadium",
-    "googlePlace": "Yankee Stadium",
-    "describe": "뉴욕 양키스의 홈구장, 야구 경기를 관람할 수 있는 장소",
-    "realname": "확실함",
-    "emozi": "⚾🏟️🗽",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.8296426,
-      "lng": -73.9261745
-    },
-    "id": "ChIJcWnnWiz0wokRCB6aVdnDQEk"
-  },
-  {
-    "startTime": "356.08",
-    "endTime": "361.039",
-    "place": "뉴욕 브롱스 Bronx Zoo",
-    "googlePlace": "Bronx Zoo",
-    "describe": "세계에서 가장 큰 동물원 중 하나, 자연 서식지를 재현한 동물원",
-    "realname": "확실함",
-    "emozi": "🦁🐒🐘",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.85014150000001,
-      "lng": -73.87672169999999
-    },
-    "id": "ChIJi9JqUYP0wokRLhCVlxy0bgU"
-  },
-  {
-    "startTime": "365.52",
-    "endTime": "374.8",
-    "place": "뉴욕 브롱스 New York Botanical Garden",
-    "googlePlace": "New York Botanical Garden",
-    "describe": "계절별 전시와 아름다운 경관을 자랑하는 식물원",
-    "realname": "확실함",
-    "emozi": "🌺🌼🌿",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.8622871,
-      "lng": -73.8773946
-    },
-    "id": "ChIJyRUHuHzzwokRPxVBNKhcP9c"
-  },
-  {
-    "startTime": "376.479",
-    "endTime": "387.28",
-    "place": "뉴욕 브롱스 Arthur Avenue",
-    "googlePlace": "Arthur Avenue",
-    "describe": "뉴욕의 진정한 리틀 이탈리아, 이탈리아 시장과 레스토랑",
-    "realname": "확실함",
-    "emozi": "🍝🍕🍷",
-    "category": "food",
-    "location": {
-      "lat": 40.8533749,
-      "lng": -73.8894639
-    },
-    "id": "ChIJH_JJSn30wokRA9NOVGocUcI"
-  },
-  {
-    "startTime": "389.12",
-    "endTime": "405.28",
-    "place": "뉴욕 첼시 The Highline",
-    "googlePlace": "The High Line",
-    "describe": "역사적인 화물 철도 노선 위에 지어진 공원, 정원과 공공 예술이 있는 산책로",
-    "realname": "확실함",
-    "emozi": "🌿🚶‍♂️🖼️",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7479925,
-      "lng": -74.0047649
-    },
-    "id": "ChIJ5bQPhMdZwokRkTwKhVxhP1g"
-  },
-  {
-    "startTime": "419.28",
-    "endTime": "428.96",
-    "place": "뉴욕 첼시 Chelsea Market",
-    "googlePlace": "Chelsea Market",
-    "describe": "음식과 쇼핑의 천국, 다양한 음식과 상점이 있는 장소",
-    "realname": "확실함",
-    "emozi": "🛍️🍣🍩",
-    "category": "food",
-    "location": {
-      "lat": 40.7424396,
-      "lng": -74.0061439
-    },
-    "id": "ChIJw2lMFL9ZwokRosAtly52YX4"
-  },
-  {
-    "startTime": "431.12",
-    "endTime": "454.479",
-    "place": "뉴욕 그리니치 빌리지 Washington Square Park",
-    "googlePlace": "Washington Square Park",
-    "describe": "활기찬 공원, 학생, 체스 플레이어, 음악가들이 모이는 장소",
-    "realname": "확실함",
-    "emozi": "🎶♟️🌳",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7308838,
-      "lng": -73.997332
-    },
-    "id": "ChIJjX494pBZwokRGH620d9eYfo"
-  },
-  {
-    "startTime": "457.12",
-    "endTime": "463.199",
-    "place": "뉴욕 소호",
-    "googlePlace": "SoHo",
-    "describe": "부티크 쇼핑, 갤러리, 자갈길이 있는 트렌디한 지역",
-    "realname": "확실함",
-    "emozi": "🛍️🖼️🗽",
-    "category": "shopping",
-    "location": {
-      "lat": 40.7245908,
-      "lng": -74.00191740000001
-    },
-    "id": "ChIJ8-JRXoxZwokRGPiQ9Ek0L84"
-  },
-  {
-    "startTime": "479.039",
-    "endTime": "483.759",
-    "place": "뉴욕 Russ & Daughters",
-    "googlePlace": "Russ & Daughters",
-    "describe": "베이글과 크림치즈를 맛볼 수 있는 유명한 장소",
-    "realname": "확실함",
-    "emozi": "🥯🧀🗽",
-    "category": "food",
-    "location": {
-      "lat": 40.7225803,
-      "lng": -73.9883134
-    },
-    "id": "ChIJ7VEEjYNZwokRS0bdsXA3uyg"
-  },
-  {
-    "startTime": "486.24",
-    "endTime": "488.4",
-    "place": "뉴욕 Katz's Delicatessen",
-    "googlePlace": "Katz's Delicatessen",
-    "describe": "시간의 시험을 견뎌낸 파스트라미 샌드위치",
-    "realname": "확실함",
-    "emozi": "🥪🗽🍴",
-    "category": "food",
-    "location": {
-      "lat": 40.722233,
-      "lng": -73.98742899999999
-    },
-    "id": "ChIJCar0f49ZwokR6ozLV-dHNTE"
+    "id": "ChIJmQJIxlVYwokRLgeuocVOGVU",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Times%20Square/27233.jpg?raw=true"
   },
   {
     "startTime": "49.68",
@@ -462,7 +28,8 @@
       "lat": 40.7825547,
       "lng": -73.9655834
     },
-    "id": "ChIJ4zGFAZpYwokRGUGph3Mf37k"
+    "id": "ChIJ4zGFAZpYwokRGUGph3Mf37k",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Central%20Park/50000.jpg?raw=true"
   },
   {
     "startTime": "70.24",
@@ -477,7 +44,8 @@
       "lat": 40.7745062,
       "lng": -73.9655418
     },
-    "id": "ChIJ9Uc4naJYwokRSndBAbr7TVY"
+    "id": "ChIJ9Uc4naJYwokRSndBAbr7TVY",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Fifth%20Avenue/72000.jpg?raw=true"
   },
   {
     "startTime": "85.36",
@@ -492,6 +60,471 @@
       "lat": 40.7484405,
       "lng": -73.98566439999999
     },
-    "id": "ChIJaXQRs6lZwokRY6EFpJnhNNE"
+    "id": "ChIJaXQRs6lZwokRY6EFpJnhNNE",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Empire%20State%20Building/86733.jpg?raw=true"
+  },
+  {
+    "startTime": "104.56",
+    "endTime": "120.0",
+    "place": "뉴욕 맨해튼 록펠러 센터",
+    "googlePlace": "Rockefeller Center",
+    "describe": "스케이트 링크와 크리스마스 트리로 유명한 장소",
+    "realname": "확실함",
+    "emozi": "⛸️🎄",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7587402,
+      "lng": -73.9786736
+    },
+    "id": "ChIJ9U1mz_5YwokRosza1aAk0jM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Rockefeller%20Center/106733.jpg?raw=true"
+  },
+  {
+    "startTime": "122.0",
+    "endTime": "136.16",
+    "place": "뉴욕 맨해튼 브로드웨이",
+    "googlePlace": "Broadway",
+    "describe": "세계적인 공연이 열리는 극장 지구",
+    "realname": "확실함",
+    "emozi": "🎭🎶",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7593724,
+      "lng": -73.9851694
+    },
+    "id": "ChIJOSMjjVlWwokRnpaTPyaFi9o",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Broadway/124000.jpg?raw=true"
+  },
+  {
+    "startTime": "138.56",
+    "endTime": "151.92",
+    "place": "뉴욕 맨해튼 메트로폴리탄 미술관",
+    "googlePlace": "The Metropolitan Museum of Art",
+    "describe": "세계적인 예술 작품을 소장한 대형 미술관",
+    "realname": "확실함",
+    "emozi": "🖼️🏛️",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7794366,
+      "lng": -73.963244
+    },
+    "id": "ChIJb8Jg9pZYwokR-qHGtvSkLzs",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/The%20Metropolitan%20Museum%20of%20Art/139233.jpg?raw=true"
+  },
+  {
+    "startTime": "154.64",
+    "endTime": "169.599",
+    "place": "뉴욕 맨해튼 자유의 여신상",
+    "googlePlace": "Statue of Liberty",
+    "describe": "미국의 상징적인 조각상, 리버티 아일랜드에 위치",
+    "realname": "확실함",
+    "emozi": "🗽🚢",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.6892494,
+      "lng": -74.04450039999999
+    },
+    "id": "ChIJPTacEpBQwokRKwIlDXelxkA",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Statue%20of%20Liberty/160233.jpg?raw=true"
+  },
+  {
+    "startTime": "176.72",
+    "endTime": "191.92",
+    "place": "뉴욕 맨해튼 원 월드 전망대",
+    "googlePlace": "One World Observatory",
+    "describe": "9/11 메모리얼과 함께 있는 전망대",
+    "realname": "확실함",
+    "emozi": "🌆🕊️",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7130062,
+      "lng": -74.013173
+    },
+    "id": "ChIJTWE_0BtawokRVJNGH5RS448",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/One%20World%20Observatory/179733.jpg?raw=true"
+  },
+  {
+    "startTime": "194.959",
+    "endTime": "206.239",
+    "place": "뉴욕 맨해튼 월 스트리트",
+    "googlePlace": "Wall Street",
+    "describe": "금융의 중심지, 유명한 차징 불 동상",
+    "realname": "확실함",
+    "emozi": "💹🐂",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7060675,
+      "lng": -74.0089046
+    },
+    "id": "ChIJq8ztWxZawokRAa61A_Ddsiw",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Wall%20Street/197500.jpg?raw=true"
+  },
+  {
+    "startTime": "221.84",
+    "endTime": "231.28",
+    "place": "뉴욕 맨해튼 배터리 파크",
+    "googlePlace": "Battery Park",
+    "describe": "항구를 내려다보는 조용한 공원",
+    "realname": "확실함",
+    "emozi": "🌳🌅",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.70293119999999,
+      "lng": -74.0153603
+    },
+    "id": "ChIJraKL-BJawokREpxDmF5GcL4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Battery%20Park/223500.jpg?raw=true"
+  },
+  {
+    "startTime": "233.36",
+    "endTime": "247.92",
+    "place": "뉴욕 브루클린 브루클린 브리지",
+    "googlePlace": "Brooklyn Bridge",
+    "describe": "맨해튼과 브루클린을 연결하는 상징적인 다리",
+    "realname": "확실함",
+    "emozi": "🌉🚶‍♂️",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7060855,
+      "lng": -73.9968643
+    },
+    "id": "ChIJK3vOQyNawokRXEa9errdJiU",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Brooklyn%20Bridge/237733.jpg?raw=true"
+  },
+  {
+    "startTime": "252.0",
+    "endTime": "264.4",
+    "place": "뉴욕 브루클린 덤보",
+    "googlePlace": "DUMBO",
+    "describe": "트렌디한 갤러리와 카페가 있는 지역",
+    "realname": "확실함",
+    "emozi": "📸☕",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7033164,
+      "lng": -73.9881451
+    },
+    "id": "ChIJ-7A-bzFawokRw8mvHCzZsc4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/DUMBO/265866.jpg?raw=true"
+  },
+  {
+    "startTime": "266.4",
+    "endTime": "275.36",
+    "place": "뉴욕 브루클린 브루클린 브리지 파크",
+    "googlePlace": "Brooklyn Bridge Park",
+    "describe": "이스트 강을 따라 위치한 공원, 맨해튼 전망",
+    "realname": "확실함",
+    "emozi": "🌳🚴‍♀️",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7022422,
+      "lng": -73.9958601
+    },
+    "id": "ChIJjaFpo0ZawokRBcOFUZ13CaE",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Brooklyn%20Bridge%20Park/268233.jpg?raw=true"
+  },
+  {
+    "startTime": "279.12",
+    "endTime": "286.8",
+    "place": "뉴욕 브루클린 Williamsburg",
+    "googlePlace": "Williamsburg",
+    "describe": "빈티지 숍, 스트리트 아트, 인디 음악 공연장, 트렌디한 카페가 있는 지역",
+    "realname": "확실함",
+    "emozi": "🛍️🎨🎶",
+    "category": "sightseeing",
+    "location": {
+      "lat": 37.2757305,
+      "lng": -76.7098049
+    },
+    "id": "ChIJG6qVRAqJsIkRqg4WXhcwS8E",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Williamsburg/281000.jpg?raw=true"
+  },
+  {
+    "startTime": "289.12",
+    "endTime": "294.32",
+    "place": "뉴욕 브루클린 Prospect Park",
+    "googlePlace": "Prospect Park",
+    "describe": "브루클린의 센트럴 파크, 자연 경관이 아름다운 공원",
+    "realname": "확실함",
+    "emozi": "🌳🌿🏞️",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.6602037,
+      "lng": -73.9689558
+    },
+    "id": "ChIJQwRohxBbwokRmHrfAMb3ixc",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Prospect%20Park/291733.jpg?raw=true"
+  },
+  {
+    "startTime": "296.32",
+    "endTime": "301.36",
+    "place": "뉴욕 브루클린 Brooklyn Museum",
+    "googlePlace": "Brooklyn Museum",
+    "describe": "다양하고 인상적인 예술과 역사 컬렉션을 소장한 박물관",
+    "realname": "확실함",
+    "emozi": "🖼️🏛️🎨",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.6712062,
+      "lng": -73.9636306
+    },
+    "id": "ChIJyTmcRApbwokR-oXJRqpVI8Y",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Brooklyn%20Museum/300366.jpg?raw=true"
+  },
+  {
+    "startTime": "302.8",
+    "endTime": "311.12",
+    "place": "뉴욕 퀸즈 Flushing Meadows Corona Park",
+    "googlePlace": "Flushing Meadows Corona Park",
+    "describe": "아이코닉한 유니스피어가 있는 대규모 공원",
+    "realname": "확실함",
+    "emozi": "🌐🏞️🎡",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7400625,
+      "lng": -73.8406875
+    },
+    "id": "ChIJ-2Yhwn9gwokR4Wwy6GgsPRM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Flushing%20Meadows%20Corona%20Park/307000.jpg?raw=true"
+  },
+  {
+    "startTime": "311.12",
+    "endTime": "315.36",
+    "place": "뉴욕 퀸즈 Queen's Museum",
+    "googlePlace": "Queens Museum",
+    "describe": "세계 박람회를 개최했던 장소, 다양한 전시가 있는 박물관",
+    "realname": "확실함",
+    "emozi": "🏛️🖼️🌍",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.745914,
+      "lng": -73.8467247
+    },
+    "id": "ChIJmWMJBtBfwokR5qK7waLcgAM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Queens%20Museum/314233.jpg?raw=true"
+  },
+  {
+    "startTime": "315.36",
+    "endTime": "317.919",
+    "place": "뉴욕 퀸즈 New York Hall of Science",
+    "googlePlace": "New York Hall of Science",
+    "describe": "과학과 기술을 체험할 수 있는 박물관",
+    "realname": "확실함",
+    "emozi": "🔬🧪🧬",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7472583,
+      "lng": -73.8516925
+    },
+    "id": "ChIJG2aZ1wT2wokRzz-VKP0lkJg",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/New%20York%20Hall%20of%20Science/320000.jpg?raw=true"
+  },
+  {
+    "startTime": "317.919",
+    "endTime": "320.88",
+    "place": "뉴욕 퀸즈 USA Billy Jean King National Tennis Center",
+    "googlePlace": "USTA Billie Jean King National Tennis Center",
+    "describe": "미국 오픈 테니스 대회가 열리는 장소",
+    "realname": "확실함",
+    "emozi": "🎾🏟️🇺🇸",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7499978,
+      "lng": -73.8469958
+    },
+    "id": "ChIJA77QN9lfwokRRmMsefeNEbA",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/USTA%20Billie%20Jean%20King%20National%20Tennis%20Center/317233.jpg?raw=true"
+  },
+  {
+    "startTime": "320.88",
+    "endTime": "328.639",
+    "place": "뉴욕 아스토리아 Museum of the Moving Image",
+    "googlePlace": "Museum of the Moving Image",
+    "describe": "영화와 TV의 역사와 기술을 다루는 박물관",
+    "realname": "확실함",
+    "emozi": "🎥📺🎞️",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7563454,
+      "lng": -73.9239496
+    },
+    "id": "ChIJAx_yUCVfwokRQ2xEBIWV21g",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Museum%20of%20the%20Moving%20Image/330500.jpg?raw=true"
+  },
+  {
+    "startTime": "330.72",
+    "endTime": "340.08",
+    "place": "뉴욕 잭슨 하이츠",
+    "googlePlace": "Jackson Heights",
+    "describe": "다양한 문화와 음식을 경험할 수 있는 지역",
+    "realname": "확실함",
+    "emozi": "🍛🌮🍜",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7556818,
+      "lng": -73.8830701
+    },
+    "id": "ChIJK2m0kaFfwokRSjJ-sU_mc-U",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Jackson%20Heights/332733.jpg?raw=true"
+  },
+  {
+    "startTime": "342.72",
+    "endTime": "350.32",
+    "place": "뉴욕 브롱스 Yankee Stadium",
+    "googlePlace": "Yankee Stadium",
+    "describe": "뉴욕 양키스의 홈구장, 야구 경기를 관람할 수 있는 장소",
+    "realname": "확실함",
+    "emozi": "⚾🏟️🗽",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.8296426,
+      "lng": -73.9261745
+    },
+    "id": "ChIJcWnnWiz0wokRCB6aVdnDQEk",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Yankee%20Stadium/346733.jpg?raw=true"
+  },
+  {
+    "startTime": "356.08",
+    "endTime": "361.039",
+    "place": "뉴욕 브롱스 Bronx Zoo",
+    "googlePlace": "Bronx Zoo",
+    "describe": "세계에서 가장 큰 동물원 중 하나, 자연 서식지를 재현한 동물원",
+    "realname": "확실함",
+    "emozi": "🦁🐒🐘",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.85014150000001,
+      "lng": -73.87672169999999
+    },
+    "id": "ChIJi9JqUYP0wokRLhCVlxy0bgU",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Bronx%20Zoo/357733.jpg?raw=true"
+  },
+  {
+    "startTime": "365.52",
+    "endTime": "374.8",
+    "place": "뉴욕 브롱스 New York Botanical Garden",
+    "googlePlace": "New York Botanical Garden",
+    "describe": "계절별 전시와 아름다운 경관을 자랑하는 식물원",
+    "realname": "확실함",
+    "emozi": "🌺🌼🌿",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.8622871,
+      "lng": -73.8773946
+    },
+    "id": "ChIJyRUHuHzzwokRPxVBNKhcP9c",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/New%20York%20Botanical%20Garden/368500.jpg?raw=true"
+  },
+  {
+    "startTime": "376.479",
+    "endTime": "387.28",
+    "place": "뉴욕 브롱스 Arthur Avenue",
+    "googlePlace": "Arthur Avenue",
+    "describe": "뉴욕의 진정한 리틀 이탈리아, 이탈리아 시장과 레스토랑",
+    "realname": "확실함",
+    "emozi": "🍝🍕🍷",
+    "category": "food",
+    "location": {
+      "lat": 40.8533749,
+      "lng": -73.8894639
+    },
+    "id": "ChIJH_JJSn30wokRA9NOVGocUcI",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Arthur%20Avenue/378233.jpg?raw=true"
+  },
+  {
+    "startTime": "389.12",
+    "endTime": "405.28",
+    "place": "뉴욕 첼시 The Highline",
+    "googlePlace": "The High Line",
+    "describe": "역사적인 화물 철도 노선 위에 지어진 공원, 정원과 공공 예술이 있는 산책로",
+    "realname": "확실함",
+    "emozi": "🌿🚶‍♂️🖼️",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7479925,
+      "lng": -74.0047649
+    },
+    "id": "ChIJ5bQPhMdZwokRkTwKhVxhP1g",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/The%20High%20Line/393233.jpg?raw=true"
+  },
+  {
+    "startTime": "419.28",
+    "endTime": "428.96",
+    "place": "뉴욕 첼시 Chelsea Market",
+    "googlePlace": "Chelsea Market",
+    "describe": "음식과 쇼핑의 천국, 다양한 음식과 상점이 있는 장소",
+    "realname": "확실함",
+    "emozi": "🛍️🍣🍩",
+    "category": "food",
+    "location": {
+      "lat": 40.7424396,
+      "lng": -74.0061439
+    },
+    "id": "ChIJw2lMFL9ZwokRosAtly52YX4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Chelsea%20Market/421733.jpg?raw=true"
+  },
+  {
+    "startTime": "431.12",
+    "endTime": "454.479",
+    "place": "뉴욕 그리니치 빌리지 Washington Square Park",
+    "googlePlace": "Washington Square Park",
+    "describe": "활기찬 공원, 학생, 체스 플레이어, 음악가들이 모이는 장소",
+    "realname": "확실함",
+    "emozi": "🎶♟️🌳",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.7308838,
+      "lng": -73.997332
+    },
+    "id": "ChIJjX494pBZwokRGH620d9eYfo",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Washington%20Square%20Park/435866.jpg?raw=true"
+  },
+  {
+    "startTime": "457.12",
+    "endTime": "463.199",
+    "place": "뉴욕 소호",
+    "googlePlace": "SoHo",
+    "describe": "부티크 쇼핑, 갤러리, 자갈길이 있는 트렌디한 지역",
+    "realname": "확실함",
+    "emozi": "🛍️🖼️🗽",
+    "category": "shopping",
+    "location": {
+      "lat": 40.7245908,
+      "lng": -74.00191740000001
+    },
+    "id": "ChIJ8-JRXoxZwokRGPiQ9Ek0L84",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/SoHo/458733.jpg?raw=true"
+  },
+  {
+    "startTime": "479.039",
+    "endTime": "483.759",
+    "place": "뉴욕 Russ & Daughters",
+    "googlePlace": "Russ & Daughters",
+    "describe": "베이글과 크림치즈를 맛볼 수 있는 유명한 장소",
+    "realname": "확실함",
+    "emozi": "🥯🧀🗽",
+    "category": "food",
+    "location": {
+      "lat": 40.7225803,
+      "lng": -73.9883134
+    },
+    "id": "ChIJ7VEEjYNZwokRS0bdsXA3uyg",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Russ%20&%20Daughters/483500.jpg?raw=true"
+  },
+  {
+    "startTime": "486.24",
+    "endTime": "488.4",
+    "place": "뉴욕 Katz's Delicatessen",
+    "googlePlace": "Katz's Delicatessen",
+    "describe": "시간의 시험을 견뎌낸 파스트라미 샌드위치",
+    "realname": "확실함",
+    "emozi": "🥪🗽🍴",
+    "category": "food",
+    "location": {
+      "lat": 40.722233,
+      "lng": -73.98742899999999
+    },
+    "id": "ChIJCar0f49ZwokR6ozLV-dHNTE",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/Qv6SMJEUVo0/Katz's%20Delicatessen/492000.jpg?raw=true"
   }
 ]

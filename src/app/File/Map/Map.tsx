@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useMemo } from 'react'
+
 import {
   APIProvider,
   Map,
@@ -19,10 +22,11 @@ const color:string[]= ['#A29BFE','#A29BFE','#F08AF4','#F08AF4']
 const colors_root = ["#f87171", "#fb923c", "#facc15", "#4ade80"];
 
 
-export default function Mappage() {
+export default function Mappage({name}) {
 
 
-    //const [comment, setcomment]=useState<Place[]>([]);
+
+
 
 
   const current_index = useSelector((state: any) => state.url.url_current_index);
@@ -95,7 +99,7 @@ export default function Mappage() {
        <Map
          mapId='c6ee764519ee05b0d0b9fec4'
          colorScheme='LIGHT'
-         defaultCenter={{lat: 35.68, lng: 139.69}}
+         defaultCenter={name=='newyork'?{lat: 40.7580, lng: -73.9855}:{lat: 35.68, lng: 139.69}}
      defaultZoom={10}
      gestureHandling={'greedy'}
      fullscreenControl={false}

@@ -73,7 +73,7 @@ export function Make_Marker({ location,id,describe,category,color,opacity }: pla
     `}>
     {/* 동그라미 부분 */}
     <div className="flex items-center justify-center w-6 h-6 rounded-full bg-white text-white shadow-md transition-transform group-hover:scale-110">
-      <div className={`flex   ${indexWithId>=0?colors[indexWithId]:`bg-[${color}]`}  w-5  h-5 items-center justify-center rounded-3xl `}>
+      <div className={`flex   ${indexWithId>=0?colors[indexWithId]:`${color}`}  w-5  h-5 items-center justify-center rounded-3xl `}>
        
     {Choose_mark(category)}
         </div>

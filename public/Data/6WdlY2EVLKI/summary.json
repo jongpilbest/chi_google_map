@@ -12,7 +12,8 @@
       "lat": 40.7825547,
       "lng": -73.9655834
     },
-    "id": "ChIJ4zGFAZpYwokRGUGph3Mf37k"
+    "id": "ChIJ4zGFAZpYwokRGUGph3Mf37k",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Central%20Park/38738.jpg?raw=true"
   },
   {
     "startTime": "52.64",
@@ -27,7 +28,8 @@
       "lat": 40.7033164,
       "lng": -73.9881451
     },
-    "id": "ChIJ-7A-bzFawokRw8mvHCzZsc4"
+    "id": "ChIJ-7A-bzFawokRw8mvHCzZsc4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/DUMBO/58124.jpg?raw=true"
   },
   {
     "startTime": "69.96",
@@ -42,7 +44,8 @@
       "lat": 40.70445,
       "lng": -73.99238849999999
     },
-    "id": "ChIJU9mVHzFawokRcNNO_Su8zGM"
+    "id": "ChIJU9mVHzFawokRcNNO_Su8zGM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Jane's%20Carousel/70837.jpg?raw=true"
   },
   {
     "startTime": "76.52",
@@ -57,7 +60,8 @@
       "lat": 40.7579747,
       "lng": -73.9855426
     },
-    "id": "ChIJmQJIxlVYwokRLgeuocVOGVU"
+    "id": "ChIJmQJIxlVYwokRLgeuocVOGVU",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Times%20Square/78778.jpg?raw=true"
   },
   {
     "startTime": "98.36",
@@ -72,7 +76,8 @@
       "lat": 40.70293119999999,
       "lng": -74.0153603
     },
-    "id": "ChIJraKL-BJawokREpxDmF5GcL4"
+    "id": "ChIJraKL-BJawokREpxDmF5GcL4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Battery%20Park/102802.jpg?raw=true"
   },
   {
     "startTime": "116.28",
@@ -87,7 +92,8 @@
       "lat": 40.6892494,
       "lng": -74.04450039999999
     },
-    "id": "ChIJPTacEpBQwokRKwIlDXelxkA"
+    "id": "ChIJPTacEpBQwokRKwIlDXelxkA",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Statue%20of%20Liberty/119319.jpg?raw=true"
   },
   {
     "startTime": "135.76",
@@ -102,7 +108,8 @@
       "lat": 40.6994748,
       "lng": -74.0395587
     },
-    "id": "ChIJDw5fGZpQwokR69Yikp1Go9I"
+    "id": "ChIJDw5fGZpQwokR69Yikp1Go9I",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Ellis%20Island/143276.jpg?raw=true"
   },
   {
     "startTime": "153.92",
@@ -117,7 +124,24 @@
       "lat": 40.68945009999999,
       "lng": -74.016792
     },
-    "id": "ChIJT4N92npawokRNfXHEXmRwng"
+    "id": "ChIJT4N92npawokRNfXHEXmRwng",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Governors%20Island/155788.jpg?raw=true"
+  },
+  {
+    "startTime": "173",
+    "endTime": "193",
+    "place": "뉴욕 맨해튼 The Oculus",
+    "googlePlace": "The Oculus",
+    "describe": "월드 트레이드 센터 인근의 교통 허브이자 쇼핑몰. 흰색 갈비뼈 형태의 아치 구조, 상점·음식점·포토 스팟.",
+    "realname": "확실함",
+    "emozi": "🏛️🛍️📸",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.711686101020256,
+      "lng": -74.01082302835088
+    },
+    "id": "ChIJ20W6MwBbwokRlga6sOhRflU",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/The%20Oculus/174874.jpg?raw=true"
   },
   {
     "startTime": "193.44",
@@ -132,7 +156,8 @@
       "lat": 40.7479925,
       "lng": -74.0047649
     },
-    "id": "ChIJ5bQPhMdZwokRkTwKhVxhP1g"
+    "id": "ChIJ5bQPhMdZwokRkTwKhVxhP1g",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/The%20High%20Line/195161.jpg?raw=true"
   },
   {
     "startTime": "212.64",
@@ -147,7 +172,40 @@
       "lat": 40.7587402,
       "lng": -73.9786736
     },
-    "id": "ChIJ9U1mz_5YwokRosza1aAk0jM"
+    "id": "ChIJ9U1mz_5YwokRosza1aAk0jM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Rockefeller%20Center/214881.jpg?raw=true"
+  },
+  {
+    "startTime": "230",
+    "endTime": "245",
+    "place": "뉴욕 맨해튼 Grand Central Terminal",
+    "googlePlace": "Grand Central Terminal",
+    "describe": "웅장한 대합실과 천장 천체도 벽화로 유명한 역사적 기차역, 쇼핑과 식당도 있음",
+    "realname": "확실함",
+    "emozi": "🚉🌌🥯",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.753553228098966,
+      "lng": -73.97682556123668
+    },
+    "id": "ChIJhRwB-yFawokRi0AhGH87UTc",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Grand%20Central%20Terminal/901433.jpg?raw=true"
+  },
+  {
+    "startTime": "243",
+    "endTime": "249",
+    "place": "뉴욕 맨해튼 Radio City Music Hall",
+    "googlePlace": "Radio City Music Hall",
+    "describe": "아르데코 양식 건축, 전설적인 로켓츠 공연으로 유명한 극장. 투어와 공연 관람 가능.",
+    "realname": "확실함",
+    "emozi": "🎶💃🏛️",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.76013850248563,
+      "lng": -73.98002011835554
+    },
+    "id": "ChIJPS8b1vhYwokRldqq2YHmxJI",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/NBC%20Studios/98735426.jpg?raw=true"
   },
   {
     "startTime": "249.12",
@@ -162,7 +220,8 @@
       "lat": 1.4092951,
       "lng": 103.9216496
     },
-    "id": "ChIJmf-D3wQ-2jERtNPC6WSqjnY"
+    "id": "ChIJmf-D3wQ-2jERtNPC6WSqjnY",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Coney%20Island/250750.jpg?raw=true"
   },
   {
     "startTime": "266.52",
@@ -177,7 +236,8 @@
       "lat": 40.7538073,
       "lng": -74.0021537
     },
-    "id": "ChIJqygAFrRZwokRwF0VrBoXS0E"
+    "id": "ChIJqygAFrRZwokRwF0VrBoXS0E",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/The%20Vessel/268501.jpg?raw=true"
   },
   {
     "startTime": "290.0",
@@ -192,7 +252,8 @@
       "lat": 40.6602037,
       "lng": -73.9689558
     },
-    "id": "ChIJQwRohxBbwokRmHrfAMb3ixc"
+    "id": "ChIJQwRohxBbwokRmHrfAMb3ixc",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Prospect%20Park/291924.jpg?raw=true"
   },
   {
     "startTime": "310.6",
@@ -207,7 +268,8 @@
       "lat": 40.6964173,
       "lng": -73.9977463
     },
-    "id": "ChIJkwX1AjdawokRx9reOccHFr4"
+    "id": "ChIJkwX1AjdawokRx9reOccHFr4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Brooklyn%20Heights%20Promenade/312645.jpg?raw=true"
   },
   {
     "startTime": "330.919",
@@ -222,7 +284,8 @@
       "lat": 40.6725832,
       "lng": -74.0438277
     },
-    "id": "ChIJZYrl0W9QwokRITkoJiQqoAE"
+    "id": "ChIJZYrl0W9QwokRITkoJiQqoAE",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Staten%20Island%20Ferry/341174.jpg?raw=true"
   },
   {
     "startTime": "346.16",
@@ -237,7 +300,56 @@
       "lat": 40.76050310000001,
       "lng": -73.9509934
     },
-    "id": "ChIJjQ1a2MRYwokRJ_6PC_93-BE"
+    "id": "ChIJjQ1a2MRYwokRJ_6PC_93-BE",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Roosevelt%20Island/347947.jpg?raw=true"
+  },
+  {
+    "startTime": "365",
+    "endTime": "372",
+    "place": "뉴욕 브롱크스 Bronx Zoo",
+    "googlePlace": "Bronx Zoo",
+    "describe": "미국 최대 규모 동물원 중 하나, 다양한 야생동물과 생태 전시.",
+    "realname": "확실함",
+    "emozi": "🦁🐒🦓",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.85074239102961,
+      "lng": -73.87685727699872
+    },
+    "id": "ChIJi9JqUYP0wokRLhCVlxy0bgU",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Bronx%20Zoo/987433.jpg?raw=true"
+  },
+  {
+    "startTime": "372",
+    "endTime": "378",
+    "place": "뉴욕 맨해튼 Central Park Zoo",
+    "googlePlace": "Central Park Zoo",
+    "describe": "센트럴 파크 내 위치한 작은 규모의 매력적인 동물원.",
+    "realname": "확실함",
+    "emozi": "🐧🦊🐻",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.76788998279756,
+      "lng": -73.97194967712613
+    },
+    "id": " ChIJaWjW_PFYwokRFD8a2YQu12U",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Central%20Park%20Zoo/9873654.jpg?raw=true"
+  },
+  {
+    "startTime": "378",
+    "endTime": "384",
+    "place": "뉴욕 퀸즈 Queens Zoo",
+    "googlePlace": "Queens Zoo",
+    "describe": "퀸즈 지역의 가족 친화적 동물원, 북미 동물 중심 전시.",
+    "realname": "확실함",
+    "emozi": "🦬🦉🦌",
+    "category": "sightseeing",
+    "location": {
+      "lat": 40.74442919787739,
+      "lng": -73.84943651650421
+    },
+    "id": "ChIJr4Vyr9BfwokRwIj7AIr7bzE",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Queens%20Zoo/98734325.jpg?raw=true"
   },
   {
     "startTime": "385.72",
@@ -252,7 +364,8 @@
       "lat": 40.7148803,
       "lng": -73.967851
     },
-    "id": "ChIJX7hLk0FZwokRFhRcjtylakg"
+    "id": "ChIJX7hLk0FZwokRFhRcjtylakg",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Domino%20Park/387487.jpg?raw=true"
   },
   {
     "startTime": "402.599",
@@ -267,7 +380,8 @@
       "lat": 40.7424396,
       "lng": -74.0061439
     },
-    "id": "ChIJw2lMFL9ZwokRosAtly52YX4"
+    "id": "ChIJw2lMFL9ZwokRosAtly52YX4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Chelsea%20Market/407740.jpg?raw=true"
   },
   {
     "startTime": "431.84",
@@ -282,7 +396,8 @@
       "lat": 40.7484405,
       "lng": -73.98566439999999
     },
-    "id": "ChIJaXQRs6lZwokRY6EFpJnhNNE"
+    "id": "ChIJaXQRs6lZwokRY6EFpJnhNNE",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Empire%20State%20Building/436169.jpg?raw=true"
   },
   {
     "startTime": "450.44",
@@ -297,7 +412,8 @@
       "lat": 40.7593495,
       "lng": -73.9794087
     },
-    "id": "ChIJe7vKMf9YwokRIMYfDz7iF9o"
+    "id": "ChIJe7vKMf9YwokRIMYfDz7iF9o",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Top%20of%20the%20Rock/453886.jpg?raw=true"
   },
   {
     "startTime": "471.28",
@@ -312,7 +428,8 @@
       "lat": 40.7527746,
       "lng": -73.9787253
     },
-    "id": "ChIJd7I1IO5ZwokRbv7YUlgChl4"
+    "id": "ChIJd7I1IO5ZwokRbv7YUlgChl4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Summit%20One%20Vanderbilt/463529.jpg?raw=true"
   },
   {
     "startTime": "496.639",
@@ -327,22 +444,8 @@
       "lat": 40.7130062,
       "lng": -74.013173
     },
-    "id": "ChIJTWE_0BtawokRVJNGH5RS448"
-  },
-  {
-    "startTime": "530.08",
-    "endTime": "540.6",
-    "place": "뉴욕 메트로폴리탄 미술관",
-    "googlePlace": "The Metropolitan Museum of Art",
-    "describe": "5,000년의 예술과 문화가 있는 박물관",
-    "realname": "확실함",
-    "emozi": "🎨🏛️",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7794366,
-      "lng": -73.963244
-    },
-    "id": "ChIJb8Jg9pZYwokR-qHGtvSkLzs"
+    "id": "ChIJTWE_0BtawokRVJNGH5RS448",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/One%20World%20Observatory/498397.jpg?raw=true"
   },
   {
     "startTime": "542.399",
@@ -357,7 +460,8 @@
       "lat": 40.7794366,
       "lng": -73.963244
     },
-    "id": "ChIJb8Jg9pZYwokR-qHGtvSkLzs"
+    "id": "ChIJb8Jg9pZYwokR-qHGtvSkLzs",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/The%20Metropolitan%20Museum%20of%20Art/534300.jpg?raw=true"
   },
   {
     "startTime": "549.92",
@@ -372,7 +476,8 @@
       "lat": 40.7614327,
       "lng": -73.97762159999999
     },
-    "id": "ChIJKxDbe_lYwokRVf__s8CPn-o"
+    "id": "ChIJKxDbe_lYwokRVf__s8CPn-o",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/The%20Museum%20of%20Modern%20Art%20(MoMA)/551751.jpg?raw=true"
   },
   {
     "startTime": "574.12",
@@ -387,7 +492,8 @@
       "lat": 40.7813241,
       "lng": -73.9739882
     },
-    "id": "ChIJCXoPsPRYwokRsV1MYnKBfaI"
+    "id": "ChIJCXoPsPRYwokRsV1MYnKBfaI",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/American%20Museum%20of%20Natural%20History/575875.jpg?raw=true"
   },
   {
     "startTime": "597.04",
@@ -402,7 +508,8 @@
       "lat": 40.6712062,
       "lng": -73.9636306
     },
-    "id": "ChIJyTmcRApbwokR-oXJRqpVI8Y"
+    "id": "ChIJyTmcRApbwokR-oXJRqpVI8Y",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Brooklyn%20Museum/599031.jpg?raw=true"
   },
   {
     "startTime": "616.72",
@@ -417,7 +524,8 @@
       "lat": 40.7829796,
       "lng": -73.9589706
     },
-    "id": "ChIJmZ5emqJYwokRuDz79o0coAQ"
+    "id": "ChIJmZ5emqJYwokRuDz79o0coAQ",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Solomon%20R.%20Guggenheim%20Museum/618618.jpg?raw=true"
   },
   {
     "startTime": "640.2",
@@ -432,7 +540,8 @@
       "lat": 38.8883484,
       "lng": -77.01650339999999
     },
-    "id": "ChIJF-dY_IO3t4kRGBj1JD-V4Q0"
+    "id": "ChIJF-dY_IO3t4kRGBj1JD-V4Q0",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/National%20Museum%20of%20the%20American%20Indian/644844.jpg?raw=true"
   },
   {
     "startTime": "662.48",
@@ -447,7 +556,8 @@
       "lat": 40.7492258,
       "lng": -73.9813971
     },
-    "id": "ChIJ3453OAdZwokRja92OOKCugM"
+    "id": "ChIJ3453OAdZwokRja92OOKCugM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/The%20Morgan%20Library%20&%20Museum/664330.jpg?raw=true"
   },
   {
     "startTime": "681.959",
@@ -462,7 +572,8 @@
       "lat": 40.6407468,
       "lng": -74.0734928
     },
-    "id": "ChIJS6PmXNJPwokRSNmVixCghQo"
+    "id": "ChIJS6PmXNJPwokRSNmVixCghQo",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/National%20Lighthouse%20Museum/683849.jpg?raw=true"
   },
   {
     "startTime": "702.079",
@@ -477,7 +588,8 @@
       "lat": 40.69057,
       "lng": -73.99006779999999
     },
-    "id": "ChIJdThqNVVawokRFk58UQOvtuM"
+    "id": "ChIJdThqNVVawokRFk58UQOvtuM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/New%20York%20Transit%20Museum/703903.jpg?raw=true"
   },
   {
     "startTime": "721.72",
@@ -492,7 +604,8 @@
       "lat": 40.7576446,
       "lng": -73.9843382
     },
-    "id": "ChIJw7GUS-5ZwokRmhit4hpZT74"
+    "id": "ChIJw7GUS-5ZwokRmhit4hpZT74",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/The%20Museum%20of%20Broadway/723689.jpg?raw=true"
   },
   {
     "startTime": "738.6",
@@ -507,7 +620,8 @@
       "lat": 40.745914,
       "lng": -73.8467247
     },
-    "id": "ChIJmWMJBtBfwokR5qK7waLcgAM"
+    "id": "ChIJmWMJBtBfwokR5qK7waLcgAM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Queens%20Museum/740339.jpg?raw=true"
   },
   {
     "startTime": "771.68",
@@ -522,7 +636,8 @@
       "lat": 40.7115776,
       "lng": -74.0133362
     },
-    "id": "ChIJRcvoOxpawokR7R4dQMXMMPQ"
+    "id": "ChIJRcvoOxpawokR7R4dQMXMMPQ",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/9/11%20Memorial%20&%20Museum/773305.jpg?raw=true"
   },
   {
     "startTime": "796.399",
@@ -537,7 +652,8 @@
       "lat": 40.7060675,
       "lng": -74.0089046
     },
-    "id": "ChIJq8ztWxZawokRAa61A_Ddsiw"
+    "id": "ChIJq8ztWxZawokRAa61A_Ddsiw",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Wall%20Street/800766.jpg?raw=true"
   },
   {
     "startTime": "817.32",
@@ -552,7 +668,8 @@
       "lat": 40.7060855,
       "lng": -73.9968643
     },
-    "id": "ChIJK3vOQyNawokRXEa9errdJiU"
+    "id": "ChIJK3vOQyNawokRXEa9errdJiU",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Brooklyn%20Bridge/821687.jpg?raw=true"
   },
   {
     "startTime": "839.6",
@@ -567,7 +684,8 @@
       "lat": 40.7410605,
       "lng": -73.9896986
     },
-    "id": "ChIJZx8c96NZwokRJklw7SVhKt4"
+    "id": "ChIJZx8c96NZwokRJklw7SVhKt4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Flatiron%20Building/840673.jpg?raw=true"
   },
   {
     "startTime": "860.759",
@@ -582,7 +700,8 @@
       "lat": 40.7586117,
       "lng": -73.9761953
     },
-    "id": "ChIJUW4vEPxYwokRW6o24DU0YIg"
+    "id": "ChIJUW4vEPxYwokRW6o24DU0YIg",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/St.%20Patrick's%20Cathedral/862695.jpg?raw=true"
   },
   {
     "startTime": "878.839",
@@ -597,22 +716,8 @@
       "lat": 40.7113281,
       "lng": -74.0091831
     },
-    "id": "ChIJ-wHkrBlawokRjCiym7MbolM"
-  },
-  {
-    "startTime": "900.48",
-    "endTime": "917.24",
-    "place": "뉴욕 그랜드 센트럴 터미널",
-    "googlePlace": "Grand Central Terminal",
-    "describe": "역사적인 랜드마크, 웅장한 건축물",
-    "realname": "확실함",
-    "emozi": "🚉🏛️🌌",
-    "category": "sightseeing",
-    "location": {
-      "lat": 40.7533582,
-      "lng": -73.9768041
-    },
-    "id": "ChIJhRwB-yFawokRi0AhGH87UTc"
+    "id": "ChIJ-wHkrBlawokRjCiym7MbolM",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/St.%20Paul's%20Chapel/880713.jpg?raw=true"
   },
   {
     "startTime": "918.48",
@@ -627,7 +732,8 @@
       "lat": 40.7312185,
       "lng": -73.9970929
     },
-    "id": "ChIJXa-d3ZBZwokRGcUkpZc_uC4"
+    "id": "ChIJXa-d3ZBZwokRGcUkpZc_uC4",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/St.%20Paul's%20Chapel/880713.jpg?raw=true"
   },
   {
     "startTime": "937.639",
@@ -642,7 +748,8 @@
       "lat": 40.75318230000001,
       "lng": -73.9822534
     },
-    "id": "ChIJqaiomQBZwokRTHOaUG7fUTs"
+    "id": "ChIJqaiomQBZwokRTHOaUG7fUTs",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/New%20York%20Public%20Library%20-%20Stephen%20A.%20Schwarzman%20Building/939505.jpg?raw=true"
   },
   {
     "startTime": "959.04",
@@ -657,7 +764,8 @@
       "lat": 40.6051455,
       "lng": -74.0564299
     },
-    "id": "ChIJq6qqqh5PwokRS7Y6dqVd1yg"
+    "id": "ChIJq6qqqh5PwokRS7Y6dqVd1yg",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Fort%20Wadsworth/972104.jpg?raw=true"
   },
   {
     "startTime": "987.36",
@@ -672,7 +780,24 @@
       "lat": 40.7405933,
       "lng": -73.9896246
     },
-    "id": "ChIJ62xq6RhZwokRj5GFxjJ8H0g"
+    "id": "ChIJ62xq6RhZwokRj5GFxjJ8H0g",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Harry%20Potter%20New%20York/989221.jpg?raw=true"
+  },
+  {
+    "startTime": "1005",
+    "endTime": "1018",
+    "place": "뉴욕 맨해튼 Rockefeller Plaza FAO Schwarz",
+    "googlePlace": "FAO Schwarz",
+    "describe": "록펠러 플라자에 위치한 아이코닉 토이 스토어. 대형 인형, 인터랙티브 전시, 발로 연주하는 거대한 피아노 체험 가능.",
+    "realname": "확실함",
+    "emozi": "🧸🎹🎁",
+    "category": "shopping",
+    "location": {
+      "lat": 40.7589316321555,
+      "lng": -73.97935573184763
+    },
+    "id": "ChIJM-qBJWVZwokRZQwIoEESnEc",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/FAO%20Schwarz/1004536.jpg?raw=true"
   },
   {
     "startTime": "1020.36",
@@ -687,7 +812,8 @@
       "lat": 40.7745062,
       "lng": -73.9655418
     },
-    "id": "ChIJ9Uc4naJYwokRSndBAbr7TVY"
+    "id": "ChIJ9Uc4naJYwokRSndBAbr7TVY",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Fifth%20Avenue/1024156.jpg?raw=true"
   },
   {
     "startTime": "1033.439",
@@ -702,6 +828,40 @@
       "lat": 40.7281384,
       "lng": -73.9947995
     },
-    "id": "ChIJ7Rljr45ZwokRKsFnqQir1zs"
+    "id": "ChIJ7Rljr45ZwokRKsFnqQir1zs",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/The%20Evolution%20Store/1035401.jpg?raw=true"
+  },
+  {
+    "startTime": "1059",
+    "endTime": "1065",
+    "place": "뉴욕 맨해튼 Joe's Pizza",
+    "googlePlace": "Joe's Pizza",
+    "describe": "뉴욕을 대표하는 피자 가게, 얇고 접을 수 있는 뉴욕 스타일 슬라이스로 유명.",
+    "realname": "확실함",
+    "emozi": "🍕😋🏙️",
+    "category": "food",
+    "location": {
+      "lat": 40.754866397027286,
+      "lng": -73.98701837417572
+    },
+    "id": "ChIJifIePKtZwokRVZ-UdRGkZzs",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Joe's%20Pizza/1067533.jpg?raw=true"
+  },
+
+  {
+    "startTime": "1065",
+    "endTime": "1072",
+    "place": "뉴욕 맨해튼 Lombardi's Pizza",
+    "googlePlace": "Lombardi's Pizza",
+    "describe": "미국 최초의 피자가게로 알려진 명소, 석탄 화덕 피자로 유명.",
+    "realname": "확실함",
+    "emozi": "🍕🔥🗽",
+    "category": "food",
+    "location": {
+      "lat": 40.721838302457414,
+      "lng": -73.9956475318493
+    },
+    "id": "ChIJp-cWE4pZwokRmUI8_BIF8dg",
+    "image": "https://github.com/jongpilbest/image_iui_file/blob/main/NewYork/6WdlY2EVLKI/Lombardi's%20Pizza/98736524.jpg?raw=true"
   }
 ]

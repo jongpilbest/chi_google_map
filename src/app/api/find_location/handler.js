@@ -4,7 +4,7 @@ import OpenAI from "openai";
 
 const PINECONE_API_KEY = process.env.PINECONE_API_KEY;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const INDEX_NAME = process.env.PINECONE_INDEX || "test";
+
 
 const UNKNOWN_PLACE_TOKEN = "x";
 const MAX_CHILD_TEXT_LEN = 2000;
@@ -19,7 +19,6 @@ const EMBED_MODEL_NAME = "text-embedding-3-small";
 // =========================
 const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
-const index = pc.Index(INDEX_NAME);
 
 // =========================
 // 임베딩 함수
@@ -51,7 +50,7 @@ function getMatches(res) {
 // =========================
 // Parent Only 검색
 // =========================
-export async function searchParentOnly(q, topK = 5) {
+export async function searchParentOnly(q, topK = 5,index) {
   const v = await embedQuery(q);
   const res = await index.query({
     vector: v,
@@ -77,7 +76,7 @@ export async function searchParentOnly(q, topK = 5) {
 // =========================
 // Parent ID 기반 Fetch
 // =========================
-export async function fetchParentsByIds(pidList) {
+export async function fetchParentsByIds(pidList,index) {
   if (!pidList?.length) return {};
 
   const ids = pidList.map((pid) => `parent-${pid}`);
@@ -110,7 +109,8 @@ export async function fetchParentsByIds(pidList) {
 // =========================
 export async function searchHybrid(
   q,
-  { topChild = 30, topParent = 10, preferPlace = true } = {}
+  { topChild = 30, topParent = 10, preferPlace = true } = {},
+  index
 ) {
   const v = await embedQuery(q);
 
@@ -136,7 +136,7 @@ export async function searchHybrid(
 
   // 3. child hit 없으면 parent만 검색
   if (Object.keys(parentScores).length === 0) {
-    const parents = await searchParentOnly(q, topParent);
+    const parents = await searchParentOnly(q, topParent,index);
     return [parents, childMatches];
   }
 
@@ -147,7 +147,7 @@ export async function searchHybrid(
   const rankedPids = ranked.map(([pid]) => parseInt(pid, 10));
 
   // 5. parent fetch
-  const fetched = await fetchParentsByIds(rankedPids);
+  const fetched = await fetchParentsByIds(rankedPids,index);
   const parentCtxs = [];
   for (const [pidStr, sc] of ranked) {
     const pid = parseInt(pidStr, 10);
@@ -206,12 +206,12 @@ export async function searchHybrid(
 // =========================
 // RAG Wrapper
 // =========================
-export async function findRag(str) {
+export async function findRag(str,index) {
   const [parents, childHits] = await searchHybrid(str, {
-    topChild: 8,
+    topChild: 10,
     topParent: 8,
     preferPlace: true,
-  });
+  },index);
   return [parents, childHits];
 }
 
@@ -234,6 +234,7 @@ export function mixBlock(parents, maxParents, maxParentTextChars) {
 
 export async function buildPromptPlaceText(
   query,
+  country,
   {
     maxParents = 4,
     maxParentTextChars = 1200,
@@ -248,8 +249,9 @@ export async function buildPromptPlaceText(
   } = {}
 ) {
   // 1) findRag 실행
-  
-  const [parents, childHits] = await findRag(query);
+  const index = pc.Index(country);
+
+  const [parents, childHits] = await findRag(query,index);
    
   
   // 2) 부모/자식 block 생성 

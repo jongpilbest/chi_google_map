@@ -8,21 +8,19 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 
 
-export default function Find() {
+export default function Find({name}) {
 
  // 여기서 그냥 함수를 불러오는걸로하고 ..
 // 결과를 Find_inner 으로 주기로 하자 
-const[store_list,setstore_list]=useState([
-   
-    
-  ])
 
     const mutation = useMutation({
   mutationFn: async (text: any) => {
     const res = await fetch("/api/find_location", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ video_url: text.value }),
+      body: JSON.stringify({ video_url: text.value ,
+        country:name
+      }),
     });
 
     if (!res.ok) {
@@ -36,7 +34,7 @@ const[store_list,setstore_list]=useState([
 });
 
 
-  console.log(mutation,'데이터 뭐고 ')
+
 
 
 const send_text= async function(text:any){

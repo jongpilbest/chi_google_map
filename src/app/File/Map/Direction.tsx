@@ -48,7 +48,7 @@ function splitWaypointsIntoSegments(waypoints:Place[], maxWaypointsPerRequest:nu
 
 useEffect(() => {
   if (!DirectionService || !Directionrender) return;
-  console.log('몇번이나 re-render 됬니?')
+  
   let polyline: google.maps.Polyline | null = null;
   // 여기에 이미 내가 해놨네 
   
