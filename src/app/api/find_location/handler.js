@@ -109,7 +109,7 @@ export async function fetchParentsByIds(pidList,index) {
 // =========================
 export async function searchHybrid(
   q,
-  { topChild = 30, topParent = 10, preferPlace = true } = {},
+  { topChild = 10, topParent = 10, preferPlace = true } = {},
   index
 ) {
   const v = await embedQuery(q);
@@ -244,7 +244,7 @@ export async function buildPromptPlaceText(
 1) 사용자 질문의 의도를 파악하고, [CONTEXT]에서 의도에 맞는 장소를 선별합니다.
 1-2) place:'x' 인곳은 최종결과로 제공해주면 안됩니다.
 2) 선별된 장소는 place: 에서 가져오고 , 해당 장소에 대한 정보를  근거로 장소에 대한 설명을 해시태그 형식으로 간단하게 작성해주세요.
-3) [CONTEXT]에 없는 정보는 절대 추측/생성하지 말고, '제공된 컨텍스트에 없습니다.'라고 명확히 밝힙니다.
+3) [CONTEXT]에 없는 정보는 절대 추측/생성하지 말고, 결과가 없는 경우 빈배열을 제공해주세요
 4) 동일/유사 장소가 여러 개면 중복을 제거하고 핵심만 통합해 제시합니다.`
   } = {}
 ) {
