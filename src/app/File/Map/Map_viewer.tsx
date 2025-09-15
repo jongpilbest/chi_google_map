@@ -62,6 +62,7 @@ export default function Map_viewer({id,describe ,handleMarkerClick ,marker}:MapV
     <>
 
           <InfoWindow
+            disableAutoPan={true}
             anchor={marker}
             minWidth={200}
             maxWidth={350}

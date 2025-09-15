@@ -140,8 +140,7 @@ const data_store_slice= createSlice({
 
     }
 
-   }
-  
+   },
 
   }
 })
@@ -150,7 +149,7 @@ const data_store_slice= createSlice({
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
 export const{chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
-export const {data_Store_change,filter_data_location}= data_store_slice.actions
+export const {data_Store_change,filter_data_location,filter_zoom_in}= data_store_slice.actions
 export const store = configureStore({
   reducer: {
     url: counterSlice.reducer,

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import {Place} from './MapType'
 
 
-const color:string[]= ['bg-[#FFD166]','bg-[#A29BFE]','bg-[#F08AF4]','bg-[#2D9CDB]']
+const color:string[]= ['bg-[#2D9CDB]','bg-[#574BF2]','bg-[#0075E2]','bg-[#F08AF4]']
 
 export default function Marker_set({ comment }: any) {
   
@@ -18,10 +18,10 @@ export default function Marker_set({ comment }: any) {
       let colorCode: [string, number] = ['', 0]
   
       if (i === 0) colorCode = ['bg-[#FFD166]', 1]
-      else if (i > 0 && i < current_index) colorCode = [color[i], 0.1]
-      else if (i=== current_index ) colorCode = [color[i], 1]
+      else if (i > 0 && i < current_index) colorCode = [color[i], 0.4]
+      else if (i=== current_index ) colorCode = [color[i], 1.2]
       else if (comment.length-1 > current_index && i > current_index)
-        colorCode = [color[i], 0.1]
+        colorCode = [color[i], 0.4]
 
       return group.map((el, index) => (
         <Make_Marker

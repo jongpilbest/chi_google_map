@@ -11,7 +11,6 @@ export default function Zoom_in() {
 const map = useMap();
 const place= useSelector((state: any) => state.data_store.zoom_in_place);
 
-      
   //state.zoom_in_place= filter_data
 // 여기 부분에 넣어줘 이때 데이터를 걍 그......쩝 fiter 해달라고 하는게 날거같은데 
 
@@ -21,14 +20,13 @@ const place= useSelector((state: any) => state.data_store.zoom_in_place);
   useEffect(() => {
     if (!map || !place) return;
   
-if (place!=null&&place[0].location) {
-  const bounds = new google.maps.LatLngBounds();
-  bounds.extend(place[0].location);
-  map.fitBounds(bounds);
+if (place&& place[0].location) {
+
+  map.panTo(place[0].location);
   map.setZoom(20);
    }
 
-  }, [map, place]);
+  }, [map, place?.[0]?.location]);
 
   return (
   <></>

@@ -58,7 +58,9 @@ const send_text= async function(text:any){
           index={index}
           store={el}></Find_inner>)
         }
-         
+         {
+          mutation.isSuccess&&mutation.data.length==0 &&<p> 검색 결과가 없습니다</p>
+         }
       </div>
     </div>
   )
