@@ -109,7 +109,7 @@ export async function fetchParentsByIds(pidList,index) {
 // =========================
 export async function searchHybrid(
   q,
-  { topChild = 10, topParent = 10, preferPlace = true } = {},
+  { topChild = 5, topParent = 3, preferPlace = true } = {},
   index
 ) {
   const v = await embedQuery(q);

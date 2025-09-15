@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     });
 
     const content = resp.choices[0].message?.content;
-    console.log(content,'뭔데 안보임?')
+   
     if (!content) {
       return NextResponse.json({ error: "LLM 응답이 비어 있음" }, { status: 500 });
     }
