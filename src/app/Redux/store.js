@@ -14,7 +14,7 @@ const counterSlice = createSlice({
      Loading_state: false,
      current_video: null,
      url_list:[],
-     url_current_index:-1,
+     url_current_index:0,
      url_current: null ,
     },
   reducers: {
@@ -38,17 +38,11 @@ const counterSlice = createSlice({
    },
    url_out(state,action){
     // 저장한 곳의 url 을 주세요라는 의미 <- handler 작업이라고 생각하면됨 
-    if (action.payload.up) {
-
-      state.url_current_index = Math.min(
-        state.url_list.length - 1,
-        state.url_current_index + 1
-      );
-
-    } else if (action.payload.down) {
-      state.url_current_index = Math.max(0, state.url_current_index-1);
-    }
-    state.url_current = state.url_list[state.url_current_index] ?? null;
+     if(state.url_current_index!= action.payload-1) {
+          state.url_current_index=action.payload-1
+          state.url_current = state.url_list[action.payload-1]
+     }
+  
      // index 을 얘내가 아나?
    }
  
@@ -109,17 +103,15 @@ const controllerSlice= createSlice({
 const data_store_slice= createSlice({
   name:'data_Store',
   initialState:{
+      map_click:false,
+      clicked_marker_id: null, 
      location_data:[[]],
      zoom_in_place:null,
      locality_place:{
       place:null,
       location:null
      },
-     // 서버에서 들어오는 데이터 && autocompleted 에서 들어오는 데이터를 모아 놓는 곳이라고 생각하슈 
-     // 근데 장소가 겹치면 쩝 어떻게 해야될지 모르겟음.. 알긴 알겠는데 이걸 따로 저장^^;; 해야되서 우선은 놔두는걸로...  
-     // 우선은 여기에 걍 데이터 넣어놓고 나중에 고민하고 수정하는것으로 하기 
-
-
+ 
   },
   reducers:{ 
    data_Store_change(state,action){
@@ -150,6 +142,16 @@ const data_store_slice= createSlice({
       place:action.payload.place,
       location:action.payload.location
      }
+    },
+    map_click_toggle(state,action){
+      if (state.clicked_marker_id === action.payload) {
+        // 같은 걸 다시 클릭하면 닫기
+        state.map_click = false;
+        state.clicked_marker_id = null;
+      } else {
+        state.map_click = true;
+        state.clicked_marker_id = action.payload;
+      }
     }
 
 
@@ -160,7 +162,7 @@ const data_store_slice= createSlice({
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
 export const{chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
-export const {data_Store_change,filter_data_location,filter_zoom_in,locality_place_change}= data_store_slice.actions
+export const {data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle}= data_store_slice.actions
 export const store = configureStore({
   reducer: {
     url: counterSlice.reducer,

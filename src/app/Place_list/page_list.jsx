@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import Image from 'next/image';
 import Glance_section from './Glance_section';
+import { FaArrowLeft } from "react-icons/fa6";
+
 const TOKYO_AREAS = [
   {
     city:"Shibuya Tokyo",
@@ -86,12 +88,47 @@ const TOKYO_AREAS = [
 
 
 export default function page_list() {
+  
+  const [modal,setmodal]=useState({
+    modal:false,
+    name:''
+  });
  
 
+  function modal_change(name){
+    setmodal({
+      modal:true,
+      name:name
+    })
+  }
+  console.log(modal)
+  
   return (
-    <div className="flex flex-2 flex-col px-8 h-full overflow-hidden">
+    <div className="flex flex-2 flex-col px-8 h-full overflow-hidden relative">
+   
       {/* 상단 영역 */}
       <div className="pt-5 pb-3 flex gap-10 items-center border-b border-gray-200">
+        {modal.modal && (
+    <div className="absolute inset-y-1 inset-0  z-50 bg-white flex px-10 mt-4 rounded-md">
+      <div className='w-full  shadow-xl'>
+
+         <header className='h-14 bg-gray-100 justify-between w-full flex items-center px-3'>
+        <p className='font-bold '>{modal.name}</p>
+        <button 
+        onClick={  ()=>   setmodal({
+      modal:false,
+      name:''
+    })}
+        className='bg-[#47D6A2] p-2 rounded-md'>
+  <FaArrowLeft className='text-white'></FaArrowLeft>
+        </button>
+      </header>
+      </div>
+
+     
+    </div>
+  )}
+
         <p className="text-md font-bold">Place</p>
         <div className="flex items-center flex-1 bg-gray-100 shadow rounded-md px-3 py-1">
           <input
@@ -103,6 +140,7 @@ export default function page_list() {
           </button>
         </div>
       </div>
+     
 
       {/* 버튼 영역 */}
       <div className="flex gap-8 justify-between py-5">
@@ -116,7 +154,9 @@ export default function page_list() {
 
       <div className="flex-1 overflow-y-auto grid grid-cols-2 gap-4 pb-5">
         {TOKYO_AREAS.map((el,index) => (
-          <Glance_section key={el+index} city_data ={el}/>
+          <Glance_section 
+          modal_change={(el)=>modal_change(el)}
+          key={el+index} city_data ={el}/>
         ))}
       </div>
 

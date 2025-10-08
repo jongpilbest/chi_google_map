@@ -10,15 +10,8 @@ useAdvancedMarkerRef,
 
 //음식
 import './custom-advanced-marker.css';
-import { PiBowlFoodFill } from "react-icons/pi";
 
-//쇼핑
-import { PiShoppingCartFill } from "react-icons/pi";
-
-
-//볼거리
-
-import { PiMapPinLineFill } from "react-icons/pi";
+import { map_click_toggle } from '@/app/Redux/store';
 
 
 import {Place} from './MapType'
@@ -28,28 +21,22 @@ type place_plus= Place&{
 const colors = ["bg-[#f87171]", "bg-[#fb923c]", "bg-[#facc15]", "bg-[#4ade80]"];
 import Map_viewer from './Map_viewer';
 
-function Choose_mark(category_name:string){
-  if(category_name=="shooping") return <PiShoppingCartFill></PiShoppingCartFill>
-  else if (category_name=="food") return <PiBowlFoodFill></PiBowlFoodFill>
-  else return <PiMapPinLineFill></PiMapPinLineFill>
-}
 
 
-
-export function Make_Marker({ location,id,describe,category,color,opacity,emozi }: place_plus) {
+export function Make_Marker({ location,id,describe,startTime,color,opacity,emozi,index }: place_plus) {
     const [markerRef, marker] = useAdvancedMarkerRef();
+    const dispatch= useDispatch()
 
-   const [selet_mark, setselected_mark] = useState<boolean>(false);
-
+   
    // 수정할거 
    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark)
+  const { map_click, clicked_marker_id } = useSelector((state: any) => state.data_store);
+
    const indexWithId = Mark_Pin_set.findIndex((set: any) => {
    return set.has(id)});
    const handleMarkerClick = ()=>{
-   
-      setselected_mark((el)=>!el)
+      dispatch(map_click_toggle(null));
       // 여기 코드 보니까 넣은거 같은데?
-
     }
 
 
@@ -58,14 +45,14 @@ export function Make_Marker({ location,id,describe,category,color,opacity,emozi 
 
     // Handle info window close by deselecting this place
   
-
+ const isOpen = map_click && clicked_marker_id === id;
   return(
    <>
         <AdvancedMarker
           ref={markerRef}
           position={location}
          style={{ opacity:indexWithId>=0?1 :opacity }}
-      onClick={handleMarkerClick}  
+          onClick={()=>dispatch(map_click_toggle(id))}  
         >
           
    <div className={`flex flex-col items-center group cursor-pointer radius
@@ -73,9 +60,15 @@ export function Make_Marker({ location,id,describe,category,color,opacity,emozi 
     `}>
     {/* 동그라미 부분 */}
     <div className="flex items-center justify-center  border-green-800 border-2  bg-white text-white  transition-transform group-hover:scale-110">
-      <div className={`flex   bg-white items-center justify-center  `}>
+     <div className={`flex items-center justify-center ${color ? `bg-[${color}]` : 'bg-white'}`}>
        
-  <span className='text-[13px]'>{emozi}</span>
+<span
+  className={`${
+    color ? 'text-[20px]' : 'text-[13px]'
+  } transition-all duration-200`}
+>
+  {emozi}
+</span>
         </div>
   
     </div>
@@ -90,7 +83,7 @@ export function Make_Marker({ location,id,describe,category,color,opacity,emozi 
 
    {
 
-   selet_mark &&  <Map_viewer describe ={describe} id={id} handleMarkerClick={handleMarkerClick} marker={marker}></Map_viewer>
+   isOpen &&  <Map_viewer startTime={startTime} describe ={describe} index={index} id={id} handleMarkerClick={handleMarkerClick} marker={marker}></Map_viewer>
    
 
    }

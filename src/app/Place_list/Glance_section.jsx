@@ -7,11 +7,12 @@ import { useDispatch, UseDispatch } from 'react-redux';
 
 import {locality_place_change} from '../Redux/store'
 
-export default function Glance_section({city_data}) {
+export default function Glance_section({city_data,modal_change}) {
   const dispatch= useDispatch()
 
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
+
 
    useEffect(()=>{
 const fetchPhoto = async () => {
@@ -32,7 +33,7 @@ const fetchPhoto = async () => {
 
 
   const click_border= function(){
-  
+    modal_change(city_data.city)
     dispatch(locality_place_change({
      
      place:city_data.place_id,
@@ -53,7 +54,7 @@ const fetchPhoto = async () => {
 
   return (
     <div
-    onClick={click_border}
+    onClick={()=>click_border()}
     className="relative w-full h-42 flex flex-col bg-white rounded-md shadow-md border border-gray-200 hover:shadow-lg transition overflow-hidden cursor-pointer group">
       {/* 썸네일 */}
       <div className="w-full aspect-[4/3] bg-gray-200 overflow-hidden">

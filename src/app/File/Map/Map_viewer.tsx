@@ -20,12 +20,13 @@ type MapViewerProps = Place & {
   handleMarkerClick: () => void; // id를 받아서 void 리턴하는 함수,
   marker: google.maps.marker.AdvancedMarkerElement | null
 };
-
+ 
+import {  url_out,change_video_chapter} from '@/app/Redux/store';
 
 const colors = ["text-red-400", "text-orange-400", "text-yellow-400","text-green-400"];
 
 
-export default function Map_viewer({id,describe ,handleMarkerClick ,marker}:MapViewerProps  ) {
+export default function Map_viewer({id,describe ,handleMarkerClick ,index,startTime}:MapViewerProps  ) {
 
   
 
@@ -81,10 +82,21 @@ export default function Map_viewer({id,describe ,handleMarkerClick ,marker}:MapV
         <p className="text-sm font-bold text-gray-700">From the Video</p>
       </div>
 
-      <div className="flex gap-5 bg-green-200 items-center rounded-md px-2">
-        {/*Mark_Pin_set.length > 0 && Maek_pin*/}
+      <div 
+       onClick={()=> {
+            // 동영상 바꾸는거 
+            // 동영상 타임라인 맞추기 
+            console.log(index,' 현재 동영상 인덱스 ')
+        dispatch(url_out(index))
+    dispatch(change_video_chapter(startTime))
 
-        <button className='rounded-md  px-2 py-1 font-semibold'> Watch Video </button>
+        }}
+      className="flex gap-5 bg-green-200 items-center rounded-md px-2 hover:bg-green-400">
+        {Mark_Pin_set.length > 0 && Maek_pin}
+
+        <button
+       
+        className='rounded-md  px-2 py-1 font-semibold '> Watch Video </button>
     <FaLongArrowAltRight></FaLongArrowAltRight>
       </div>
     </div>

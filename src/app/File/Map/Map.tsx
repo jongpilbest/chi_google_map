@@ -10,7 +10,7 @@ MapControl,
 ControlPosition
 } from "@vis.gl/react-google-maps";
 
-
+import { map_click_toggle } from '@/app/Redux/store';
 
 import { useEffect,useState ,useCallback , useRef} from 'react';
 import {Place} from './MapType'
@@ -31,7 +31,7 @@ const colors_root = ["#f87171", "#fb923c", "#facc15", "#4ade80"];
 export default function Mappage({name}) {
 
 
-
+   const dispatch= useDispatch()
 
 
 
@@ -54,7 +54,7 @@ export default function Mappage({name}) {
 
       // 사용자의 맞춤 경로 때문에 발생하는 초록색 Direction 부분
       // 경로를 이제 지우지 말까.?
-
+      console.log('여기 경로 뭐임?')
       // 경로 바꾸는거 
  
         polylinesRef.current.map((el,index)=>{
@@ -114,7 +114,7 @@ export default function Mappage({name}) {
      defaultZoom={10}
      gestureHandling={'greedy'}
      fullscreenControl={false}
-
+      onClick={()=> dispatch(map_click_toggle(null))}
      mapTypeControl={false}
        >
         <Zoom_in></Zoom_in>

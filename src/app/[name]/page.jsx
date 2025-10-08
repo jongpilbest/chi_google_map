@@ -29,7 +29,7 @@ const queryClient = new QueryClient();
 <Provider store={store}>
   {/* 전체 화면 기준 flex-col */}
   <div className="flex flex-col h-screen w-full bg-amber-700">
-    
+       <Map_Contorller></Map_Contorller>
     {/* 상단 고정 Controller */}
     <div className="h-15 bg-white">
       <Controller />
