@@ -3,17 +3,19 @@ import { useState } from 'react';
 import {
 
   InfoWindow,
-  useAdvancedMarkerRef,
-
+  ControlPosition,
+MapControl
 } from "@vis.gl/react-google-maps";
 import { IoMdPin } from "react-icons/io";
-import { FaRobot } from "react-icons/fa6";
+import { LuMapPinned } from "react-icons/lu";
 import { MdOutlineCancel } from "react-icons/md";
 import { toggleMark} from '@/app/Redux/store';
-
-
+import { IoVideocamOutline } from "react-icons/io5";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { useDispatch,useSelector } from 'react-redux';
+import { BiSolidDownArrow } from "react-icons/bi";
 import {Place} from './MapType'
+import { FaHeart } from "react-icons/fa";
 type MapViewerProps = Place & {
   handleMarkerClick: () => void; // id를 받아서 void 리턴하는 함수,
   marker: google.maps.marker.AdvancedMarkerElement | null
@@ -43,7 +45,7 @@ export default function Map_viewer({id,describe ,handleMarkerClick ,marker}:MapV
             index: index,
           })
         )
-        console.log(id)
+       
 
       }
       
@@ -60,54 +62,58 @@ export default function Map_viewer({id,describe ,handleMarkerClick ,marker}:MapV
 
   return (
     <>
-
-          <InfoWindow
-            disableAutoPan={true}
-            anchor={marker}
-            minWidth={200}
-            maxWidth={350}
-            headerDisabled={true}>
-              <div className='p-2'> 
-                 <div className=' flex gap-4 items-center py-2 w-full justify-between' > 
-                   <div className="flex gap-4">
-                      <FaRobot className=' text-lg  text-[#A29BFE]'></FaRobot> 
-      
-                 <p className='text-sm font-medium text-gray-700'> From the Video</p>
-                    </div> 
-
-                    <div className='flex gap-2'>
-
-
-                       {
-                        Mark_Pin_set.length>0 && Maek_pin
-                       }      
-              
-      
-                 <MdOutlineCancel  
-                 className='text-lg hover:text-[#4DD599]'
-                 onClick={handleMarkerClick} />
-
-                    </div>
+    <MapControl position={ControlPosition.TOP_RIGHT}>
          
+             <div
+    className="absolute top-0 right-0 h-screen w-[23rem] 
+               bg-white/80  shadow-lg overflow-y-auto z-[1000] "
+  >    <header className='h-7 p-4  flex-row-reverse flex items-center bg-gray-100'> <p>    <MdOutlineCancel
+          className="text-lg hover:text-[#4DD599]"
+          onClick={handleMarkerClick}
+        /></p></header>
 
-                 </div>
-                 <hr className='border-t-1 border-gray-200'></hr>
-                 <div className='py-2'> 
-                    {
-                        describe &&    <p>{describe}</p>
-                    }
-                 </div>
-                
-                  </div>
-         
-                 <gmp-place-details>
-                <gmp-place-details-place-request
-                  place={id ?? ''}></gmp-place-details-place-request>
-                <gmp-place-all-content></gmp-place-all-content>
-              </gmp-place-details>
-            
-          </InfoWindow>
-        
+    <div className="flex gap-4 items-center pt-4 pb-1 w-full justify-between px-4">
+      <div className="flex gap-2 items-center">
+        <div className='p-1 rounded-md bg-[#0E9E86]'>
+   <IoVideocamOutline className='text-white'></IoVideocamOutline>
+        </div>
+    
+        <p className="text-sm font-bold text-gray-700">From the Video</p>
+      </div>
+
+      <div className="flex gap-5 bg-green-200 items-center rounded-md px-2">
+        {/*Mark_Pin_set.length > 0 && Maek_pin*/}
+
+        <button className='rounded-md  px-2 py-1 font-semibold'> Watch Video </button>
+    <FaLongArrowAltRight></FaLongArrowAltRight>
+      </div>
+    </div>
+
+
+
+    <div className="py-3 p-4">{describe && <p>{describe}</p>}
+    <div className='bg-[#47D6A2] my-3 py-1.5 px-2 rounded-md flex gap-2 items-center justify-between'>
+      <div className='flex gap-2 items-center'>
+       <LuMapPinned className='text-white'></LuMapPinned>
+      <p className='text-white'> 여행에 추가하기 </p>
+      </div>
+      <BiSolidDownArrow className='text-white '></BiSolidDownArrow>
+     
+
+    </div>
+    <button className=' bg-gray-200 p-2 rounded-2xl mt-5 flex  '>
+ 
+ <FaHeart className='text-gray-500'></FaHeart>
+    </button>
+    </div>
+
+    <gmp-place-details>
+      <gmp-place-details-place-request place={id ?? ''}></gmp-place-details-place-request>
+      <gmp-place-all-content></gmp-place-all-content>
+    </gmp-place-details>
+  </div>
+      
+        </MapControl>
             </>
   )
 }

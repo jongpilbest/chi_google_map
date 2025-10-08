@@ -18,7 +18,7 @@ export default function Marker_set({ comment }: any) {
       let colorCode: [string, number] = ['', 0]
   
       if (i === 0) colorCode = ['bg-[#FFD166]', 1]
-      else if (i > 0 && i < current_index) colorCode = [color[i], 0.4]
+      else if (i > 0 && i < current_index) colorCode = [color[i], 1]
       else if (i=== current_index ) colorCode = [color[i], 1.2]
       else if (comment.length-1 > current_index && i > current_index)
         colorCode = [color[i], 0.4]
@@ -29,6 +29,7 @@ export default function Marker_set({ comment }: any) {
           describe={el.describe}
           index={index}
           id={el.id}
+          emozi={el.emozi}
           location={el.location}
           category={el.category}
           color={colorCode[0]}

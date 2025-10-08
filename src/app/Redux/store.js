@@ -110,7 +110,11 @@ const data_store_slice= createSlice({
   name:'data_Store',
   initialState:{
      location_data:[[]],
-     zoom_in_place:null
+     zoom_in_place:null,
+     locality_place:{
+      place:null,
+      location:null
+     },
      // 서버에서 들어오는 데이터 && autocompleted 에서 들어오는 데이터를 모아 놓는 곳이라고 생각하슈 
      // 근데 장소가 겹치면 쩝 어떻게 해야될지 모르겟음.. 알긴 알겠는데 이걸 따로 저장^^;; 해야되서 우선은 놔두는걸로...  
      // 우선은 여기에 걍 데이터 넣어놓고 나중에 고민하고 수정하는것으로 하기 
@@ -141,6 +145,13 @@ const data_store_slice= createSlice({
     }
 
    },
+    locality_place_change(state,action){
+     state.locality_place= {
+      place:action.payload.place,
+      location:action.payload.location
+     }
+    }
+
 
   }
 })
@@ -149,7 +160,7 @@ const data_store_slice= createSlice({
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
 export const{chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
-export const {data_Store_change,filter_data_location,filter_zoom_in}= data_store_slice.actions
+export const {data_Store_change,filter_data_location,filter_zoom_in,locality_place_change}= data_store_slice.actions
 export const store = configureStore({
   reducer: {
     url: counterSlice.reducer,

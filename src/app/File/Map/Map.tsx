@@ -1,18 +1,24 @@
-"use client";
+'use client';
 
 import React, { useMemo } from 'react'
 
 import {
   APIProvider,
   Map,
+
 MapControl,
 ControlPosition
 } from "@vis.gl/react-google-maps";
+
+
+
 import { useEffect,useState ,useCallback , useRef} from 'react';
 import {Place} from './MapType'
 import Direction from './Direction';
 import Zoom_in from './Zoom_in';
 import { useDispatch,useSelector,shallowEqual  } from 'react-redux';
+
+import Border_map from './Border_map'
 
 import {AutocompleteCustom} from '../auto_search/autocomletecomponent'
 import Autocomplete_Result from '../auto_search/Autocomplete_Result';
@@ -91,13 +97,18 @@ export default function Mappage({name}) {
 
    const API_KEY = 'AIzaSyBkXahoUxLe2LROntj84Lra95YI-BXqunc';
   return (
-      <div className=" flex-[5]   rounded-lg">
+      <div className=" w-full h-full   rounded-lg">
         
 
      <APIProvider 
      apiKey={API_KEY}>
+ 
+
+  
+
+        
        <Map
-         mapId='c6ee764519ee05b0d0b9fec4'
+         mapId='c6ee764519ee05b0312e3370'
          colorScheme='LIGHT'
          defaultCenter={name=='newyork'?{lat: 40.7580, lng: -73.9855}:{lat: 35.68, lng: 139.69}}
      defaultZoom={10}
@@ -107,7 +118,7 @@ export default function Mappage({name}) {
      mapTypeControl={false}
        >
         <Zoom_in></Zoom_in>
-        
+        <Border_map></Border_map>
 
         <Marker_set comment={comment}></Marker_set>
      
@@ -121,26 +132,30 @@ export default function Mappage({name}) {
        {
          
          <>
-            <MapControl position={ControlPosition.TOP_LEFT}>
-               <AutocompleteCustom  onPlaceSelect={setSelectedPlace}>
-
-               </AutocompleteCustom>
-         </MapControl>
-         <Autocomplete_Result place={selectedPlace} />
-   
+          
          </>
          
        }
-      
+  
 
 
        </Map>
+     
      </APIProvider>
      </div>
   )
 }
 
 // commnet을 넣는게 아니라.. filter 해야됨.. 이러면  ㅎ...
+
+ // <MapControl position={ControlPosition.TOP_LEFT}>
+ //              <AutocompleteCustom  onPlaceSelect={setSelectedPlace}>
+//
+ //              </AutocompleteCustom>
+ //        </MapControl>
+ //        <Autocomplete_Result place={selectedPlace} />
+ //  <> 여기사이에
+
 
 
 

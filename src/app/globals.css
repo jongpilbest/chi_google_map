@@ -28,25 +28,29 @@ body {
 
 /* 스크롤바 전체 */
 ::-webkit-scrollbar {
-  height: 6px;   /* 세로는 width */
-  width: 10px
+  height: 5px;   /* 세로는 width */
+  width: 5px
 }
 
 /* 스크롤바 트랙 (배경) */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* 스크롤바 핸들 (움직이는 부분) */
 ::-webkit-scrollbar-thumb {
-  background: #A29BFE;   /* 원하는 색 */
-  border-radius: 10px;
+  background: #39D49B;   /* 원하는 색 */
+  border-radius: 5px;
 }
 /*9C6CFE
 /*
 
 /* hover 시 색상 */
 ::-webkit-scrollbar-thumb:hover {
-  background: #7B7AE7;
+  background: #0E9E86;
+}
+gmp-place-details{
+  background-color: rgba(255, 255, 255, 0.60); /* 85% 불투명한 흰색 */
+
 }

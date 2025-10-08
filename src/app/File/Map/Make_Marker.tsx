@@ -36,7 +36,7 @@ function Choose_mark(category_name:string){
 
 
 
-export function Make_Marker({ location,id,describe,category,color,opacity }: place_plus) {
+export function Make_Marker({ location,id,describe,category,color,opacity,emozi }: place_plus) {
     const [markerRef, marker] = useAdvancedMarkerRef();
 
    const [selet_mark, setselected_mark] = useState<boolean>(false);
@@ -72,10 +72,10 @@ export function Make_Marker({ location,id,describe,category,color,opacity }: pla
    
     `}>
     {/* 동그라미 부분 */}
-    <div className="flex items-center justify-center w-5 h-5 rounded-full bg-white text-white shadow-md transition-transform group-hover:scale-110">
-      <div className={`flex   ${indexWithId>=0?colors[indexWithId]:`${color}`}  w-4  h-4 items-center justify-center rounded-3xl `}>
+    <div className="flex items-center justify-center  border-green-800 border-2  bg-white text-white  transition-transform group-hover:scale-110">
+      <div className={`flex   bg-white items-center justify-center  `}>
        
-    {Choose_mark(category)}
+  <span className='text-[13px]'>{emozi}</span>
         </div>
   
     </div>

@@ -2,15 +2,15 @@ import React, { useRef } from 'react';
 import { IoIosSend } from 'react-icons/io';
 import { useDispatch } from 'react-redux';
 import { url_plus, data_Store_change } from '@/app/Redux/store';
-
+import { CiSearch } from "react-icons/ci";
 let check_list: string[] = [];
-
+import { FiMapPin } from "react-icons/fi";
 export function extractVideoId(url: string): string | null {
   const regex = /(?:v=|\/)([0-9A-Za-z_-]{11})/;
   const match = url.match(regex);
   return match ? match[1] : null;
 }
-
+import { MdOutlineTravelExplore } from "react-icons/md";
 export default function Youtube_link_input() {
   const dispatch = useDispatch();
   const url_youtube = useRef<HTMLInputElement | null>(null);
@@ -81,15 +81,34 @@ export default function Youtube_link_input() {
   };
 
   return (
-    <div className="flex items-center rounded-lg">
-      <input
-        ref={url_youtube}
-        placeholder="Please enter a YouTube link"
-        className="text-sm h-6 px-9 text-gray-800 bg-white"
-      />
-      <button className="bg-white" onClick={handleSubmit}>
-        <IoIosSend className="text-gray-500" />
-      </button>
-    </div>
+<div className="flex items-center justify-between w-full gap-10 bg-white  rounded-2xl   border-gray-200">
+  {/* 입력창 */}
+  <div className="flex items-center flex-1 bg-gray-100  shadow rounded-md px-3 py-1">
+    <input 
+      ref={url_youtube}
+      placeholder="Please enter a YouTube link"
+      className="text-xs h-6 px-2 w-full text-gray-800  bg-transparent outline-none placeholder-gray-400"
+    />
+    <button
+      onClick={handleSubmit}
+      className=" text-white w-5 h-5 flex justify-center items-center  hover:text-green-700 transition-colors bg-[#47D6A2] rounded-md"
+    >
+      <CiSearch className="text-sm " />
+    </button>
+    
+  </div>
+   
+ <div className="flex items-center shadow rounded-2xl px-1   ">
+    <button className="flex items-center gap-1  bg-[#47D6A2] hover:bg-green-600 text-white text-sm px-4 py-1 rounded-full shadow-sm transition-all">
+      <FiMapPin></FiMapPin>
+      <span className="text-white text-sm">Explore</span>
+    </button>
+    <button className="flex items-center gap-1 hover:bg-gray-200 text-gray-700 text-sm px-4 py-1 rounded-full  transition-all">
+     <MdOutlineTravelExplore></MdOutlineTravelExplore>
+      <span className='text-sm'>My Trip</span>
+    </button>
+  </div>
+</div>
+
   );
 }

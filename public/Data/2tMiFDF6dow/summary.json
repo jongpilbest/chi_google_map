@@ -1,12 +1,13 @@
 [
-  {
+  
+  { "city":"Shibuya",
     "startTime": "41.666",
     "endTime": "90.507",
     "place": "도쿄 하라주쿠 철판 프렌치토스트 카페 (유추)",
     "googlePlace": "도쿄 하라주쿠 Brandy Melville Harajuku",
     "describe": "오모테산도 인근, 뜨거운 철판에 구워 나오는 프렌치토스트와 라떼 베이스를 파는 카페",
     "realname": "의심됨",
-    "emozi": "🍞☕️🔥",
+    "emozi": "🍞☕️",
     "category": "food",
     "location": {
       "lat": 35.6718015,
@@ -16,13 +17,14 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Brandy%20Melville%20Laforet%20Harajuku/95553.jpg?raw=true"
   },
   {
+    "city":"Shibuya",
     "startTime": "126.584",
     "endTime": "143.935",
     "place": "도쿄 하라주쿠 KILO SHOP HARAJUKU",
     "googlePlace": "도쿄 하라주쿠 KILO SHOP HARAJUKU",
     "describe": "1g당 7엔으로 계산하는 무게 빈티지 숍(최근 오픈) 방문",
     "realname": "의심됨",
-    "emozi": "🛍️👖⚖️",
+    "emozi": "🛍️👖",
     "category": "shopping",
     "location": {
       "lat": 35.6699682,
@@ -31,14 +33,14 @@
     "id": "ChIJ5V1T5KKMGGARlTLiBrjIGUg",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/KILO%20SHOP%20HARAJUKU/127585.jpg?raw=true"
   },
-  {
+  { "city":"Shibuya",
     "startTime": "155.363",
     "endTime": "235.902",
     "place": "Tokyu Plaza Harajuku Harakado",
     "googlePlace": "Tokyu Plaza Harajuku Harakado",
     "describe": "도큐플라자 맞은편의 신관 ‘하라카도’ 탐방, 푸드코트·옥상 테라스·정원(원형 가든) 구경",
     "realname": "확실함",
-    "emozi": "🛍️🌿🏙️",
+    "emozi": "🛍️🏙️",
     "category": "sightseeing",
     "location": {
       "lat": 35.6683739,
@@ -47,14 +49,14 @@
     "id": "ChIJ_9GsagCNGGAR6auqGPod5nY",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Tokyu%20Plaza%20Harajuku%20Harakado/159701.jpg?raw=true"
   },
-  {
+  {"city":"Minato City",
     "startTime": "301.301",
     "endTime": "362.362",
     "place": "도쿄 니시아자부 Gonpachi Nishi-Azabu",
     "googlePlace": "Gonpachi Nishi-Azabu",
     "describe": "‘킬빌’ 촬영지로 유명한 이자카야, 철판 꼬치구이와 다국어 메뉴",
     "realname": "확실함",
-    "emozi": "🍢🍶🔥",
+    "emozi": "🍢🔥",
     "category": "food",
     "location": {
       "lat": 35.6601742,
@@ -64,13 +66,14 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Gonpachi%20Nishi-Azabu/307056.jpg?raw=true"
   },
   {
+    "city":"Minato City",
     "startTime": "384.926",
     "endTime": "468.134",
     "place": "도쿄 긴자 정식집 (유추)",
     "googlePlace": "도쿄 주오구 긴자 鳥ぎん 銀座本店",
     "describe": "긴자에서 웨이팅 피하고 방문한 밥집, 누룽지와 생선 조림(고등어/삼치) 정식",
     "realname": "의심됨",
-    "emozi": "🐟🍚🫖",
+    "emozi": "🐟🍚",
     "category": "food",
     "location": {
       "lat": 35.671242,
@@ -79,14 +82,14 @@
     "id": "ChIJk4z8B-aLGGARzXBgQxRBGKY",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Gonpachi%20Nishi-Azabu/304512.jpg?raw=true"
   },
-  {
+  {"city":"Chuo City",
     "startTime": "518.017",
     "endTime": "569.569",
     "place": "도쿄 긴자 HENRI CHARPENTIER Ginza Maison",
     "googlePlace": "HENRI CHARPENTIER Ginza Maison",
     "describe": "파인다이닝급 디저트 살롱, 코스처럼 서브되는 클래식 프렌치 디저트",
     "realname": "확실함",
-    "emozi": "🍰🍮🍵",
+    "emozi": "🍰🍮",
     "category": "food",
     "location": {
       "lat": 35.6733711,
@@ -95,14 +98,14 @@
     "id": "ChIJU4dl_OOLGGAR4K-HHbIdWXY",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/HENRI%20CHARPENTIER%20Ginza%20Maison/518934.jpg?raw=true"
   },
-  {
+  {"city":"Chuo City",
     "startTime": "574.407",
     "endTime": "582.039",
     "place": "도쿄 긴자 UNIQLO Ginza",
     "googlePlace": "UNIQLO Ginza",
     "describe": "제작한 커스텀 티셔츠 픽업",
     "realname": "확실함",
-    "emozi": "👕✅🛍️",
+    "emozi": "👕🛍️",
     "category": "shopping",
     "location": {
       "lat": 35.6702448,
@@ -111,14 +114,14 @@
     "id": "ChIJb9MHbuaLGGAR0xi-noU25UU",
     "image": "https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/UNIQLO%20Ginza/471887.jpg?raw=true"
   },
-  {
+  {"city":"Minato City",
     "startTime": "583.833",
     "endTime": "641.390",
     "place": "도쿄 롯폰기 The National Art Center, Tokyo (국립 신미술관)",
     "googlePlace": "The National Art Center, Tokyo",
     "describe": "유려한 곡선 유리 파사드와 천창, 내부 카페·가구 감상",
     "realname": "확실함",
-    "emozi": "🖼️🏛️🌤️",
+    "emozi": "🖼️🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 35.665289,
@@ -127,14 +130,14 @@
     "id": "ChIJP-vO9nuLGGARGJ2q8uryJUA",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/The%20National%20Art%20Center,%20Tokyo/587836.jpg?raw=true"
   },
-  {
+  {"city":"Minato City",
     "startTime": "648.898",
     "endTime": "715.423",
     "place": "도쿄 미나미아오야마 Share Green Minami-Aoyama",
     "googlePlace": "Share Green Minami-Aoyama",
     "describe": "카페·꽃집·잔디 정원이 있는 복합문화공간, 반려견 친화적",
     "realname": "확실함",
-    "emozi": "🌿☕️🌼",
+    "emozi": "🌿☕️",
     "category": "sightseeing",
     "location": {
       "lat": 35.6688258,
@@ -143,14 +146,14 @@
     "id": "ChIJM2L_HKaLGGARiOXFtfKKMEM",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Share%20Green%20Minami-Aoyama/652192.jpg?raw=true"
   },
-  {
+  {"city":"Shibuya",
     "startTime": "725.766",
     "endTime": "775.858",
     "place": "도쿄 시부야 Okonomiyaki Imari Shibuya",
     "googlePlace": "Okonomiyaki Imari Shibuya",
     "describe": "오코노미야키 오마카세로 다양한 스타일을 코스로 즐기는 철판집",
     "realname": "확실함",
-    "emozi": "🥘🔥🍺",
+    "emozi": "🥘🍺",
     "category": "food",
     "location": {
       "lat": 35.645569,
@@ -159,14 +162,14 @@
     "id": "ChIJaXEcjxSLGGAR3jt9r99KMhU",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Okonomiyaki%20Imari%20Shibuya/730437.jpg?raw=true"
   },
-  {
+  {"city":"Shibuya",
     "startTime": "805.179",
     "endTime": "822.154",
     "place": "도쿄 요요기공원 인근 CAMELBACK sandwich & espresso",
     "googlePlace": "CAMELBACK sandwich & espresso",
     "describe": "요요기공원 근처 인기 샌드위치·에스프레소 카페",
     "realname": "확실함",
-    "emozi": "🥪☕️💛",
+    "emozi": "🥪☕️",
     "category": "food",
     "location": {
       "lat": 35.665578,
@@ -175,30 +178,15 @@
     "id": "ChIJx4PWoLKMGGARLkqKeMuy6h8",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/CAMELBACK%20sandwich%20&%20espresso/807222.jpg?raw=true"
   },
-  {
-    "startTime": "828.410",
-    "endTime": "847.555",
-    "place": "도쿄 토미가야 Nata de Cristiano's (유추)",
-    "googlePlace": "도쿄 시부야구 도미가야 CAMELBACK sandwich & espresso",
-    "describe": "후글렌 근처의 유명 포르투갈식 에그 타르트 전문점, 박스 구매",
-    "realname": "의심됨",
-    "emozi": "🥧🇵🇹🧡",
-    "category": "food",
-    "location": {
-      "lat": 35.665578,
-      "lng": 139.6922285
-    },
-    "id": "ChIJx4PWoLKMGGARLkqKeMuy6h8",
-    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Nata%20de%20Cristiano's/832039.jpg?raw=true"
-  },
-  {
+  
+  {"city":"Shibuya",
     "startTime": "850.641",
     "endTime": "910.367",
     "place": "도쿄 시부야 요요기 공원",
     "googlePlace": "Yoyogi Park",
     "describe": "피크닉 명소, 가을철 추천. 인근 카페·베이커리 테이크아웃 후 돗자리 피크닉",
     "realname": "확실함",
-    "emozi": "🌳🧺☀️",
+    "emozi": "🌳🧺",
     "category": "sightseeing",
     "location": {
       "lat": 35.6700649,
@@ -207,14 +195,14 @@
     "id": "ChIJMwpiebSMGGARPr_454zHvDQ",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Yoyogi%20Park/854436.jpg?raw=true"
   },
-  {
+  {"city":"Chiyoda City",
     "startTime": "923.005",
     "endTime": "960.167",
     "place": "도쿄 간다 고등어 정식집 (유추)",
     "googlePlace": "도쿄 지요다구 간다 神田 勝本",
     "describe": "간다 오피스가 인근, 고등어를 갈아 넣은 소스와 누룽지가 특징인 정식",
     "realname": "의심됨",
-    "emozi": "🐟🍚🤤",
+    "emozi": "🐟🍚",
     "category": "food",
     "location": {
       "lat": 35.6974877,
@@ -223,14 +211,14 @@
     "id": "ChIJBduY0RaMGGAR3fbXTTSTyHg",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Nata%20de%20Cristiano's/828368.jpg?raw=true"
   },
-  {
+  {"city":"Taito City",
     "startTime": "1072.362",
     "endTime": "1086.293",
     "place": "도쿄 다이토 우에노 공원",
     "googlePlace": "Ueno Park",
     "describe": "박물관·미술관 밀집 공원, 개찰구로 바로 연결되는 대형 공원",
     "realname": "확실함",
-    "emozi": "🌳🏞️🎨",
+    "emozi": "🌳🎨",
     "category": "sightseeing",
     "location": {
       "lat": 35.7147557,
@@ -239,14 +227,14 @@
     "id": "ChIJw2qQRZuOGGARWmROEiM2y7E",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Ueno%20Park/1073655.jpg?raw=true"
   },
-  {
+  {"city":"Taito City",
     "startTime": "1081.371",
     "endTime": "1086.293",
     "place": "도쿄 우에노 The National Museum of Western Art",
     "googlePlace": "The National Museum of Western Art",
     "describe": "우에노 공원 내 국립 서양미술관(방문일 휴관)",
     "realname": "확실함",
-    "emozi": "🏛️🎨⛔️",
+    "emozi": "🏛️🎨",
     "category": "sightseeing",
     "location": {
       "lat": 35.7153869,
@@ -255,14 +243,14 @@
     "id": "ChIJf8xB-pyOGGARizzhlNTcI7s",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/The%20National%20Museum%20of%20Western%20Art/1082122.jpg?raw=true"
   },
-  {
+  {"city":"Taito City",
     "startTime": "1092.591",
     "endTime": "1169.251",
     "place": "도쿄 우에노 Tokyo Metropolitan Art Museum",
     "googlePlace": "Tokyo Metropolitan Art Museum",
     "describe": "우에노공원 내 대형 미술관. 현장구매 대기 후 입장, 일부 촬영 가능 작품. 목재·옻칠 작품 전시 관람.",
     "realname": "확실함",
-    "emozi": "🖼️🌳🎫",
+    "emozi": "🖼️🌳",
     "category": "sightseeing",
     "location": {
       "lat": 35.7172113,
@@ -271,14 +259,14 @@
     "id": "ChIJb_o7HiiMGGARUKu8uO7fGIQ",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Tokyo%20Metropolitan%20Art%20Museum/1101599.jpg?raw=true"
   },
-  {
+  {"city":"Taito City",
     "startTime": "1178.969",
     "endTime": "1210.334",
     "place": "도쿄 우에노 신오바즈노이케 연꽃 연못",
     "googlePlace": "Shinobazu Pond",
     "describe": "우에노공원 남측의 연꽃정원 풍경 감상.",
     "realname": "확실함",
-    "emozi": "🌸🌿🪷",
+    "emozi": "🌸🌿",
     "category": "sightseeing",
     "location": {
       "lat": 35.7102401,
@@ -287,30 +275,14 @@
     "id": "ChIJo8VKlCCMGGARarjlIsaLY1g",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Shinobazu%20Pond/1183056.jpg?raw=true"
   },
-  {
-    "startTime": "1237.819",
-    "endTime": "1269.977",
-    "place": "도쿄 우에노 DEAN & DELUCA CAFE Ueno",
-    "googlePlace": " DEAN & DELUCA CAFE Ueno",
-    "describe": "체인 카페. 쾌적한 좌석에서 디저트와 커피로 휴식.",
-    "realname": "의심됨",
-    "emozi": "☕🍰🥐",
-    "category": "food",
-    "location": {
-      "lat":35.70741510440423, 
-      "lng": 139.77339099140082
-    },
-    "id": "ChIJ4SePkI-RQTURZK27BI3fauk",
-    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/DEAN%20&%20DELUCA%20CAFE%20Ueno/1239404.jpg?raw=true"
-  },
-  {
+  {"city":"Chiyoda City",
     "startTime": "1282.864",
     "endTime": "1330.370",
     "place": "도쿄 아키하바라 Akihabara Gachapon Hall (가챠샵)",
     "googlePlace": "도쿄 치요다구 아키하바라 Akihabara Gachapon Hall",
     "describe": "아키하바라의 가챠 전문샵에서 토이 스토리 슬링키 캡슐 뽑기.",
     "realname": "의심됨",
-    "emozi": "🧸🎰🎲",
+    "emozi": "🧸🎰",
     "category": "shopping",
     "location": {
       "lat": 35.7018425,
@@ -319,14 +291,14 @@
     "id": "ChIJBztW3x2MGGARadHYl5vTEK0",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Akihabara%20Gachapon%20Hall/1283739.jpg?raw=true"
   },
-  {
+  {"city":"Taito City",
     "startTime": "1369.785",
     "endTime": "1431.513",
     "place": "도쿄 아사쿠사 MISOJYU",
     "googlePlace": "MISOJYU",
     "describe": "된장국 전문점. 소금밥과 닭구이, 두부·절임 반찬 등 구성.",
     "realname": "확실함",
-    "emozi": "🍲🍚🐓",
+    "emozi": "🍲🍚",
     "category": "food",
     "location": {
       "lat": 35.7116123,
@@ -335,14 +307,14 @@
     "id": "ChIJUcu5UUCPGGARC_4_okxXI8w",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/MISOJYU/1371202.jpg?raw=true"
   },
-  {
+  {"city":"Taito City",
     "startTime": "1437.477",
     "endTime": "1465.297",
     "place": "도쿄 아사쿠사 Sanrio Gift Gate Asakusa",
     "googlePlace": "Sanrio Gift Gate Asakusa",
     "describe": "센소지 인근 산리오 캐릭터 굿즈 매장 방문.",
     "realname": "의심됨",
-    "emozi": "🎀🐱🛍️",
+    "emozi": "🎀🛍️",
     "category": "shopping",
     "location": {
       "lat": 35.711604221298465,
@@ -351,14 +323,14 @@
     "id": "ChIJIRVdC6pFezUR02aa2I7i57A",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Sanrio%20Gift%20Gate%20Asakusa/1446736.jpg?raw=true"
   },
-  {
+  {"city":"Taito City",
     "startTime": "1516.890",
     "endTime": "1560.976",
     "place": "도쿄 아사쿠사 갓파바시 도구거리",
     "googlePlace": "Kappabashi Dougu Street",
     "describe": "주방도구 전문 상점가 산책. 셰프용 조리도구와 소품 구경.",
     "realname": "확실함",
-    "emozi": "🍳🔪🛒",
+    "emozi": "🍳🔪",
     "category": "shopping",
     "location": {
       "lat": 35.7105754,
@@ -367,14 +339,14 @@
     "id": "ChIJXYV-6JWOGGAR85vIZbM1RCE",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Kappabashi%20Dougu%20Street/1518182.jpg?raw=true"
   },
-  {
+  {"city":"Taito City",
     "startTime": "1531.196",
     "endTime": "1538.537",
     "place": "도쿄 아사쿠사 간소 식품 샘플야 갓파바시",
     "googlePlace": "Ganso Shokuhin Sample-ya Kappabashi",
     "describe": "리얼한 음식 모형 전문점. 바나나 숙성단계 모형 등 감상.",
     "realname": "확실함",
-    "emozi": "🍌🧁🧪",
+    "emozi": "🍌🧁",
     "category": "shopping",
     "location": {
       "lat": 35.714885,
@@ -383,14 +355,14 @@
     "id": "ChIJXfrPw5WOGGARtaWpQ0neL7U",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Ganso%20Shokuhin%20Sample-ya%20Kappabashi/1535449.jpg?raw=true"
   },
-  {
+  {"city":"Chiyoda City",
     "startTime": "1589.504",
     "endTime": "1614.988",
     "place": "도쿄 오차노미즈 오차노미즈역",
     "googlePlace": "Ochanomizu Station",
     "describe": "스즈메의 문단속 감성 스팟. 선로 터널 주변에서 열차 동시 통과 구경.",
     "realname": "확실함",
-    "emozi": "🚆📸🌉",
+    "emozi": "🚆📸",
     "category": "sightseeing",
     "location": {
       "lat": 35.6997175,
@@ -399,14 +371,14 @@
     "id": "ChIJebf-6hmMGGARH8tTXnEen_Y",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Ochanomizu%20Station/1592464.jpg?raw=true"
   },
-  {
+  {"city":"Musashino",
     "startTime": "1676.049",
     "endTime": "1705.161",
     "place": "도쿄 키치조지 FLAMINGO Kichijoji",
     "googlePlace": "FLAMINGO Kichijoji",
     "describe": "상태 좋은 디스플레이의 빈티지 숍. 가죽자켓 등 상품 구경.",
     "realname": "확실함",
-    "emozi": "🧥👗🛍️",
+    "emozi": "🧥👗",
     "category": "shopping",
     "location": {
       "lat": 35.7007476,
@@ -415,14 +387,14 @@
     "id": "ChIJE8JmjjfuGGAR5-Z-dr7ba0o",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/FLAMINGO%20Kichijoji/1687643.jpg?raw=true"
   },
-  {
+  {"city":"Musashino",
     "startTime": "2009.674",
     "endTime": "2082.872",
     "place": "도쿄 키치조지 Hikiniku to Kome Kichijoji",
     "googlePlace": "Hikiniku to Kome Kichijoji",
     "describe": "함바그 3구성 코스. 폰즈+간무, 생달걀 토핑, 된장국 곁들임.",
     "realname": "확실함",
-    "emozi": "🥩🍚🥢",
+    "emozi": "🥩🍚",
     "category": "food",
     "location": {
       "lat": 35.7058316,
@@ -431,14 +403,14 @@
     "id": "ChIJqdnczB3vGGARH6a7Qauu5CY",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/2tMiFDF6dow/Hikiniku%20to%20Kome%20Kichijoji/2011758.jpg?raw=true"
   },
-  {
+  {"city":"Musashino",
     "startTime": "2103.518",
     "endTime": "2109.941",
     "place": "도쿄 키치조지 Henri Charpentier Kichijoji",
     "googlePlace": "도쿄 시부야구 앙리 샤르팡티에 시부야 도큐 푸드쇼점",
     "describe": "귀가길에 디저트 테이크아웃.",
     "realname": "의심됨",
-    "emozi": "🍰🎁🍮",
+    "emozi": "🍰🎁",
     "category": "food",
     "location": {
       "lat": 35.6733711,
