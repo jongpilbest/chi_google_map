@@ -37,10 +37,11 @@ const counterSlice = createSlice({
       
    },
    url_out(state,action){
+    console.log(action.payload)
     // 저장한 곳의 url 을 주세요라는 의미 <- handler 작업이라고 생각하면됨 
-     if(state.url_current_index!= action.payload-1) {
-          state.url_current_index=action.payload-1
-          state.url_current = state.url_list[action.payload-1]
+     if(state.url_current_index!= action.payload) {
+          state.url_current_index=action.payload
+          state.url_current = state.url_list[action.payload]
      }
   
      // index 을 얘내가 아나?
@@ -105,7 +106,7 @@ const data_store_slice= createSlice({
   initialState:{
       map_click:false,
       clicked_marker_id: null, 
-     location_data:[[]],
+     location_data:{},
      zoom_in_place:null,
      locality_place:{
       place:null,
@@ -114,15 +115,18 @@ const data_store_slice= createSlice({
  
   },
   reducers:{ 
-   data_Store_change(state,action){
-  
-    if(action.payload.index==0){
-        state.location_data[action.payload.index].push(action.payload.data)
-    }
-    else{
-        state.location_data.push(action.payload.data)
-    }
-   },
+   data_Store_change(state, action) {
+      const index = action.payload.index;
+      const data = action.payload.data;
+
+      data.map((el) => {
+        if (!state.location_data[el['id']]) {
+          state.location_data[el['id']] = [];
+        }
+
+        state.location_data[el['id']].push([{ ...el, index: index }]);
+      });
+    }, // 
    filter_data_location(state,action){
      
     if(state.location_data.length>0){
@@ -153,7 +157,6 @@ const data_store_slice= createSlice({
         state.clicked_marker_id = action.payload;
       }
     }
-
 
   }
 })

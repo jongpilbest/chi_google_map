@@ -18,7 +18,6 @@ import { useSelector } from 'react-redux';
 const colors = ["bg-red-300", "bg-orange-300", "bg-yellow-300","bg-green-300"];
 export default function Map_Contorller() {
 
-  console.log('여기 작동 되는 코드 맞ㅇ?')
  
  /// circle 이랑 cancel 은 pin 이 활성화 되고 있을때만 작동하게 만들어주세요 
  // redux 내부에서 작동할때도 .. 그렇게 해애됨 ... ==> 이거 예외처리 프론트에 줘야되나 ..

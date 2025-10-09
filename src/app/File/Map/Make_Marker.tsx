@@ -1,4 +1,4 @@
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch,useSelector,shallowEqual } from 'react-redux';
 
 import { useCallback , useState} from 'react';
 import {
@@ -11,7 +11,7 @@ useAdvancedMarkerRef,
 //음식
 import './custom-advanced-marker.css';
 
-import { map_click_toggle } from '@/app/Redux/store';
+import { map_click_toggle } from '@/app/Redux/store'
 
 
 import {Place} from './MapType'
@@ -23,14 +23,15 @@ import Map_viewer from './Map_viewer';
 
 
 
-export function Make_Marker({ location,id,describe,startTime,color,opacity,emozi,index }: place_plus) {
+export function Make_Marker({ location,id,color,opacity,emozi }: place_plus) {
     const [markerRef, marker] = useAdvancedMarkerRef();
     const dispatch= useDispatch()
-
-   
-   // 수정할거 
-   const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark)
+  
+  
+  const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark)
   const { map_click, clicked_marker_id } = useSelector((state: any) => state.data_store);
+
+
 
    const indexWithId = Mark_Pin_set.findIndex((set: any) => {
    return set.has(id)});
@@ -83,7 +84,7 @@ export function Make_Marker({ location,id,describe,startTime,color,opacity,emozi
 
    {
 
-   isOpen &&  <Map_viewer startTime={startTime} describe ={describe} index={index} id={id} handleMarkerClick={handleMarkerClick} marker={marker}></Map_viewer>
+   isOpen &&  <Map_viewer id={id} handleMarkerClick={handleMarkerClick} marker={marker}></Map_viewer>
    
 
    }

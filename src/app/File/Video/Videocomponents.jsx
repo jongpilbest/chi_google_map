@@ -15,8 +15,6 @@ const VideoPlayer = forwardRef(function VideoPlayer({ url }, ref) {
   useEffect(() => {
     if (ready && ref.current && youtube_link != null) {
       const seekTime = Number(youtube_link);
-      console.log("▶️ Seeking to:", seekTime);
-
       // 약간 딜레이 후 실행 (iframe 갱신 대기)
       const timer = setTimeout(() => {
         try {

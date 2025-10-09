@@ -63,10 +63,11 @@ export default function Youtube_link_input() {
      try {
        const res = await fetch(`/Data/${link}/summary.json`);
        const comment_data = await res.json(); // 바로 JSON 파싱
- 
+       // 데이터 넣을때 data_store_change에 넣음 
+
        dispatch(
          data_Store_change({
-           index: 2,
+           index:check_list.length-1 ,
            data: comment_data,
          })
        );

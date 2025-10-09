@@ -11,26 +11,31 @@ import { LuMapPinned } from "react-icons/lu";
 import { MdOutlineCancel } from "react-icons/md";
 import { toggleMark} from '@/app/Redux/store';
 import { IoVideocamOutline } from "react-icons/io5";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { useDispatch,useSelector } from 'react-redux';
+
+import { useDispatch,useSelector,shallowEqual } from 'react-redux';
 import { BiSolidDownArrow } from "react-icons/bi";
 import {Place} from './MapType'
 import { FaHeart } from "react-icons/fa";
+
+import WatchVideo from '../../Place_list/Watch_video'
+
+
 type MapViewerProps = Place & {
   handleMarkerClick: () => void; // id를 받아서 void 리턴하는 함수,
   marker: google.maps.marker.AdvancedMarkerElement | null
 };
  
-import {  url_out,change_video_chapter} from '@/app/Redux/store';
+
 
 const colors = ["text-red-400", "text-orange-400", "text-yellow-400","text-green-400"];
 
 
-export default function Map_viewer({id,describe ,handleMarkerClick ,index,startTime}:MapViewerProps  ) {
+export default function Map_viewer({id ,handleMarkerClick ,}:MapViewerProps  ) {
 
   
-
-
+   const comment= useSelector((state:any)=>state.data_store.location_data,shallowEqual) as any[];
+   const data= comment[id]
+ 
    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark);
    // 이거 우선은 배열안에 new set 으로 만들어야되나? 
 
@@ -40,7 +45,7 @@ export default function Map_viewer({id,describe ,handleMarkerClick ,index,startT
     <IoMdPin
       key={index}
       onClick={() =>{
-  dispatch(
+        dispatch(
           toggleMark({
             id: id,
             index: index,
@@ -67,44 +72,49 @@ export default function Map_viewer({id,describe ,handleMarkerClick ,index,startT
          
              <div
     className="absolute top-0 right-0 h-screen w-[23rem] 
-               bg-white/80  shadow-lg overflow-y-auto z-[1000] "
-  >    <header className='h-7 p-4  flex-row-reverse flex items-center bg-gray-100'> <p>    <MdOutlineCancel
-          className="text-lg hover:text-[#4DD599]"
-          onClick={handleMarkerClick}
-        /></p></header>
+               bg-white/80  shadow-lg overflow-y-auto z-[1000]  ">   
+  
 
-    <div className="flex gap-4 items-center pt-4 pb-1 w-full justify-between px-4">
-      <div className="flex gap-2 items-center">
-        <div className='p-1 rounded-md bg-[#0E9E86]'>
-   <IoVideocamOutline className='text-white'></IoVideocamOutline>
-        </div>
+
+       
+
+
+
+      
+        <header className="h-7 p-4 flex-row-reverse flex items-center bg-gray-100">
+          
+          <p>
+            <MdOutlineCancel
+              className="text-lg hover:text-[#4DD599]"
+              onClick={handleMarkerClick}
+            />
+          </p>
+        </header>
+  <div className='p-3'>
     
-        <p className="text-sm font-bold text-gray-700">From the Video</p>
+   {
+  data.map((el,index) => (
+    <div key={el[0].id+index}>
+      <div className="flex gap-4 items-center pt-4 pb-1 w-full justify-between">
+        <div className="flex gap-2 items-center">
+          <div className="p-1 rounded-md bg-[#0E9E86]">
+            <IoVideocamOutline className="text-white" />
+          </div>
+          <p className="text-sm font-bold text-gray-700">From the Video</p>
+        </div>
+
+        <WatchVideo index={el[0].index} startTime={el[0].startTime} />
       </div>
 
-      <div 
-       onClick={()=> {
-            // 동영상 바꾸는거 
-            // 동영상 타임라인 맞추기 
-            console.log(index,' 현재 동영상 인덱스 ')
-        dispatch(url_out(index))
-    dispatch(change_video_chapter(startTime))
-
-        }}
-      className="flex gap-5 bg-green-200 items-center rounded-md px-2 hover:bg-green-400">
-        {Mark_Pin_set.length > 0 && Maek_pin}
-
-        <button
-       
-        className='rounded-md  px-2 py-1 font-semibold '> Watch Video </button>
-    <FaLongArrowAltRight></FaLongArrowAltRight>
+      <div className="py-3 ">
+        {el[0].describe && <p>{el[0].describe}</p>}
       </div>
     </div>
-
-
-
-    <div className="py-3 p-4">{describe && <p>{describe}</p>}
-    <div className='bg-[#47D6A2] my-3 py-1.5 px-2 rounded-md flex gap-2 items-center justify-between'>
+  ))
+}
+ 
+    
+    <div className='bg-[#47D6A2] py-1.5 px-2 rounded-md flex gap-2 items-center justify-between'>
       <div className='flex gap-2 items-center'>
        <LuMapPinned className='text-white'></LuMapPinned>
       <p className='text-white'> 여행에 추가하기 </p>
@@ -117,13 +127,14 @@ export default function Map_viewer({id,describe ,handleMarkerClick ,index,startT
  
  <FaHeart className='text-gray-500'></FaHeart>
     </button>
-    </div>
-
+    
     <gmp-place-details>
       <gmp-place-details-place-request place={id ?? ''}></gmp-place-details-place-request>
       <gmp-place-all-content></gmp-place-all-content>
     </gmp-place-details>
-  </div>
+    </div>
+
+</div>
       
         </MapControl>
             </>

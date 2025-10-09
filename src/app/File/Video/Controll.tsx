@@ -6,32 +6,12 @@ import { url_plus, url_out } from '@/app/Redux/store';
 import Youtube_link_input from './Youtube_link_input'
 import { LuMapPin } from "react-icons/lu";
 export default function Controll() {
- const dispatch = useDispatch();
-
- const check_list = useSelector((state:any) => state.url.url_list);
-
- const url_current_index=  useSelector((state:any) => state.url.url_current_index);
 
 
 
-  const url_index_change= function(name:string){
 
-   if(name=="up"){
-    if(url_current_index+1<=check_list.length)
-    dispatch(url_out({
-      "up":true,
-      "down":false
-    }))
-   }
-   else{
-    if(url_current_index-1>=0)
-      dispatch(url_out({
-      "up":false,
-      "down":true
-    }))
-   }
 
-  }
+
 
   return (
      <header className="w-full h-15 flex  justify-between  items-center px-10 bg-white border-b border-gray-300">

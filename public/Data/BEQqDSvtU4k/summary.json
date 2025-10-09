@@ -1,5 +1,6 @@
 [
   {
+    "city":"Shibuya",
     "startTime": "98.139",
     "endTime": "158.000",
     "place": "도쿄 시부야 Fuglen Tokyo",
@@ -15,7 +16,7 @@
     "id": "ChIJrWB6lbKMGGARp0QB0mMSNe4",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Fuglen%20Tokyo/103478.jpg?raw=true"
   },
-  {
+  {"city":"Shibuya",
     "startTime": "163.246",
     "endTime": "221.137",
     "place": "도쿄 시부야 KAKAN (마파두부)",
@@ -31,23 +32,9 @@
     "id": "ChIJrWB6lbKMGGARp0QB0mMSNe4",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/KAKAN/166749.jpg?raw=true"
   },
+  
   {
-    "startTime": "254.295",
-    "endTime": "283.032",
-    "place": "도쿄 시부야 요요기 공원",
-    "googlePlace": "Yoyogi Park",
-    "describe": "하라주쿠와 오모테산도를 잇는 대형 공원, 가을 산책과 피크닉",
-    "realname": "확실함",
-    "emozi": "🌳🧺",
-    "category": "sightseeing",
-    "location": {
-      "lat": 35.6700649,
-      "lng": 139.6949656
-    },
-    "id": "ChIJMwpiebSMGGARPr_454zHvDQ",
-    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Yoyogi%20Park/255505.jpg?raw=true"
-  },
-  {
+    "city":"Minato City",
     "startTime": "285.368",
     "endTime": "339.005",
     "place": "도쿄 아오야마 네즈 미술관",
@@ -64,6 +51,8 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Nezu%20Museum/293376.jpg?raw=true"
   },
   {
+  "city":"Minato City",
+
     "startTime": "354.020",
     "endTime": "404.070",
     "place": "도쿄 아카사카 Warayakiya Akasaka",
@@ -80,6 +69,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Warayakiya%20Roppongi%20Akasaka%20(Akasaka%20branch)/354687.jpg?raw=true"
   },
   {
+      "city":"Minato City",
     "startTime": "409.951",
     "endTime": "473.306",
     "place": "도쿄 롯폰기 Roppongi Hills (Keyakizaka 일루미네이션)",
@@ -96,6 +86,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Roppongi%20Hills/410576.jpg?raw=true"
   },
   {
+      "city":"Kanagawa",
     "startTime": "504.295",
     "endTime": "545.878",
     "place": "가나가와 후지사와 Fujisawa Station",
@@ -112,6 +103,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Fujisawa%20Station/507632.jpg?raw=true"
   },
   {
+      "city":"Kamakura",
     "startTime": "561.269",
     "endTime": "613.112",
     "place": "가나가와 가마쿠라 Kamakurakokomae Station",
@@ -128,6 +120,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Kamakurakokomae%20Station/565940.jpg?raw=true"
   },
   {
+      "city":"Kamakura",
     "startTime": "654.403",
     "endTime": "721.637",
     "place": "가나가와 시치리가하마 Pacific DRIVE-IN",
@@ -144,6 +137,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Pacific%20DRIVE-IN/656030.jpg?raw=true"
   },
   {
+      "city":"Kamakura",
     "startTime": "730.146",
     "endTime": "755.296",
     "place": "가나가와 가마쿠라 Komachi Dori",
@@ -160,6 +154,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Komachi%20Dori/734650.jpg?raw=true"
   },
   {
+      "city":"Kichijoji",
     "startTime": "832.289",
     "endTime": "904.570",
     "place": "도쿄 키치조지 Margaret Howell Shop & Cafe (3F) (방문 시 임시 휴업)",
@@ -176,6 +171,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/MARGARET%20HOWELL%20SHOP%20&%20CAFE%20KICHIJOJI/838587.jpg?raw=true"
   },
   {
+   "city":"Kichijoji",
     "startTime": "905.821",
     "endTime": "913.412",
     "place": "도쿄 키치조지 Hara Donuts Kichijoji",
@@ -192,6 +188,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Hara%20Donuts%20Kichijoji/910618.jpg?raw=true"
   },
   {
+   "city":"Kichijoji",
     "startTime": "940.064",
     "endTime": "950.240",
     "place": "도쿄 키치조지 PAPER MESSAGE Kichijoji",
@@ -208,6 +205,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/PAPER%20MESSAGE%20Kichijoji/940189.jpg?raw=true"
   },
   {
+      "city":"Kichijoji",
     "startTime": "968.676",
     "endTime": "985.275",
     "place": "도쿄 키치조지 Tokyu Department Store Kichijoji",
@@ -224,6 +222,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Tokyu%20Department%20Store%20Kichijoji/972763.jpg?raw=true"
   },
   {
+  "city":"Kichijoji",
     "startTime": "990.447",
     "endTime": "999.623",
     "place": "도쿄 키치조지 Satou (Menchi-katsu)",
@@ -240,6 +239,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Satou%20Kichijoji/994910.jpg?raw=true"
   },
   {
+     "city":"Kichijoji",
     "startTime": "1021.520",
     "endTime": "1098.722",
     "place": "도쿄 키치조지 이노카시라 공원",
@@ -256,6 +256,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Inokashira%20Park/1023063.jpg?raw=true"
   },
   {
+ "city":"Kichijoji",
     "startTime": "1098.722",
     "endTime": "1132.673",
     "place": "도쿄 키치조지 나카미치도리 빈티지 거리 (유추)",
@@ -272,6 +273,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Inokashira%20Park/1025482.jpg?raw=true"
   },
   {
+ "city":"Kichijoji",
     "startTime": "1135.217",
     "endTime": "1138.387",
     "place": "도쿄 키치조지 L.L.Bean Kichijoji",
@@ -288,6 +290,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/L.L.Bean%20Kichijoji%20Store/1148856.jpg?raw=true"
   },
   {
+      "city":"Chiyoda",
     "startTime": "1153.193",
     "endTime": "1162.911",
     "place": "도쿄 마루노우치 도쿄역 마루노우치 역사",
@@ -304,6 +307,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Tokyo%20Station%20Marunouchi%20Station%20Building/1157990.jpg?raw=true"
   },
   {
+      "city":"Chiyoda",
     "startTime": "1166.665",
     "endTime": "1181.847",
     "place": "도쿄 마루노우치 KITTE 가든",
@@ -320,6 +324,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/KITTE%20Garden/1168375.jpg?raw=true"
   },
   {
+      "city":"Chiyoda",
     "startTime": "1187.895",
     "endTime": "1203.118",
     "place": "도쿄 마루노우치 OVERRIDE KITTE MARUNOUCHI",
@@ -336,6 +341,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/OVERRIDE%20KITTE%20MARUNOUCHI/1189396.jpg?raw=true"
   },
   {
+      "city":"Shibuya",
     "startTime": "1264.137",
     "endTime": "1393.767",
     "place": "도쿄 시부야 SHIBUYA SKY",
@@ -352,6 +358,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/SHIBUYA%20SKY/1271812.jpg?raw=true"
   },
   {
+      "city":"Shibuya",
     "startTime": "1431.263",
     "endTime": "1512.302",
     "place": "도쿄 시부야 몬자야끼 Mohegi",
@@ -368,6 +375,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Unknown/1430512.jpg?raw=true"
   },
   {
+      "city":"Chuo City",
     "startTime": "1519.226",
     "endTime": "1550.507",
     "place": "도쿄 츠키지 츠키지 장외시장",
@@ -384,6 +392,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Tsukiji%20Outer%20Market/1522521.jpg?raw=true"
   },
   {
+      "city":"Chuo City",
     "startTime": "1550.507",
     "endTime": "1616.781",
     "place": "도쿄 츠키지 키츠네야",
@@ -400,6 +409,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Kitsuneya/1552842.jpg?raw=true"
   },
   {
+      "city":"Taito City",
     "startTime": "1662.327",
     "endTime": "1680.053",
     "place": "Hoshino Coffee Tsukiji",
@@ -416,6 +426,7 @@
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Hoshino%20Coffee%20Tsukiji/1668416.jpg?raw=true"
   },
   {
+      "city":"Taito City",
     "startTime": "1697.654",
     "endTime": "1831.079",
     "place": "도쿄 아사쿠사 센소지",
@@ -431,7 +442,9 @@
     "id": "ChIJ8T1GpMGOGGARDYGSgpooDWw",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Tokyo/BEQqDSvtU4k/Senso-ji/1699364.jpg?raw=true"
   },
+  
   {
+      "city":"Taito City",
     "startTime": "1846.219",
     "endTime": "1887.010",
     "place": "도쿄 아사쿠사 아사쿠사요코초",
