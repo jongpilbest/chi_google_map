@@ -18,13 +18,17 @@ import {Place} from './MapType'
 type place_plus= Place&{
   opacity:number
 }
-const colors = ["bg-[#f87171]", "bg-[#fb923c]", "bg-[#facc15]", "bg-[#4ade80]"];
+
+const colors = {"pink":"bg-[#F08AF4]", 
+  "purple":"bg-[#9C6CFE]"};
+
 import Map_viewer from './Map_viewer';
 
 
 
 export function Make_Marker({ location,id,color,opacity,emozi }: place_plus) {
     const [markerRef, marker] = useAdvancedMarkerRef();
+
     const dispatch= useDispatch()
   
   
@@ -61,7 +65,7 @@ export function Make_Marker({ location,id,color,opacity,emozi }: place_plus) {
     `}>
     {/* 동그라미 부분 */}
     <div className="flex items-center justify-center  border-green-800 border-2  bg-white text-white  transition-transform group-hover:scale-110">
-     <div className={`flex items-center justify-center ${color ? `bg-[${color}]` : 'bg-white'}`}>
+     <div className={`flex items-center justify-center ${color ? `${colors[color]}` : 'bg-white'}`}>
        
 <span
   className={`${
@@ -84,7 +88,7 @@ export function Make_Marker({ location,id,color,opacity,emozi }: place_plus) {
 
    {
 
-   isOpen &&  <Map_viewer id={id} handleMarkerClick={handleMarkerClick} marker={marker}></Map_viewer>
+   isOpen &&  <Map_viewer id={id} handleMarkerClick={handleMarkerClick}></Map_viewer>
    
 
    }

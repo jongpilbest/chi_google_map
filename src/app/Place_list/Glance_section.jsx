@@ -70,6 +70,7 @@ const fetchPhoto = async () => {
 
       {/* 텍스트 영역 */}
       <div className="px-3 py-3">
+    
         <p className="text-xs text-green-600 font-medium">
           {city_data.tagging}
         </p>

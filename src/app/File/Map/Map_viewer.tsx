@@ -24,7 +24,8 @@ type MapViewerProps = Place & {
   handleMarkerClick: () => void; // id를 받아서 void 리턴하는 함수,
   marker: google.maps.marker.AdvancedMarkerElement | null
 };
- 
+ import { personal_like_place } from '../../Redux/store'
+
 
 
 const colors = ["text-red-400", "text-orange-400", "text-yellow-400","text-green-400"];
@@ -32,9 +33,11 @@ const colors = ["text-red-400", "text-orange-400", "text-yellow-400","text-green
 
 export default function Map_viewer({id ,handleMarkerClick ,}:MapViewerProps  ) {
 
-  
+     const { like_location } = useSelector((state:any) => state.data_store);
+  const dispatch= useDispatch()
    const comment= useSelector((state:any)=>state.data_store.location_data,shallowEqual) as any[];
    const data= comment[id]
+
  
    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark);
    // 이거 우선은 배열안에 new set 으로 만들어야되나? 
@@ -64,7 +67,7 @@ export default function Map_viewer({id ,handleMarkerClick ,}:MapViewerProps  ) {
    },[Mark_Pin_set])
 
 
-  const dispatch= useDispatch()
+
 
   return (
     <>
@@ -121,11 +124,12 @@ export default function Map_viewer({id ,handleMarkerClick ,}:MapViewerProps  ) {
       </div>
       <BiSolidDownArrow className='text-white '></BiSolidDownArrow>
      
-
-    </div>
-    <button className=' bg-gray-200 p-2 rounded-2xl mt-5 flex  '>
- 
- <FaHeart className='text-gray-500'></FaHeart>
+ </div>
+    <button 
+     onClick={()=>dispatch(personal_like_place(data[0][0].id))}
+    className=' bg-gray-200 p-2 rounded-2xl mt-5 flex  '>
+ <FaHeart className={`${like_location.has(data[0][0].id)?'text-[#F08AF4]':'text-gray-500'} text-xs`}></FaHeart>
+   
     </button>
     
     <gmp-place-details>

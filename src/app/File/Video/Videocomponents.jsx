@@ -8,6 +8,8 @@ const VideoPlayer = forwardRef(function VideoPlayer({ url }, ref) {
 
     const youtube_link = useSelector((state) => state.url.current_video);
      const [ready, setReady] = useState(false);
+       const [playing, setPlaying] = useState(false);
+
    useEffect(() => {
     setReady(false);
   }, [url]);
@@ -18,7 +20,9 @@ const VideoPlayer = forwardRef(function VideoPlayer({ url }, ref) {
       // 약간 딜레이 후 실행 (iframe 갱신 대기)
       const timer = setTimeout(() => {
         try {
+            setPlaying(false); 
           ref.current.seekTo(seekTime, "seconds");
+           setPlaying(true); 
         } catch (err) {
           console.warn("Seek failed:", err);
         }
@@ -34,8 +38,9 @@ const VideoPlayer = forwardRef(function VideoPlayer({ url }, ref) {
       controls
       width="100%"
       height="100%"
-      playing={false}
+        playing={playing}
       onReady={() => setReady(true)}
+
   
     />
   );

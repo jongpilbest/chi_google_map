@@ -154,7 +154,7 @@ export default function page_list() {
       </header>
 
       {/* 콘텐츠 스크롤 영역 */}
-      <div className="flex-1 overflow-y-auto p-2">
+      <div className="flex-1 overflow-y-auto p-3">
         {filter_comment.map((El) => (
           <Inner_compont key={El.googlePlace} data={El} />
         ))}

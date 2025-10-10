@@ -3,6 +3,7 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 
 import { enableMapSet } from "immer";
+import { act } from 'react';
 
 enableMapSet(); // ✅ Immer에 Map/Set 지원 켜기
 // createSlice: action + reducer 통합 선언 (immer 내장됨)
@@ -112,7 +113,7 @@ const data_store_slice= createSlice({
       place:null,
       location:null
      },
- 
+    like_location: new Set()
   },
   reducers:{ 
    data_Store_change(state, action) {
@@ -156,6 +157,14 @@ const data_store_slice= createSlice({
         state.map_click = true;
         state.clicked_marker_id = action.payload;
       }
+    },
+    personal_like_place(state,action){
+      if(state.like_location.has(action.payload)){
+          state.like_location.delete(action.payload)
+      }
+      else{
+     state.like_location.add(action.payload)
+      }
     }
 
   }
@@ -165,7 +174,7 @@ const data_store_slice= createSlice({
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
 export const{chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
-export const {data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle}= data_store_slice.actions
+export const {data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle,personal_like_place}= data_store_slice.actions
 export const store = configureStore({
   reducer: {
     url: counterSlice.reducer,
