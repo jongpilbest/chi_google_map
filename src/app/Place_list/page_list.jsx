@@ -2,9 +2,19 @@ import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import Glance_section from './Glance_section';
 import { FaArrowLeft } from "react-icons/fa6";
-
+import Drawer from './Drawer'
 import { useSelector ,shallowEqual} from 'react-redux';
 import Inner_compont from './Inner_compont';
+
+  const tabs = [
+    { id: "food", label: "Food" },
+    { id: "adventure", label: "Adventure" },
+    { id: "shopping", label: "Shopping" },
+  ];
+
+
+
+  
 const TOKYO_AREAS = [
   {
     city:"Shibuya",
@@ -111,6 +121,8 @@ export default function page_list() {
 
 
 
+ const[setting,Setsetting]=useState('Glance');
+
   const [modal,setmodal]=useState({
     modal:false,
     name:''
@@ -127,17 +139,22 @@ export default function page_list() {
     set_filter_comment(comment_filter)
   }
 
+  function Drawer_change(activeTab){
+    const comment_filter=comment&&Object.values(comment).flat(Infinity).filter((el)=>el.category==activeTab)   
+    set_filter_comment(comment_filter)
+
+  }
+
   
   
   return (
     <div className="flex flex-2 flex-col px-8 h-full overflow-hidden relative">
-   
-      {/* 상단 영역 */}
+
       <div className="pt-5 pb-3 flex gap-10 items-center border-b border-gray-200">
        {modal.modal && (
   <div className="absolute inset-0 z-50 bg-white flex flex-col px-10 rounded-md">
     <div className="w-full h-full shadow-xl flex flex-col">
-      {/* 헤더 */}
+
       <header className="h-14 bg-gray-100 flex justify-between items-center px-3 border-b border-gray-200">
         <p className="font-bold text-sm">{modal.name}</p>
         <button
@@ -153,7 +170,7 @@ export default function page_list() {
         </button>
       </header>
 
-      {/* 콘텐츠 스크롤 영역 */}
+  
       <div className="flex-1 overflow-y-auto p-3">
         {filter_comment.map((El) => (
           <Inner_compont key={El.googlePlace} data={El} />
@@ -165,6 +182,7 @@ export default function page_list() {
 
 
         <p className="text-md font-bold">Place</p>
+       {/*
         <div className="flex items-center flex-1 bg-gray-100 shadow rounded-md px-3 py-1">
           <input
             placeholder="Find Place"
@@ -174,26 +192,64 @@ export default function page_list() {
             <CiSearch className="text-sm" />
           </button>
         </div>
+       */}
       </div>
-     
 
-      {/* 버튼 영역 */}
-      <div className="flex gap-8 justify-between py-5">
-        <button className="flex-1 py-1.5 bg-[#47D6A2] text-sm text-white rounded-md">
+
+   
+      <div className="flex w-full gap-8 justify-between py-5">
+        <button 
+        onClick={()=>Setsetting('Glance')}
+       className={`flex-1 py-1.5 ${
+  setting === 'Glance' ? 'bg-[#47D6A2] text-white' : 'bg-gray-100 text-gray-400'
+} text-sm  rounded-md hover:bg-green-600 hover:text-white`}
+       >
           Glance
         </button>
-        <button className="flex-1 py-1.5 bg-gray-100 text-sm rounded-md">
+        <button 
+         onClick={()=>Setsetting('Concise')}
+       className={`flex-1 py-1.5 ${
+  setting === 'Concise' ? 'bg-[#47D6A2] text-white' : 'bg-gray-100 text-gray-400'
+} text-sm  rounded-md hover:bg-green-600 hover:text-white`}
+       >
           Concise
         </button>
+        
       </div>
+   
 
-      <div className="flex-1 overflow-y-auto grid grid-cols-2 gap-4 pb-5">
-        {TOKYO_AREAS.map((el,index) => (
-          <Glance_section 
-          modal_change={(el)=>modal_change(el)}
-          key={el+index} city_data ={el}/>
-        ))}
-      </div>
+
+
+{/* 아래 콘텐츠 영역 */}
+<div className="flex flex-1 h-full min-h-0 w-full">
+  {/* 왼쪽: Glance */}
+  {setting === 'Glance' && (
+    <div className="flex-1 h-full min-h-0 min-w-0 overflow-y-auto grid grid-cols-2 gap-4 pb-5">
+      {TOKYO_AREAS.map((el, index) => (
+        <Glance_section
+          key={el + index}
+          city_data={el}
+          modal_change={(el) => modal_change(el)}
+        />
+      ))}
+    </div>
+  )}
+
+  {/* 오른쪽: Concise */}
+  {setting === 'Concise' && (
+    <div className="flex-1 min-h-0 min-w-0 overflow-y-auto bg-white">
+      <Drawer change_category={()=>Drawer_change()}     tabs={tabs} >
+
+         {
+        filter_comment?.map((El)=>
+              <Inner_compont key={El.googlePlace} data={El} />
+        )
+       }
+        </Drawer>
+    </div>
+  )}
+</div>
+
 
      
     </div>

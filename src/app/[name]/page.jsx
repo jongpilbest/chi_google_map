@@ -9,7 +9,7 @@ import Find from "../File/Short-video/Find";
 import Mappage from '../File/Map/Map'
 import Controller from '../File/Video/Controll'
 import History from '../File/VideoHistory/History'
-
+import Iternity_page from '../File/iternity/iternity_page';
 import Videopage from '../File/Video/Video'
 import Map_Contorller from "../File/Contorller/Map_Contorller";
 
@@ -41,7 +41,8 @@ const queryClient = new QueryClient();
       {/* 왼쪽 영역 */}
       <div className="flex-[0.7] flex flex-col bg-white overflow-hidden">
         <Videopage />
-        <Page_list /> {/* 내부 스크롤 영역 */}
+       {/* 내부 스크롤 영역  <Page_list /> */}
+<Iternity_page></Iternity_page>
       </div>
 
       {/* 오른쪽 지도 영역 */}
