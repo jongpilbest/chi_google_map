@@ -20,7 +20,7 @@ const { like_location, clicked_marker_id } = useSelector((state: any) => state.d
 
   // ✅ 조건문은 JSX 밖에서 처리
  
-   if(like_location.has(el.id)){
+   if(like_location.hasOwnProperty(el.id)){
     colorCode = ['pink', 1];
   }
   else if (el.id === clicked_marker_id) {

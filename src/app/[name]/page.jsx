@@ -14,17 +14,21 @@ import Videopage from '../File/Video/Video'
 import Map_Contorller from "../File/Contorller/Map_Contorller";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { use } from "react";
+import { use, useState } from "react";
 import dynamic from 'next/dynamic';
 const MapPage = dynamic(() => import('@/app/File/Map/Map'), { ssr: false });
+
 
 export default function Intro({ params}) {
 
   const { name } = use(params);
+  const Change= function(e){
+    setChoice(e)
+  }
 
 const queryClient = new QueryClient();
   //const onLoad= useCallback(()=>addZoneLayer(map))
-  
+  const[Choice,setChoice]=useState('Explore')
   return (
 <Provider store={store}>
   {/* 전체 화면 기준 flex-col */}
@@ -32,7 +36,7 @@ const queryClient = new QueryClient();
        <Map_Contorller></Map_Contorller>
     {/* 상단 고정 Controller */}
     <div className="h-15 bg-white">
-      <Controller />
+      <Controller Change={(e)=>Change(e)} Choice={Choice}/>
     </div>
 
     {/* 나머지 영역이 자동으로 확장 */}
@@ -42,7 +46,8 @@ const queryClient = new QueryClient();
       <div className="flex-[0.7] flex flex-col bg-white overflow-hidden">
         <Videopage />
        {/* 내부 스크롤 영역  <Page_list /> */}
-<Iternity_page></Iternity_page>
+       {Choice=='Explore' && <Page_list></Page_list>}
+       {Choice=='MyTrip' &&<Iternity_page></Iternity_page> }
       </div>
 
       {/* 오른쪽 지도 영역 */}

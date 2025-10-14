@@ -4,14 +4,14 @@ import { useDispatch } from 'react-redux';
 import { url_plus, data_Store_change } from '@/app/Redux/store';
 import { CiSearch } from "react-icons/ci";
 let check_list: string[] = [];
-import { FiMapPin } from "react-icons/fi";
+
 export function extractVideoId(url: string): string | null {
   const regex = /(?:v=|\/)([0-9A-Za-z_-]{11})/;
   const match = url.match(regex);
   return match ? match[1] : null;
 }
-import { MdOutlineTravelExplore } from "react-icons/md";
-export default function Youtube_link_input() {
+
+export default function Youtube_link_input({children}) {
   const dispatch = useDispatch();
   const url_youtube = useRef<HTMLInputElement | null>(null);
 // const handleSubmit = async () => {
@@ -96,19 +96,10 @@ export default function Youtube_link_input() {
     >
       <CiSearch className="text-sm " />
     </button>
-    
-  </div>
    
- <div className="flex items-center shadow rounded-2xl px-1   ">
-    <button className="flex items-center gap-1  bg-[#47D6A2] hover:bg-green-600 text-white text-sm px-4 py-1 rounded-full shadow-sm transition-all">
-      <FiMapPin></FiMapPin>
-      <span className="text-white text-sm">Explore</span>
-    </button>
-    <button className="flex items-center gap-1 hover:bg-gray-200 text-gray-700 text-sm px-4 py-1 rounded-full  transition-all">
-     <MdOutlineTravelExplore></MdOutlineTravelExplore>
-      <span className='text-sm'>My Trip</span>
-    </button>
   </div>
+    {children}
+
 </div>
 
   );

@@ -61,7 +61,7 @@ export default function Map_Contorller() {
 
 {check_check_confirm && colors.map((el, index) => (
   <button 
-  onClick={()=> dispatch(change_selected_mark(index))}
+  onClick={()=> {}}
     key={index}
     className={`rounded-2xl w-3.5  h-3.5 ${click_route==index?el:'bg-gray-500'}`}
   >
@@ -81,3 +81,7 @@ export default function Map_Contorller() {
 //  <LuMapPinPlus 
      //           onClick={()=>add_Selected_mark}
      //           className='text-lg hover:text-[#4DD599]'></LuMapPinPlus>
+
+
+  //onClick={()=> /*dispatch(change_selected_mark(index))*/}
+     //

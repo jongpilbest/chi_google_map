@@ -25,9 +25,9 @@ export default function Inner_compont({data}) {
             <header className='flex justify-between '>
                  <p className='text-xs font-semibold truncate'>{data.emozi} {data.googlePlace}</p>
                  <button 
-                 onClick={()=>dispatch(personal_like_place(data.id))}
+                 onClick={()=>dispatch(personal_like_place({key:data.id, location:[data.location.lat, data.location.lng]}))}
                  className='l'>
-                  <FaHeart className={`${like_location.has(data.id)?'text-[#F08AF4]':'text-gray-500'} text-xs`}></FaHeart> </button>
+                  <FaHeart className={`${like_location.hasOwnProperty(data.id)?'text-[#F08AF4]':'text-gray-500'} text-xs`}></FaHeart> </button>
             </header>
   
             <div className='flex w-full  justify-between '>

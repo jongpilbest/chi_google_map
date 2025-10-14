@@ -1,120 +1,94 @@
-
-
-import { useEffect ,useState, useRef} from "react";
+import { useEffect, useMemo } from "react";
 import React from "react";
-import {
-  useMap,
-  useMapsLibrary,
-} from "@vis.gl/react-google-maps";
+import { useMap, useMapsLibrary } from "@vis.gl/react-google-maps";
+import { useSelector } from "react-redux";
+import { Place } from "./MapType";
+import Route from "./google_map_direction/Route";
+import { RoutesApi } from "./google_map_direction/routes-api";
 
-import {Place} from './MapType'
-
-
-interface Prop{
-   comment: Place[];
-  polylinesRef:React.MutableRefObject<google.maps.Polyline[]> ;
-  color?:string ;
-  check:boolean
+interface Prop {
+  comment: Place[];
+  polylinesRef: React.MutableRefObject<google.maps.Polyline[]>;
+  color?: string;
+  check: boolean;
 }
 
-
-function splitWaypointsIntoSegments(waypoints:Place[], maxWaypointsPerRequest:number) {
-  var segments = [];
-  for (var i = 0; i < waypoints.length; i += maxWaypointsPerRequest - 1) {
-    var segment = waypoints.slice(i, Math.min(i + maxWaypointsPerRequest, waypoints.length));
-    if (segment.length > 1) segments.push(segment.map((el)=>el.location));
+function splitWaypointsIntoSegments(waypoints: any[], maxWaypointsPerRequest: number) {
+  const segments = [];
+  for (let i = 0; i < waypoints.length; i += maxWaypointsPerRequest - 1) {
+    const segment = waypoints.slice(i, Math.min(i + maxWaypointsPerRequest, waypoints.length));
+    if (segment.length > 1) segments.push(segment);
   }
   return segments;
-   }
+}
 
+function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
+  const comment = useSelector((state: any) => state.contorller.original_route_data);
+  const map = useMap();
+  const routeLibrary = useMapsLibrary("routes");
 
- function Direction({ comment,polylinesRef,color,check}:Prop ){
+  const apiClient = new RoutesApi('AIzaSyBkXahoUxLe2LROntj84Lra95YI-BXqunc');
 
+  // ✅ comment 바뀔 때마다 segment 재계산
+  const segments = useMemo(() => {
+    if (!comment || !comment[0]) return [];
+    return splitWaypointsIntoSegments(comment[0], 10);
+  }, [comment]);
 
-  const [DirectionService, setDirectionService] = useState<google.maps.DirectionsService>();
-  const [Directionrender,setDirectionRender]=useState<google.maps.DirectionsRenderer>();
+  const timestamp = Math.ceil(Date.now() / 86_400_000) * 86_400_000 + 900_000;
+  const departureTime = new Date(timestamp).toISOString();
 
-   const map= useMap();
-   const routeLibrary= useMapsLibrary('routes')
-  
-  const segments = splitWaypointsIntoSegments(comment, 20); 
-  
-    
-   useEffect(()=>{
-   if(!map || !routeLibrary) return
-    setDirectionService(new routeLibrary.DirectionsService())
-    setDirectionRender( new routeLibrary.DirectionsRenderer({map}));
-   },[map,routeLibrary])
-
-useEffect(() => {
-  if (!DirectionService || !Directionrender) return;
-  
-  let polyline: google.maps.Polyline | null = null;
-  // 여기에 이미 내가 해놨네 
-  
-  if (polylinesRef.current.length > 0) {
-    polylinesRef.current[polylinesRef.current.length - 1].setOptions({
-      strokeColor: "#808080",
-      strokeOpacity: 0.2,
-    });
-  }
-
-  Promise.all(
-    segments.map((segment) => {
-      const waypts = [];
-      for (let i = 1; i < segment.length - 1; i++) {
-        waypts.push({
-          location: segment[i],
-          stopover: true,
-        });
-      }
-
-
-      return DirectionService.route({
-        origin: segment[0]!,
-        destination: segment[segment.length - 1]!,
-        waypoints: waypts,
-        optimizeWaypoints: !check,
-        travelMode: google.maps.TravelMode.WALKING,
-      });
-    })
-  )
-    .then((responses) => {
-      let fullPath: any[] = [];
-      responses.forEach((res) => {
-        fullPath = fullPath.concat(res.routes[0].overview_path);
-      });
-
-      polyline = new google.maps.Polyline({
-        path: fullPath,
-        map: Directionrender.getMap(),
-        strokeColor: color,
-        strokeOpacity: 0.8,
-        strokeWeight: 5,
-      });
-    if(check){ polylinesRef.current.push(polyline)}
-    })
-    .catch((err) => console.error("Directions failed:", err));
-
-  // ✅ useEffect cleanup
-  return () => {
-    if (polyline&& check==true) {
-
-      polyline.setMap(null); // 자기 자신 polyline만 삭제
-      //polylinesRef.current = polylinesRef.current.filter((p) => p !== polyline);
-      // 여기 색 다시 설정해야됨 .. setOption 으로 기존으로 되돌려주는 형식 ... 
-      // 그 color 셋트의 색을 좀 내가 설정해 놓고 , 우선은 3개라고 가정하고 3개로 만들어 놓고 
-      // 그 색으로 다시 돌아가게 햐주는 for 문으로 설정하면 될거같음 어쩌피 ..동영상 많이 할거 아니여서 괜찮음
-
-
-
-    }
+  const routeOptions = {
+    travelMode: "TRANSIT",
+    departureTime,
+    computeAlternativeRoutes: false,
+    units: "METRIC",
   };
-}, [DirectionService, Directionrender, comment.length]);
 
+  const appearance = {
+    walkingPolylineColor: "#000",
+    defaultPolylineColor: "#7c7c7c",
+    stepMarkerFillColor: "#333333",
+    stepMarkerBorderColor: "#000000",
+  };
 
+  // ✅ Route 배열 memoization (comment 바뀔 때마다 새로 생성)
+  const routesToRender = useMemo(() => {
+    return segments.flatMap((segment, idx) => {
+      const routeList = [];
+      for (let i = 0; i < segment.length - 1; i++) {
+        const origin = { lat: segment[i][0], lng: segment[i][1] };
+        const destination = { lat: segment[i + 1][0], lng: segment[i + 1][1] };
+        routeList.push(
+          <Route
+            key={`route-${idx}-${origin.lat}-${origin.lng}`} // ✅ comment 변할 때마다 key 변경
+            apiClient={apiClient}
+            origin={origin}
+            destination={destination}
+            routeOptions={routeOptions}
+            appearance={appearance}
+          />
+        );
+      }
+      return routeList;
+    });
+  }, [segments, comment]); // comment 바뀌면 Route 새로 생성
 
-   return null;
+  // ✅ cleanup: polyline 제거
+  useEffect(() => {
+    return () => {
+      polylinesRef.current.forEach((p) => p.setMap(null));
+      polylinesRef.current = [];
+    };
+  }, []);
+
+  // ✅ comment 변화마다 cleanup 후 새 경로 그리기
+  useEffect(() => {
+    polylinesRef.current.forEach((p) => p.setMap(null));
+    polylinesRef.current = [];
+  }, [comment]);
+
+  return <>{routesToRender}</>;
 }
 
 export default React.memo(Direction);

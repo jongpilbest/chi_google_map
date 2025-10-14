@@ -5,13 +5,9 @@ import { useDispatch,useSelector } from 'react-redux';
 import { url_plus, url_out } from '@/app/Redux/store';
 import Youtube_link_input from './Youtube_link_input'
 import { LuMapPin } from "react-icons/lu";
-export default function Controll() {
-
-
-
-
-
-
+import { FiMapPin } from "react-icons/fi";
+import { MdOutlineTravelExplore } from "react-icons/md";
+export default function Controll({Change,Choice}) {
 
   return (
      <header className="w-full h-15 flex  justify-between  items-center px-10 bg-white border-b border-gray-300">
@@ -29,8 +25,30 @@ export default function Controll() {
       </div>
           
     <div className="h-10  flex gap-7 items-center  flex-3" >
-           <Youtube_link_input></Youtube_link_input>
-      
+           <Youtube_link_input>
+       <div className="flex items-center shadow rounded-2xl px-1   ">
+          <button 
+          onClick={()=>Change('Explore')}
+        className={`flex items-center gap-1 text-sm px-4 py-1 rounded-full shadow-sm transition-all 
+    ${Choice === 'Explore' ? 'bg-[#47D6A2] text-white hover:bg-[#0E9E86]' : 'bg-white hover:bg-gray-100 text-black'}`}
+       >
+            <FiMapPin></FiMapPin>
+            <span  className={`text-md ${Choice === 'Explore' ? 'text-white' : 'text-black'}`}>Explore</span>
+          </button>
+          <button 
+           onClick={()=>Change('MyTrip')}
+             className={`flex items-center gap-1 text-sm px-4 py-1 rounded-full shadow-sm transition-all 
+    ${Choice === 'MyTrip' ? 'bg-[#47D6A2] text-white hover:bg-[#0E9E86]' : 'bg-white hover:bg-gray-100 text-black'}`}>
+           <MdOutlineTravelExplore></MdOutlineTravelExplore>
+            <span   className={`text-md ${Choice === 'MyTrip' ? 'text-white' : 'text-black'}`}>My Trip</span>
+          </button>
+        </div>
+
+
+           </Youtube_link_input>
+   
+   
+     
  
     </div>
         </header>

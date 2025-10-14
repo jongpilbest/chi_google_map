@@ -7,19 +7,66 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import { kMeans, runKMeansWithOptimalInertia } from "k-means-clustering-js";
 import { Cluster } from "k-means-clustering-js/dist/types";
+import { useDispatch } from "react-redux";
 import Portal from './Portal'
 import { isDateRange } from "react-day-picker";
-
+import { useSelector } from "react-redux";
 import Drawer from '../../Place_list/Drawer'
  //const tabs = [
  //   { id: "food", label: "Food" },
  //   { id: "adventure", label: "Adventure" },
  //   { id: "shopping", label: "Shopping" },
  // ];
+import { chnage_original_route_data } from "../../Redux/store";
 
+function makeOrderedRoute(points) {
+  if (points.length <= 2) return points;
+
+  // 1️⃣ 출발점·도착점 찾기 (가장 멀리 떨어진 두 점)
+  let maxDist = 0;
+  let endpoints = [null, null];
+
+  for (let i = 0; i < points.length; i++) {
+    for (let j = i + 1; j < points.length; j++) {
+      const dist = Math.sqrt(
+        (points[i][0] - points[j][0]) ** 2 +
+        (points[i][1] - points[j][1]) ** 2
+      );
+      if (dist > maxDist) {
+        maxDist = dist;
+        endpoints = [points[i], points[j]];
+      }
+    }
+  }
+
+  const [origin, destination] = endpoints;
+
+  // 2️⃣ 중간 포인트 정렬 (출발→도착 방향 직선 투영)
+  const dx = destination[1] - origin[1];
+  const dy = destination[0] - origin[0];
+
+  const middlePoints = points
+    .filter(
+      (p) => !(p[0] === origin[0] && p[1] === origin[1]) &&
+             !(p[0] === destination[0] && p[1] === destination[1])
+    )
+    .map((p) => ({
+      point: p,
+      proj:
+        ((p[1] - origin[1]) * dx + (p[0] - origin[0]) * dy) /
+        (dx * dx + dy * dy),
+    }))
+    .sort((a, b) => a.proj - b.proj)
+    .map((d) => d.point);
+
+  // 3️⃣ 최종 경로 순서 배열 반환
+   return [origin, ...middlePoints, destination];
+}
 
 
 export default function DateRangePicker() {
+  const dispatch= useDispatch()
+
 
  const [range, setRange] = useState(isDateRange);
 
@@ -28,10 +75,11 @@ export default function DateRangePicker() {
     day:0,
     tabs:[]
   });
-  console.log(total_travel.tabs,'뭐지?')
+
 
   const [showStartPicker, setShowStartPicker] = useState(false);
   
+     const { like_location } = useSelector((state) => state.data_store);
 
   // format date text
   const formatDate = (date) => (date ? format(date, "MM/dd/yyyy") : "");
@@ -58,40 +106,26 @@ export default function DateRangePicker() {
       day:diffDays,
       tabs: tabs})
 
-    Make_travel()
-   
+    Make_travel(Object.values(like_location),diffDays)
+    
+
   }
 
-  const Make_travel= async function(){
- 
-const places = [
-    [2.37, 5.56],
-    [6.12, 1.92],
-    [4.72, 3.25],
-    [7.82, 8.16],
-    [3.64, 6.01],
-    [8.29, 2.46],
-    [5.63, 9.71],
-    [4.88, 6.44],
-    [7.33, 7.85],
-    [9.56, 1.82],
-    [3.93, 9.51],
-    [5.79, 7.28],
-    [8.06, 2.92],
-    [6.63, 8.03],
-    [4.25, 4.76],
-    [2.89, 7.54],
-    [9.24, 6.48],
-  ];
+  const Make_travel= async function(places,day){
 
   const results = runKMeansWithOptimalInertia({
-      data: places,
-      k: total_travel.day,
+      data:places,
+      k: day+1,
     });
-   console.log(results,'결과만 확인')
+
+   const final_data=results.map((el)=>makeOrderedRoute(el.points))
+   //여기 그 direction (map) 에 보내는곳 > map 에서 좀 수정 부탁요 
+    console.log(final_data,'경로저장?')
+     dispatch(chnage_original_route_data(final_data))
 
   }
   function Drawer_change(){
+    // 여기서 인덱스 번호를 얻어와서 걍 filter 해주면 되는거아님????????????????
 
   }
 
@@ -180,7 +214,10 @@ const places = [
         </div>
         {total_travel.tabs.length>0&&
            <Drawer change_category={()=>Drawer_change()}   tabs={total_travel.tabs} >
+            {
 
+
+            }
 
            </Drawer>
 }

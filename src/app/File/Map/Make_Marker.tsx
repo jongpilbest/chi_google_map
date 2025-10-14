@@ -39,6 +39,11 @@ export function Make_Marker({ location,id,color,opacity,emozi }: place_plus) {
 
    const indexWithId = Mark_Pin_set.findIndex((set: any) => {
    return set.has(id)});
+
+
+
+
+   
    const handleMarkerClick = ()=>{
       dispatch(map_click_toggle(null));
       // 여기 코드 보니까 넣은거 같은데?

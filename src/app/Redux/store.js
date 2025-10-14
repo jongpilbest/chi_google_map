@@ -2,6 +2,7 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 
+
 import { enableMapSet } from "immer";
 import { act } from 'react';
 
@@ -58,13 +59,16 @@ const controllerSlice= createSlice({
    Check_check: false,
    select_mark_index:0,
    cancel_check:false,
-   selectedMark:[new Set(),new Set(), new Set(), new Set()] ,
+   selectedMark:[] ,
    showDirection: false,
-   show_search:false
+   show_search:false,
+   original_route_data:[],
   },
   reducers:{
-      
-    change_selected_mark(state,action){
+    chnage_original_route_data(state,action){
+      state.original_route_data=action.payload
+    }  ,
+    change_selected_mark_(state,action){
       state.select_mark_index=action.payload
     },
 
@@ -74,11 +78,13 @@ const controllerSlice= createSlice({
      },
      add_Selected_mark(state,action){
       // 나중에 쓸거 지금 바빠서 못함
-      state.selectedMark.add(new Set());
+      state.selectedMark=action.payload;
      }
      ,
     toggleMark(state, action) {
-      const id = action.payload.id;
+      const id = action.payload.i
+      //이거 걍 추후에 쓴다고 가정하고 지금은 만지지 말자
+    ;
       const index= action.payload.index
        if (state.selectedMark[index].has(id)) {
        state.selectedMark[index].delete(id);   // 있으면 제거
@@ -113,7 +119,7 @@ const data_store_slice= createSlice({
       place:null,
       location:null
      },
-    like_location: new Set()
+    like_location: {}
   },
   reducers:{ 
    data_Store_change(state, action) {
@@ -159,11 +165,13 @@ const data_store_slice= createSlice({
       }
     },
     personal_like_place(state,action){
-      if(state.like_location.has(action.payload)){
-          state.like_location.delete(action.payload)
+      const key= action.payload.key;
+      const location= action.payload.location;
+      if(state.like_location[key]){
+          delete state.like_location[key]
       }
       else{
-     state.like_location.add(action.payload)
+     state.like_location[key]=location
       }
     }
 
@@ -173,7 +181,7 @@ const data_store_slice= createSlice({
 
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
-export const{chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
+export const{chnage_original_route_data,chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
 export const {data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle,personal_like_place}= data_store_slice.actions
 export const store = configureStore({
   reducer: {

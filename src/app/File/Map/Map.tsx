@@ -87,8 +87,11 @@ export default function Mappage({name}) {
   const filteredComment = useMemo(() => {
     // 여기서 문제였군 .. 
    if(comment.length>0){
-     //Mark_Pin_set 수정할거 
+     //Mark_Pin_set 배열형태로 굳이 내가 다시 filter 할이유 없고 어쩌피 지금 필요한게,  location 이라면... 
      // 여기 true 인 인덱스만 뽑아
+ 
+
+
      return  comment.flat().filter((el)=>Mark_Pin_set[Find_index_mark_pin].has(el.id))    
    } 
 
@@ -124,7 +127,7 @@ export default function Mappage({name}) {
      
      
             {
-            Check_check&&<Direction color={colors_root[Find_index_mark_pin]} key="filtered" check={true}  comment={filteredComment} polylinesRef={polylinesRef}
+            Check_check&&<Direction  key="filtered" check={true}  polylinesRef={polylinesRef}
              ></Direction>
              }
 

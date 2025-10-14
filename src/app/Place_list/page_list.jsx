@@ -7,9 +7,9 @@ import { useSelector ,shallowEqual} from 'react-redux';
 import Inner_compont from './Inner_compont';
 
   const tabs = [
-    { id: "food", label: "Food" },
-    { id: "adventure", label: "Adventure" },
-    { id: "shopping", label: "Shopping" },
+    { id: "food", label: "food" },
+    { id: "adventure", label: "adventure" },
+    { id: "shopping", label: "shopping" },
   ];
 
 
@@ -140,7 +140,10 @@ export default function page_list() {
   }
 
   function Drawer_change(activeTab){
+  
+    
     const comment_filter=comment&&Object.values(comment).flat(Infinity).filter((el)=>el.category==activeTab)   
+
     set_filter_comment(comment_filter)
 
   }
@@ -172,7 +175,7 @@ export default function page_list() {
 
   
       <div className="flex-1 overflow-y-auto p-3">
-        {filter_comment.map((El) => (
+        { filter_comment.map((El) => (
           <Inner_compont key={El.googlePlace} data={El} />
         ))}
       </div>
@@ -238,10 +241,9 @@ export default function page_list() {
   {/* 오른쪽: Concise */}
   {setting === 'Concise' && (
     <div className="flex-1 min-h-0 min-w-0 overflow-y-auto bg-white">
-      <Drawer change_category={()=>Drawer_change()}     tabs={tabs} >
-
+      <Drawer change_category={(e)=>Drawer_change(e)}     tabs={tabs} >
          {
-        filter_comment?.map((El)=>
+        filter_comment.map((El)=>
               <Inner_compont key={El.googlePlace} data={El} />
         )
        }

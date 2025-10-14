@@ -1,7 +1,7 @@
 import { Children, useState } from "react";
-
+import { useDispatch } from "react-redux";
 import Inner_compont from "./Inner_compont";
-export default function CategoryTabs({Children,tabs,change_category }) {
+export default function CategoryTabs({children,tabs,change_category }) {
 
   const [activeTab, setActiveTab] = useState(tabs[0].label);
   
@@ -10,16 +10,16 @@ export default function CategoryTabs({Children,tabs,change_category }) {
  
 
   return (
-    <div className="flex h-full  border-gray-200 w-full flex-col ">
-        <div className="h-20 flex overflow-x-auto overflow-y-hidden no-scrollbar w-full">
-      {tabs.map((tab) => (
+    <div className="flex   border-gray-200 w-full flex-col ">
+        <div className="h-16 flex overflow-x-auto overflow-y-hidden no-scrollbar w-full">
+      {tabs.map((tab,index) => (
         <button
           key={tab.id}
           onClick={() => {setActiveTab(tab.id)
-
-             change_category()
+             dispatch(index)
+             change_category(tab.id)
           }}
-          className={`relative px-4 py-1 w-20   text-gray-600 text-xs transition-colors duration-200
+          className={`relative px-4  w-20   text-gray-600 text-xs transition-colors duration-200
             ${activeTab === tab.id ? "text-[#2BB67E]" : "hover:text-gray-800"}`}
         > 
           {tab.label}
@@ -29,12 +29,14 @@ export default function CategoryTabs({Children,tabs,change_category }) {
         </button>
       ))}
             </div>
-    <div className="w-full flex flex-col  min-w-0 ">
-      {Children}
 
-    </div>
-     
+
+     {children}    
+
     
+   
+ 
     </div>
+    
   );
 }

@@ -126,9 +126,9 @@ export default function Map_viewer({id ,handleMarkerClick ,}:MapViewerProps  ) {
      
  </div>
     <button 
-     onClick={()=>dispatch(personal_like_place(data[0][0].id))}
+     onClick={()=>dispatch(personal_like_place({key:data[0][0].id,location:[data[0][0].location.lat,data[0][0].location.lng]}))}
     className=' bg-gray-200 p-2 rounded-2xl mt-5 flex  '>
- <FaHeart className={`${like_location.has(data[0][0].id)?'text-[#F08AF4]':'text-gray-500'} text-xs`}></FaHeart>
+ <FaHeart className={`${like_location.hasOwnProperty(data[0][0].id)?'text-[#F08AF4]':'text-gray-500'} text-xs`}></FaHeart>
    
     </button>
     
