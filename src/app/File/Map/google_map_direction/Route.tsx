@@ -36,6 +36,7 @@ const Route = (props: RouteProps) => {
   if (!map) return;
 
   const route_go = async () => {
+    console.log('여기 go?')
     try {
       // ✅ fetch 호출
       const res = await fetch("/api/itineray", {
@@ -68,17 +69,7 @@ const Route = (props: RouteProps) => {
       const [route] = data.routes; // 첫 번째 경로만 사용
       setRoute(route);
 
-      // ✅ 지도에 fitBounds 적용 (viewport 존재 시)
-      const viewport = route.viewport;
-      if (viewport) {
-        const bounds = {
-          north: viewport.high.latitude,
-          south: viewport.low.latitude,
-          east: viewport.high.longitude,
-          west: viewport.low.longitude,
-        };
-        map.fitBounds(bounds);
-      }
+  
 
       console.log("✅ 경로 데이터:", route);
     } catch (error) {
@@ -87,7 +78,7 @@ const Route = (props: RouteProps) => {
   };
 
   route_go();
-}, [map, origin, destination, routeOptions]);
+}, []);
 
  
   if (!route) return null;

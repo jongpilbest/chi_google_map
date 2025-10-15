@@ -25,17 +25,12 @@ function splitWaypointsIntoSegments(waypoints: any[], maxWaypointsPerRequest: nu
 function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   const comment = useSelector((state: any) => state.contorller.original_route_data);
   const map = useMap();
-  const routeLibrary = useMapsLibrary("routes");
 
-  const apiClient = new RoutesApi('AIzaSyBkXahoUxLe2LROntj84Lra95YI-BXqunc');
+console.log(comment,'선호 데이터')
 
   // ✅ comment 바뀔 때마다 segment 재계산
   const segments = useMemo(() => {
-    if (!comment || !comment[0]) return [];
-    return splitWaypointsIntoSegments(comment[0], 10);
-  }, [comment]);
-
-  const timestamp = Math.ceil(Date.now() / 86_400_000) * 86_400_000 + 900_000;
+   const timestamp = Math.ceil(Date.now() / 86_400_000) * 86_400_000 + 900_000;
   const departureTime = new Date(timestamp).toISOString();
 
   const routeOptions = {
@@ -44,35 +39,46 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
     computeAlternativeRoutes: false,
     units: "METRIC",
   };
+const route_go = async () => {
+    console.log('여기 go?')
+    try {
+      // ✅ fetch 호출
+      const res = await fetch("/api/itineray", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          origin: { location: { latLng: { latitude: 37.5665, longitude: 126.978 } } },
+          destination: { location: { latLng: { latitude: 37.5705, longitude: 126.983 } } },
+         ...routeOptions
 
-  const appearance = {
-    walkingPolylineColor: "#000",
-    defaultPolylineColor: "#7c7c7c",
-    stepMarkerFillColor: "#333333",
-    stepMarkerBorderColor: "#000000",
+        }),
+      });
+
+  //console.log(res,'서버데이터')
+
+      // ✅ JSON 파싱
+      const data = await res.json();
+//
+     // // ✅ data.routes 존재 확인
+     // if (!data?.routes || !Array.isArray(data.routes)) {
+     //   console.warn("⚠️ 유효한 경로 데이터가 없습니다:", data);
+     //   return;
+     // }
+//
+     // const [route] = data.routes; // 첫 번째 경로만 사용
+  //
+//
+  
+
+    console.log("✅ 경로 데이터:", data);
+    } catch (error) {
+      console.error("❌ 경로 요청 중 에러:", error);
+    }
   };
 
-  // ✅ Route 배열 memoization (comment 바뀔 때마다 새로 생성)
-  const routesToRender = useMemo(() => {
-    return segments.flatMap((segment, idx) => {
-      const routeList = [];
-      for (let i = 0; i < segment.length - 1; i++) {
-        const origin = { lat: segment[i][0], lng: segment[i][1] };
-        const destination = { lat: segment[i + 1][0], lng: segment[i + 1][1] };
-        routeList.push(
-          <Route
-            key={`route-${idx}-${origin.lat}-${origin.lng}`} // ✅ comment 변할 때마다 key 변경
-            apiClient={apiClient}
-            origin={origin}
-            destination={destination}
-            routeOptions={routeOptions}
-            appearance={appearance}
-          />
-        );
-      }
-      return routeList;
-    });
-  }, [segments, comment]); // comment 바뀌면 Route 새로 생성
+route_go()
+  
+  }, [ comment]); // comment 바뀌면 Route 새로 생성
 
   // ✅ cleanup: polyline 제거
   useEffect(() => {
@@ -88,7 +94,6 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
     polylinesRef.current = [];
   }, [comment]);
 
-  return <>{routesToRender}</>;
 }
 
 export default React.memo(Direction);
