@@ -36,15 +36,16 @@ const Route = (props: RouteProps) => {
   if (!map) return;
 
   const route_go = async () => {
-    console.log('여기 go?')
+
     try {
       // ✅ fetch 호출
       const res = await fetch("/api/itineray", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          origin: { location: { latLng: { latitude: 37.5665, longitude: 126.978 } } },
-          destination: { location: { latLng: { latitude: 37.5705, longitude: 126.983 } } },
+          
+          origin: { location: origin },
+          destination: { location:destination } ,
          ...routeOptions
 
         }),
@@ -86,7 +87,7 @@ const Route = (props: RouteProps) => {
   // With only two waypoints, our route will have a single leg.
   // We now want to create a visualization for the steps in that leg.
   const routeSteps: any[] = route.legs[0].steps;
-
+  console.log(routeSteps, '시간좀 봐봐 ')
   const appearance = {...defaultAppearance, ...props.appearance};
 
   // Every step of the route is visualized using a polyline (see ./polyline.tsx);
@@ -111,14 +112,6 @@ const Route = (props: RouteProps) => {
 
   // At the beginning of every step, an AdvancedMarker with a small circle is placed.
   // The beginning of the first step is omitted for a different marker.
-  const stepMarkerStyle = {
-    backgroundColor: appearance.stepMarkerFillColor,
-    borderColor: appearance.stepMarkerBorderColor,
-    width: 8,
-    height: 8,
-    border: `1px solid`,
-    borderRadius: '50%'
-  };
 
 
 

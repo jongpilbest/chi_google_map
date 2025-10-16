@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import Inner_compont from "./Inner_compont";
 export default function CategoryTabs({children,tabs,change_category }) {
 
-  const [activeTab, setActiveTab] = useState(tabs[0].label);
+  const [activeTab, setActiveTab] = useState(tabs[0].id);
   
 
 
@@ -16,7 +16,9 @@ export default function CategoryTabs({children,tabs,change_category }) {
         <button
           key={tab.id}
           onClick={() => {setActiveTab(tab.id)
-             dispatch(index)
+             //dispatch(index)
+             // 여기에서 몇일인지 뽑아서 보내주면 됨 
+
              change_category(tab.id)
           }}
           className={`relative px-4  w-20   text-gray-600 text-xs transition-colors duration-200

@@ -12,13 +12,15 @@ import Portal from './Portal'
 import { isDateRange } from "react-day-picker";
 import { useSelector } from "react-redux";
 import Drawer from '../../Place_list/Drawer'
+import Inner_compont from "../../Place_list/Inner_compont";
  //const tabs = [
  //   { id: "food", label: "Food" },
  //   { id: "adventure", label: "Adventure" },
  //   { id: "shopping", label: "Shopping" },
  // ];
-import { chnage_original_route_data } from "../../Redux/store";
-
+import { chnage_original_route_data ,change_check_Check} from "../../Redux/store";
+import { change_selected_mark } from "../../Redux/store";
+import { shallowEqual } from "react-redux";
 function makeOrderedRoute(points) {
   if (points.length <= 2) return points;
 
@@ -66,6 +68,9 @@ function makeOrderedRoute(points) {
 
 export default function DateRangePicker() {
   const dispatch= useDispatch()
+  const comment= useSelector((state)=>state.data_store.location_data,shallowEqual) 
+
+ const[filter_comment, set_filter_comment]=useState([]);
 
 
  const [range, setRange] = useState(isDateRange);
@@ -76,10 +81,14 @@ export default function DateRangePicker() {
     tabs:[]
   });
 
+  const[Daydata,setDaydata]=useState([]);
+
+   
 
   const [showStartPicker, setShowStartPicker] = useState(false);
   
      const { like_location } = useSelector((state) => state.data_store);
+
 
   // format date text
   const formatDate = (date) => (date ? format(date, "MM/dd/yyyy") : "");
@@ -106,12 +115,21 @@ export default function DateRangePicker() {
       day:diffDays,
       tabs: tabs})
 
+
     Make_travel(Object.values(like_location),diffDays)
-    
+    dispatch(change_check_Check())
+    // 두개보내지말고 걍 .. 인덱스 보낼까..귀찮네 
+
+
 
   }
 
   const Make_travel= async function(places,day){
+
+
+
+    
+
 
   const results = runKMeansWithOptimalInertia({
       data:places,
@@ -119,13 +137,33 @@ export default function DateRangePicker() {
     });
 
    const final_data=results.map((el)=>makeOrderedRoute(el.points))
+   setDaydata(final_data)
+   //데이터 저장하는거
    //여기 그 direction (map) 에 보내는곳 > map 에서 좀 수정 부탁요 
-    console.log(final_data,'경로저장?')
      dispatch(chnage_original_route_data(final_data))
 
   }
-  function Drawer_change(){
+  function Drawer_change(e){
     // 여기서 인덱스 번호를 얻어와서 걍 filter 해주면 되는거아님????????????????
+    dispatch(change_selected_mark(e-1))
+    const filter_data_day= Daydata[e-1] 
+    // 여기 이중 배열 
+
+   const resultKeys = Object.entries(like_location)
+  .filter(([key, value]) =>
+    filter_data_day.some((d) => d.join(",") === value.join(","))
+  )
+  .map(([key]) => key);
+
+  
+  
+
+   const comment_filter=Object.values(comment).flat(Infinity).filter((el)=>resultKeys.includes(el.id))
+   if(comment_filter.length>0){
+    set_filter_comment(comment_filter)
+    // 제대로 나오니 이제 이거 결과넣어봐아아아아
+   }
+
 
   }
 
@@ -213,11 +251,11 @@ export default function DateRangePicker() {
       </button>
         </div>
         {total_travel.tabs.length>0&&
-           <Drawer change_category={()=>Drawer_change()}   tabs={total_travel.tabs} >
-            {
+           <Drawer change_category={(e)=>Drawer_change(e)}   tabs={total_travel.tabs} >
+            { filter_comment.length>0 && filter_comment.map((El) => (
+          <Inner_compont key={El.googlePlace} data={El} />
+        ))}
 
-
-            }
 
            </Drawer>
 }

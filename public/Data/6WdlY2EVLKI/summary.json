@@ -6,7 +6,7 @@
     "googlePlace": "Central Park",
     "describe": "맨해튼의 중심에 위치한 대형 공원, 다양한 활동 가능",
     "realname": "확실함",
-    "emozi": "🌳🚴‍♂️🚣‍♀️",
+    "emozi": "🌳🚴‍♂️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7825547,
@@ -22,7 +22,7 @@
     "googlePlace": "DUMBO",
     "describe": "맨해튼 브리지와 엠파이어 스테이트 빌딩이 보이는 지역",
     "realname": "확실함",
-    "emozi": "🏙️☕📸",
+    "emozi": "🏙️☕",
     "category": "sightseeing",
     "location": {
       "lat": 40.7033164,
@@ -134,7 +134,7 @@
     "googlePlace": "The Oculus",
     "describe": "월드 트레이드 센터 인근의 교통 허브이자 쇼핑몰. 흰색 갈비뼈 형태의 아치 구조, 상점·음식점·포토 스팟.",
     "realname": "확실함",
-    "emozi": "🏛️🛍️📸",
+    "emozi": "🏛️🛍️",
     "category": "sightseeing",
     "location": {
       "lat": 40.711686101020256,
@@ -182,7 +182,7 @@
     "googlePlace": "Grand Central Terminal",
     "describe": "웅장한 대합실과 천장 천체도 벽화로 유명한 역사적 기차역, 쇼핑과 식당도 있음",
     "realname": "확실함",
-    "emozi": "🚉🌌🥯",
+    "emozi": "🚉🌌",
     "category": "sightseeing",
     "location": {
       "lat": 40.753553228098966,
@@ -310,7 +310,7 @@
     "googlePlace": "Bronx Zoo",
     "describe": "미국 최대 규모 동물원 중 하나, 다양한 야생동물과 생태 전시.",
     "realname": "확실함",
-    "emozi": "🦁🐒🦓",
+    "emozi": "🦁🦓",
     "category": "sightseeing",
     "location": {
       "lat": 40.85074239102961,
@@ -326,7 +326,7 @@
     "googlePlace": "Central Park Zoo",
     "describe": "센트럴 파크 내 위치한 작은 규모의 매력적인 동물원.",
     "realname": "확실함",
-    "emozi": "🐧🦊🐻",
+    "emozi": "🐧🐻",
     "category": "sightseeing",
     "location": {
       "lat": 40.76788998279756,
@@ -342,7 +342,7 @@
     "googlePlace": "Queens Zoo",
     "describe": "퀸즈 지역의 가족 친화적 동물원, 북미 동물 중심 전시.",
     "realname": "확실함",
-    "emozi": "🦬🦉🦌",
+    "emozi": "🦬🦌",
     "category": "sightseeing",
     "location": {
       "lat": 40.74442919787739,
@@ -454,7 +454,7 @@
     "googlePlace": "The Metropolitan Museum of Art",
     "describe": "뉴욕의 대표적인 문화 보물, 다양한 전시",
     "realname": "확실함",
-    "emozi": "🖼️🎨🏛️",
+    "emozi": "🖼️🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7794366,
@@ -470,7 +470,7 @@
     "googlePlace": "The Museum of Modern Art (MoMA)",
     "describe": "피카소, 반 고흐, 워홀의 작품이 있는 현대 미술관",
     "realname": "확실함",
-    "emozi": "🖼️🎨🖌️",
+    "emozi": "🖼️🎨",
     "category": "sightseeing",
     "location": {
       "lat": 40.7614327,
@@ -486,7 +486,7 @@
     "googlePlace": "American Museum of Natural History",
     "describe": "공룡 해골과 자연 세계의 경이로움을 전시",
     "realname": "확실함",
-    "emozi": "🦖🌌🌊",
+    "emozi": "🦖🌌",
     "category": "sightseeing",
     "location": {
       "lat": 40.7813241,
@@ -502,7 +502,7 @@
     "googlePlace": "Brooklyn Museum",
     "describe": "고대 이집트 유물부터 현대 미술까지 다양한 전시",
     "realname": "확실함",
-    "emozi": "🖼️🏺🖌️",
+    "emozi": "🖼️🏺",
     "category": "sightseeing",
     "location": {
       "lat": 40.6712062,
@@ -518,7 +518,7 @@
     "googlePlace": "Solomon R. Guggenheim Museum",
     "describe": "프랭크 로이드 라이트가 설계한 독특한 건축물",
     "realname": "확실함",
-    "emozi": "🏛️🖼️🌀",
+    "emozi": "🏛️🖼️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7829796,
@@ -534,7 +534,7 @@
     "googlePlace": "National Museum of the American Indian",
     "describe": "알렉산더 해밀턴 미국 세관 건물에 위치한 박물관",
     "realname": "확실함",
-    "emozi": "🪶🏛️🌎",
+    "emozi": "🏛️🌎",
     "category": "sightseeing",
     "location": {
       "lat": 38.8883484,
@@ -550,7 +550,7 @@
     "googlePlace": "The Morgan Library & Museum",
     "describe": "JP 모건의 개인 도서관, 희귀 원고와 고서 전시",
     "realname": "확실함",
-    "emozi": "📚🏛️📜",
+    "emozi": "🏛️📜",
     "category": "sightseeing",
     "location": {
       "lat": 40.7492258,
@@ -566,7 +566,7 @@
     "googlePlace": "National Lighthouse Museum",
     "describe": "등대의 역사와 해양사 전시",
     "realname": "확실함",
-    "emozi": "🗼🌊🚢",
+    "emozi": "🏛️🚢",
     "category": "sightseeing",
     "location": {
       "lat": 40.6407468,
@@ -582,7 +582,7 @@
     "googlePlace": "New York Transit Museum",
     "describe": "브루클린의 폐쇄된 지하철역에 위치한 교통사 박물관",
     "realname": "확실함",
-    "emozi": "🚇🚌🚦",
+    "emozi": "🚇🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 40.69057,
@@ -598,7 +598,7 @@
     "googlePlace": "The Museum of Broadway",
     "describe": "뉴욕 시의 극장 역사와 마법을 기념하는 박물관",
     "realname": "확실함",
-    "emozi": "🎭🎟️🎬",
+    "emozi": "🎭🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7576446,
@@ -614,7 +614,7 @@
     "googlePlace": "Queens Museum",
     "describe": "뉴욕 시의 파노라마와 세계 박람회 전시",
     "realname": "확실함",
-    "emozi": "🏙️🖼️🌍",
+    "emozi": "🖼️🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 40.745914,
@@ -630,7 +630,7 @@
     "googlePlace": "9/11 Memorial & Museum",
     "describe": "9/11 테러 희생자들을 기리는 기념관",
     "realname": "확실함",
-    "emozi": "🕊️🇺🇸🌆",
+    "emozi": "🕊️🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7115776,
@@ -646,7 +646,7 @@
     "googlePlace": "Wall Street",
     "describe": "뉴욕 증권거래소와 차징 불 동상이 있는 금융 중심지",
     "realname": "확실함",
-    "emozi": "🏦🐂📈",
+    "emozi": "🐂📈",
     "category": "sightseeing",
     "location": {
       "lat": 40.7060675,
@@ -662,7 +662,7 @@
     "googlePlace": "Brooklyn Bridge",
     "describe": "맨해튼 스카이라인과 이스트 강의 멋진 전망",
     "realname": "확실함",
-    "emozi": "🌉🏙️📸",
+    "emozi": "🌉🏙️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7060855,
@@ -678,7 +678,7 @@
     "googlePlace": "Flatiron Building",
     "describe": "뉴욕의 상징적인 건축물, 삼각형 모양",
     "realname": "확실함",
-    "emozi": "🏢📸🔺",
+    "emozi": "📸🔺",
     "category": "sightseeing",
     "location": {
       "lat": 40.7410605,
@@ -694,7 +694,7 @@
     "googlePlace": "St. Patrick's Cathedral",
     "describe": "5번가에 위치한 네오고딕 양식의 대성당",
     "realname": "확실함",
-    "emozi": "⛪🌟🕍",
+    "emozi": "⛪🌟",
     "category": "sightseeing",
     "location": {
       "lat": 40.7586117,
@@ -710,7 +710,7 @@
     "googlePlace": "St. Paul's Chapel",
     "describe": "맨해튼의 가장 오래된 교회, 911 당시 피난처",
     "realname": "확실함",
-    "emozi": "⛪🕊️🕯️",
+    "emozi": "⛪🕊️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7113281,
@@ -726,7 +726,7 @@
     "googlePlace": "Washington Square Arch",
     "describe": "그리니치 빌리지에 위치한 아치, 활기찬 공원",
     "realname": "확실함",
-    "emozi": "🌳🎶♟️",
+    "emozi": "🌳🎶",
     "category": "sightseeing",
     "location": {
       "lat": 40.7312185,
@@ -742,7 +742,7 @@
     "googlePlace": "New York Public Library - Stephen A. Schwarzman Building",
     "describe": "웅장한 건축물과 사자상으로 유명한 도서관",
     "realname": "확실함",
-    "emozi": "📚🦁🏛️",
+    "emozi": "📚🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 40.75318230000001,
@@ -758,7 +758,7 @@
     "googlePlace": "Fort Wadsworth",
     "describe": "스태튼 아일랜드에 위치한 미국의 오래된 군사 요새",
     "realname": "확실함",
-    "emozi": "🏰🔭🌉",
+    "emozi": "🏰🌉",
     "category": "sightseeing",
     "location": {
       "lat": 40.6051455,
@@ -774,7 +774,7 @@
     "googlePlace": "Harry Potter New York",
     "describe": "플랫아이언에 위치한 해리포터 테마 스토어",
     "realname": "확실함",
-    "emozi": "🧙‍♂️🪄🍺",
+    "emozi": "🧙🪄",
     "category": "shopping",
     "location": {
       "lat": 40.7405933,
@@ -790,7 +790,7 @@
     "googlePlace": "FAO Schwarz",
     "describe": "록펠러 플라자에 위치한 아이코닉 토이 스토어. 대형 인형, 인터랙티브 전시, 발로 연주하는 거대한 피아노 체험 가능.",
     "realname": "확실함",
-    "emozi": "🧸🎹🎁",
+    "emozi": "🧸🎁",
     "category": "shopping",
     "location": {
       "lat": 40.7589316321555,
@@ -806,7 +806,7 @@
     "googlePlace": "Fifth Avenue",
     "describe": "럭셔리 브랜드가 즐비한 뉴욕의 유명 쇼핑 거리",
     "realname": "확실함",
-    "emozi": "🛍️👗💎",
+    "emozi": "🛍️👗",
     "category": "shopping",
     "location": {
       "lat": 40.7745062,
@@ -822,7 +822,7 @@
     "googlePlace": "The Evolution Store",
     "describe": "자연사 테마의 독특한 상점, 화석과 박제 전시",
     "realname": "확실함",
-    "emozi": "🦖🔬💎",
+    "emozi": "🦖🔬",
     "category": "shopping",
     "location": {
       "lat": 40.7281384,
@@ -838,7 +838,7 @@
     "googlePlace": "Joe's Pizza",
     "describe": "뉴욕을 대표하는 피자 가게, 얇고 접을 수 있는 뉴욕 스타일 슬라이스로 유명.",
     "realname": "확실함",
-    "emozi": "🍕😋🏙️",
+    "emozi": "🍕😋",
     "category": "food",
     "location": {
       "lat": 40.754866397027286,
@@ -855,7 +855,7 @@
     "googlePlace": "Lombardi's Pizza",
     "describe": "미국 최초의 피자가게로 알려진 명소, 석탄 화덕 피자로 유명.",
     "realname": "확실함",
-    "emozi": "🍕🔥🗽",
+    "emozi": "🍕🔥",
     "category": "food",
     "location": {
       "lat": 40.721838302457414,

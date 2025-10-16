@@ -68,7 +68,7 @@ const controllerSlice= createSlice({
     chnage_original_route_data(state,action){
       state.original_route_data=action.payload
     }  ,
-    change_selected_mark_(state,action){
+    change_selected_mark(state,action){
       state.select_mark_index=action.payload
     },
 

@@ -230,7 +230,7 @@
     "googlePlace": "Williamsburg",
     "describe": "빈티지 숍, 스트리트 아트, 인디 음악 공연장, 트렌디한 카페가 있는 지역",
     "realname": "확실함",
-    "emozi": "🛍️🎨🎶",
+    "emozi": "🛍️🎨",
     "category": "sightseeing",
     "location": {
       "lat": 37.2757305,
@@ -246,7 +246,7 @@
     "googlePlace": "Prospect Park",
     "describe": "브루클린의 센트럴 파크, 자연 경관이 아름다운 공원",
     "realname": "확실함",
-    "emozi": "🌳🌿🏞️",
+    "emozi": "🌳🌿",
     "category": "sightseeing",
     "location": {
       "lat": 40.6602037,
@@ -262,7 +262,7 @@
     "googlePlace": "Brooklyn Museum",
     "describe": "다양하고 인상적인 예술과 역사 컬렉션을 소장한 박물관",
     "realname": "확실함",
-    "emozi": "🖼️🏛️🎨",
+    "emozi": "🖼️🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 40.6712062,
@@ -278,7 +278,7 @@
     "googlePlace": "Flushing Meadows Corona Park",
     "describe": "아이코닉한 유니스피어가 있는 대규모 공원",
     "realname": "확실함",
-    "emozi": "🌐🏞️🎡",
+    "emozi": "🏞️🎡",
     "category": "sightseeing",
     "location": {
       "lat": 40.7400625,
@@ -294,7 +294,7 @@
     "googlePlace": "Queens Museum",
     "describe": "세계 박람회를 개최했던 장소, 다양한 전시가 있는 박물관",
     "realname": "확실함",
-    "emozi": "🏛️🖼️🌍",
+    "emozi": "🏛️🌍",
     "category": "sightseeing",
     "location": {
       "lat": 40.745914,
@@ -310,7 +310,7 @@
     "googlePlace": "New York Hall of Science",
     "describe": "과학과 기술을 체험할 수 있는 박물관",
     "realname": "확실함",
-    "emozi": "🔬🧪🧬",
+    "emozi": "🏛️🧪",
     "category": "sightseeing",
     "location": {
       "lat": 40.7472583,
@@ -326,7 +326,7 @@
     "googlePlace": "USTA Billie Jean King National Tennis Center",
     "describe": "미국 오픈 테니스 대회가 열리는 장소",
     "realname": "확실함",
-    "emozi": "🎾🏟️🇺🇸",
+    "emozi": "🎾🏟️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7499978,
@@ -342,7 +342,7 @@
     "googlePlace": "Museum of the Moving Image",
     "describe": "영화와 TV의 역사와 기술을 다루는 박물관",
     "realname": "확실함",
-    "emozi": "🎥📺🎞️",
+    "emozi": "🎥🏛️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7563454,
@@ -358,7 +358,7 @@
     "googlePlace": "Jackson Heights",
     "describe": "다양한 문화와 음식을 경험할 수 있는 지역",
     "realname": "확실함",
-    "emozi": "🍛🌮🍜",
+    "emozi": "🌮🍜",
     "category": "sightseeing",
     "location": {
       "lat": 40.7556818,
@@ -374,7 +374,7 @@
     "googlePlace": "Yankee Stadium",
     "describe": "뉴욕 양키스의 홈구장, 야구 경기를 관람할 수 있는 장소",
     "realname": "확실함",
-    "emozi": "⚾🏟️🗽",
+    "emozi": "⚾🏟️",
     "category": "sightseeing",
     "location": {
       "lat": 40.8296426,
@@ -390,7 +390,7 @@
     "googlePlace": "Bronx Zoo",
     "describe": "세계에서 가장 큰 동물원 중 하나, 자연 서식지를 재현한 동물원",
     "realname": "확실함",
-    "emozi": "🦁🐒🐘",
+    "emozi": "🦁🐘",
     "category": "sightseeing",
     "location": {
       "lat": 40.85014150000001,
@@ -406,7 +406,7 @@
     "googlePlace": "New York Botanical Garden",
     "describe": "계절별 전시와 아름다운 경관을 자랑하는 식물원",
     "realname": "확실함",
-    "emozi": "🌺🌼🌿",
+    "emozi": "🌺🌿",
     "category": "sightseeing",
     "location": {
       "lat": 40.8622871,
@@ -422,7 +422,7 @@
     "googlePlace": "Arthur Avenue",
     "describe": "뉴욕의 진정한 리틀 이탈리아, 이탈리아 시장과 레스토랑",
     "realname": "확실함",
-    "emozi": "🍝🍕🍷",
+    "emozi": "🍝🍕",
     "category": "food",
     "location": {
       "lat": 40.8533749,
@@ -438,7 +438,7 @@
     "googlePlace": "The High Line",
     "describe": "역사적인 화물 철도 노선 위에 지어진 공원, 정원과 공공 예술이 있는 산책로",
     "realname": "확실함",
-    "emozi": "🌿🚶‍♂️🖼️",
+    "emozi": "🌿🖼️",
     "category": "sightseeing",
     "location": {
       "lat": 40.7479925,
@@ -454,7 +454,7 @@
     "googlePlace": "Chelsea Market",
     "describe": "음식과 쇼핑의 천국, 다양한 음식과 상점이 있는 장소",
     "realname": "확실함",
-    "emozi": "🛍️🍣🍩",
+    "emozi": "🛍️🍩",
     "category": "food",
     "location": {
       "lat": 40.7424396,
@@ -470,7 +470,7 @@
     "googlePlace": "Washington Square Park",
     "describe": "활기찬 공원, 학생, 체스 플레이어, 음악가들이 모이는 장소",
     "realname": "확실함",
-    "emozi": "🎶♟️🌳",
+    "emozi": "🎶🌳",
     "category": "sightseeing",
     "location": {
       "lat": 40.7308838,
@@ -486,7 +486,7 @@
     "googlePlace": "SoHo",
     "describe": "부티크 쇼핑, 갤러리, 자갈길이 있는 트렌디한 지역",
     "realname": "확실함",
-    "emozi": "🛍️🖼️🗽",
+    "emozi": "🛍️🖼️",
     "category": "shopping",
     "location": {
       "lat": 40.7245908,
@@ -502,7 +502,7 @@
     "googlePlace": "Russ & Daughters",
     "describe": "베이글과 크림치즈를 맛볼 수 있는 유명한 장소",
     "realname": "확실함",
-    "emozi": "🥯🧀🗽",
+    "emozi": "🥯🧀",
     "category": "food",
     "location": {
       "lat": 40.7225803,
@@ -518,7 +518,7 @@
     "googlePlace": "Katz's Delicatessen",
     "describe": "시간의 시험을 견뎌낸 파스트라미 샌드위치",
     "realname": "확실함",
-    "emozi": "🥪🗽🍴",
+    "emozi": "🥪🍴",
     "category": "food",
     "location": {
       "lat": 40.722233,

@@ -6,7 +6,7 @@
     "googlePlace": "Statue of Liberty",
     "describe": "미국의 상징적인 동상, 리버티 아일랜드에 위치",
     "realname": "확실함",
-    "emozi": "🗽🇺🇸",
+    "emozi": "🗽",
     "category": "sightseeing",
     "location": {
       "lat": 40.6892494,
@@ -326,7 +326,7 @@
     "googlePlace": "Yankee Stadium",
     "describe": "뉴욕 양키스 홈구장. 시즌 중에는 야구 경기 관람, 시즌 외에는 투어 프로그램 운영.",
     "realname": "확실함",
-    "emozi": "⚾🥤🌭",
+    "emozi": "⚾🥤",
     "category": "sightseeing",
     "location": {
       "lat": 40.82979681398329,
@@ -342,7 +342,7 @@
     "googlePlace": "Hudson River Cruise",
     "describe": "허드슨 강에서 즐기는 보트 투어. 수상택시, 럭셔리 요트, 해적 테마 보트 등 다양한 방식으로 뉴욕 전경 감상 가능.",
     "realname": "확실함",
-    "emozi": "⛴️🌊🏙️",
+    "emozi": "⛴️🏙️",
     "category": "sightseeing",
     "location": {
       "lat": 41.91828583750284,
@@ -358,7 +358,7 @@
     "googlePlace": "Ellis Island National Museum of Immigration",
     "describe": "미국 이민의 상징적 입국지. Statue Cruises 페리를 타고 방문 가능. 'Treasures from Home' 전시와 American Family Immigration History Center에서 가족 이민 기록 검색 가능.",
     "realname": "확실함",
-    "emozi": "🛳️📖🗽",
+    "emozi": "🛳️🗽",
     "category": "sightseeing",
     "location": {
       "lat": 40.69946235272239,

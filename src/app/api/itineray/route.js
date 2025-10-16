@@ -7,6 +7,7 @@ export async function POST(request) {
   try {
     // ✅ body 파싱
     const body = await request.json();
+    console.log(JSON.stringify(body,null,2))
 
     const url = new URL(ROUTES_API_ENDPOINT);
     url.searchParams.set('fields', fields.join(','));
@@ -18,7 +19,7 @@ export async function POST(request) {
         "Content-Type": "application/json",
         "X-Goog-Api-Key": process.env.GOOGLE_MAPS_API_KEY || 'AIzaSyBkXahoUxLe2LROntj84Lra95YI-BXqunc',
       },
-      body: JSON.stringify(body), // 여기서 body는 실제 데이터
+      body: JSON.stringify(body,null,2), // 여기서 body는 실제 데이터
     });
 
     const data = await response.json();

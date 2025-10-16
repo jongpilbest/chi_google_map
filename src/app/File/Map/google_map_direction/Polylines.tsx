@@ -11,6 +11,7 @@ export type PolylineProps = google.maps.PolylineOptions & PolylineCustomProps;
 export const Polyline = (props: PolylineProps) => {
   const {encodedPath, ...polylineOptions} = props;
 
+   
   const map = useMap();
   const geometryLibrary = useMapsLibrary('geometry');
   const mapsLibrary = useMapsLibrary('maps');
