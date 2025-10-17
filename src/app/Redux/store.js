@@ -63,6 +63,7 @@ const controllerSlice= createSlice({
    showDirection: false,
    show_search:false,
    original_route_data:[],
+   Duration_Time:[]
   },
   reducers:{
     chnage_original_route_data(state,action){
@@ -70,6 +71,8 @@ const controllerSlice= createSlice({
     }  ,
     change_selected_mark(state,action){
       state.select_mark_index=action.payload
+      state.Duration_Time=[]
+      
     },
 
      change_check_Check(state,action){
@@ -101,7 +104,11 @@ const controllerSlice= createSlice({
           state.show_search= action.payload
           state.Check_check=false;
           // toggle 이니까 이딴식으로 해도 상관없는거 아님?
-       } 
+       } ,
+
+     Time_Duration(state,action){
+      state.Duration_Time.push(action.payload)
+     }  
 
     }
 })
@@ -181,7 +188,7 @@ const data_store_slice= createSlice({
 
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
-export const{chnage_original_route_data,chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
+export const{Time_Duration,chnage_original_route_data,chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
 export const {data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle,personal_like_place}= data_store_slice.actions
 export const store = configureStore({
   reducer: {

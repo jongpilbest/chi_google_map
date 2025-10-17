@@ -1,11 +1,11 @@
 import { useEffect, useMemo } from "react";
 import React from "react";
 import { useMap, useMapsLibrary } from "@vis.gl/react-google-maps";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { Place } from "./MapType";
 import Route from "./google_map_direction/Route";
 import { RoutesApi } from "./google_map_direction/routes-api";
-
+import { Time_Duration } from '@/app/Redux/store';
 interface Prop {
   comment: Place[];
   polylinesRef: React.MutableRefObject<google.maps.Polyline[]>;
@@ -23,6 +23,12 @@ function splitWaypointsIntoSegments(waypoints: any[], maxWaypointsPerRequest: nu
 }
 
 function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
+  const dispatch= useDispatch();
+
+  const handleDurationCalculated= function(time){
+   // console.log(time,'타임?//')
+  dispatch(Time_Duration(time))
+  }
   const comment = useSelector((state: any) => state.contorller.original_route_data);
   const map = useMap();
   const routeLibrary = useMapsLibrary("routes");
@@ -65,6 +71,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
 
         routeList.push(
           <Route
+          onDurationCalculated={(e)=>handleDurationCalculated(e)}
             key={`route--${origin.latLng.latitude}`} // ✅ comment 변할 때마다 key 변경
             apiClient={apiClient}
             origin={origin}
@@ -76,7 +83,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
       }
       return routeList;
     
-  }, [segments, comment,Find_index_mark]); // comment 바뀌면 Route 새로 생성
+  }, [Find_index_mark]); // comment 바뀌면 Route 새로 생성
 
   // ✅ cleanup: polyline 제거
   useEffect(() => {
@@ -90,7 +97,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   useEffect(() => {
     polylinesRef.current.forEach((p) => p.setMap(null));
     polylinesRef.current = [];
-  }, [comment]);
+  }, [Find_index_mark]);
 
   return <>{routesToRender}</>;
 }

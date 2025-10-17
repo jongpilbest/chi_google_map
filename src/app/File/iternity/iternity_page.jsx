@@ -68,7 +68,10 @@ function makeOrderedRoute(points) {
 
 export default function DateRangePicker() {
   const dispatch= useDispatch()
+  
   const comment= useSelector((state)=>state.data_store.location_data,shallowEqual) 
+  const Total_duration=useSelector((state)=>state.contorller.Duration_Time)
+  console.log(Total_duration,'시간은')
 
  const[filter_comment, set_filter_comment]=useState([]);
 
@@ -251,13 +254,26 @@ export default function DateRangePicker() {
       </button>
         </div>
         {total_travel.tabs.length>0&&
-           <Drawer change_category={(e)=>Drawer_change(e)}   tabs={total_travel.tabs} >
-            { filter_comment.length>0 && filter_comment.map((El) => (
-          <Inner_compont key={El.googlePlace} data={El} />
-        ))}
+             <Drawer change_category={(e) => Drawer_change(e)} tabs={total_travel.tabs}>
+      {filter_comment.map((El, idx) => (
+        <React.Fragment key={El.googlePlace}>
+          {/* 장소 컴포넌트 */}
+          <Inner_compont data={El} />
 
-
-           </Drawer>
+          {/* 다음 장소가 존재할 때만 시간 표시 */}
+          {Total_duration.length>0 && Total_duration?.[idx] && (
+            <div className="flex flex-col items-center my-2 text-gray-600 text-sm">
+              <span>
+                🚶‍♀️ Walk: {Total_duration[idx].WALK ?? "-"}s
+              </span>
+              <span>
+                🚌 Transit: {Total_duration[idx].TRANSIT ?? "-"}s
+              </span>
+            </div>
+          )}
+        </React.Fragment>
+      ))}
+    </Drawer>
 }
     </div>
   );

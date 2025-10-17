@@ -5,10 +5,12 @@ import { LuMapPin } from 'react-icons/lu'
 import Image from 'next/image'
 import { useDispatch,useSelector } from 'react-redux'
 import { map_click_toggle ,personal_like_place } from '../Redux/store'
-export default function Inner_compont({data}) {
+export default function Inner_compont({data,index}) {
 
     const dispatch= useDispatch()
    const { like_location } = useSelector((state) => state.data_store);
+
+ 
 
   return (
   
@@ -45,6 +47,7 @@ export default function Inner_compont({data}) {
         
   
           </div>
+        
               </div>
           
        
