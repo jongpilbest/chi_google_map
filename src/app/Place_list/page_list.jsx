@@ -135,15 +135,15 @@ export default function page_list() {
       modal:true,
       name:name
     })
-    const comment_filter=Object.values(comment).flat(Infinity).filter((el)=>el.city==name)    
+    const comment_filter=Object.values(comment).map(arr => arr[0]).flat().filter((el)=>el.city==name)    
     set_filter_comment(comment_filter)
   }
 
   function Drawer_change(activeTab){
   
     
-    const comment_filter=comment&&Object.values(comment).flat(Infinity).filter((el)=>el.category==activeTab)   
-
+    const comment_filter=comment&&Object.values(comment).map(arr => arr[0]).flat().filter((el)=>el.category==activeTab)   
+    console.log(Object.values(comment).map(arr=>arr[0]))
     set_filter_comment(comment_filter)
 
   }
@@ -176,7 +176,7 @@ export default function page_list() {
   
       <div className="flex-1 overflow-y-auto p-3">
         { filter_comment.map((El) => (
-          <Inner_compont key={El.googlePlace} data={El} />
+          <Inner_compont key={El.describe} data={El} />
         ))}
       </div>
     </div>
@@ -244,7 +244,7 @@ export default function page_list() {
       <Drawer change_category={(e)=>Drawer_change(e)}     tabs={tabs} >
          {
         filter_comment.map((El)=>
-              <Inner_compont key={El.googlePlace} data={El} />
+              <Inner_compont key={El.describe}  data={El} />
         )
        }
         </Drawer>

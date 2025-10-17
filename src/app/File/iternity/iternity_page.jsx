@@ -13,6 +13,8 @@ import { isDateRange } from "react-day-picker";
 import { useSelector } from "react-redux";
 import Drawer from '../../Place_list/Drawer'
 import Inner_compont from "../../Place_list/Inner_compont";
+import { FaTrainSubway } from "react-icons/fa6";
+import { FaPersonWalking } from "react-icons/fa6";
  //const tabs = [
  //   { id: "food", label: "Food" },
  //   { id: "adventure", label: "Adventure" },
@@ -21,19 +23,40 @@ import Inner_compont from "../../Place_list/Inner_compont";
 import { chnage_original_route_data ,change_check_Check} from "../../Redux/store";
 import { change_selected_mark } from "../../Redux/store";
 import { shallowEqual } from "react-redux";
-function makeOrderedRoute(points) {
-  if (points.length <= 2) return points;
+ const formatTime = (seconds) => {
+    if (!seconds || seconds <= 0) return null;
+    const minutes = Math.floor(seconds / 60);
+    const remainSeconds = Math.floor(seconds % 60);
+    return `${minutes}m ${remainSeconds}s`;
+  };
 
-  // 1️⃣ 출발점·도착점 찾기 (가장 멀리 떨어진 두 점)
+  function haversineDistance(p1, p2) {
+  const R = 6371; // 지구 반지름 (단위: km)
+  const toRad = (deg) => (deg * Math.PI) / 180;
+
+  const dLat = toRad(p2[0] - p1[0]);
+  const dLon = toRad(p2[1] - p1[1]);
+  const lat1 = toRad(p1[0]);
+  const lat2 = toRad(p2[0]);
+
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+  return R * c; // km 단위 거리
+}
+  function makeOrderedRoute(points) {
+  if (points.length <= 2) return points;
+  console.log(points)
+
+  // ✅ Haversine 기반 거리 계산
   let maxDist = 0;
   let endpoints = [null, null];
 
   for (let i = 0; i < points.length; i++) {
     for (let j = i + 1; j < points.length; j++) {
-      const dist = Math.sqrt(
-        (points[i][0] - points[j][0]) ** 2 +
-        (points[i][1] - points[j][1]) ** 2
-      );
+      const dist = haversineDistance(points[i], points[j]);
       if (dist > maxDist) {
         maxDist = dist;
         endpoints = [points[i], points[j]];
@@ -43,10 +66,7 @@ function makeOrderedRoute(points) {
 
   const [origin, destination] = endpoints;
 
-  // 2️⃣ 중간 포인트 정렬 (출발→도착 방향 직선 투영)
-  const dx = destination[1] - origin[1];
-  const dy = destination[0] - origin[0];
-
+  // ✅ 중간 포인트를 출발점에서의 거리순으로 정렬
   const middlePoints = points
     .filter(
       (p) => !(p[0] === origin[0] && p[1] === origin[1]) &&
@@ -54,16 +74,16 @@ function makeOrderedRoute(points) {
     )
     .map((p) => ({
       point: p,
-      proj:
-        ((p[1] - origin[1]) * dx + (p[0] - origin[0]) * dy) /
-        (dx * dx + dy * dy),
+      dist: haversineDistance(origin, p),
     }))
-    .sort((a, b) => a.proj - b.proj)
+    .sort((a, b) => a.dist - b.dist)
     .map((d) => d.point);
 
-  // 3️⃣ 최종 경로 순서 배열 반환
-   return [origin, ...middlePoints, destination];
+      console.log(origin, ...middlePoints, destination)
+
+  return [origin, ...middlePoints, destination];
 }
+
 
 
 export default function DateRangePicker() {
@@ -71,7 +91,7 @@ export default function DateRangePicker() {
   
   const comment= useSelector((state)=>state.data_store.location_data,shallowEqual) 
   const Total_duration=useSelector((state)=>state.contorller.Duration_Time)
-  console.log(Total_duration,'시간은')
+
 
  const[filter_comment, set_filter_comment]=useState([]);
 
@@ -98,7 +118,7 @@ export default function DateRangePicker() {
   
   const Travel_Day= function(){
     const startDate = new Date(range.from);
-    const endDate = new Date(range.to);
+    const endDate = new Date(range.to) 
     
     // 2️⃣ 시간 차(밀리초 단위) 계산
     const diffTime = endDate - startDate; // 밀리초(ms)
@@ -122,7 +142,7 @@ export default function DateRangePicker() {
     Make_travel(Object.values(like_location),diffDays)
     dispatch(change_check_Check())
     // 두개보내지말고 걍 .. 인덱스 보낼까..귀찮네 
-
+   
 
 
   }
@@ -144,6 +164,7 @@ export default function DateRangePicker() {
    //데이터 저장하는거
    //여기 그 direction (map) 에 보내는곳 > map 에서 좀 수정 부탁요 
      dispatch(chnage_original_route_data(final_data))
+     Drawer_change(1)
 
   }
   function Drawer_change(e){
@@ -151,17 +172,30 @@ export default function DateRangePicker() {
     dispatch(change_selected_mark(e-1))
     const filter_data_day= Daydata[e-1] 
     // 여기 이중 배열 
+   
 
-   const resultKeys = Object.entries(like_location)
-  .filter(([key, value]) =>
-    filter_data_day.some((d) => d.join(",") === value.join(","))
+   const resultKeys = filter_data_day.map((d) => {
+  const found = Object.entries(like_location).find(
+    ([key, value]) =>
+      Array.isArray(value) &&
+      d[0] === value[0] &&
+      d[1] === value[1]
+  );
+  return found ? found[0] : null; // 매칭되는 key만 반환
+}).filter(Boolean);
+ 
+  console.log(resultKeys,'정답은?')
+  
+  
+
+  const comment_filter = resultKeys
+  .map((key) =>
+    Object.values(comment)
+      .flat(Infinity)
+      .find((item) => item.id === key)
   )
-  .map(([key]) => key);
-
-  
-  
-
-   const comment_filter=Object.values(comment).flat(Infinity).filter((el)=>resultKeys.includes(el.id))
+  .filter(Boolean);
+  console.log(comment_filter,'결과')
    if(comment_filter.length>0){
     set_filter_comment(comment_filter)
     // 제대로 나오니 이제 이거 결과넣어봐아아아아
@@ -173,7 +207,7 @@ export default function DateRangePicker() {
 
 
   return (
-    <div className="flex-2    gap-4 px-10 py-4 rounded-md w-full max-w-lg">
+    <div className="flex flex-2 flex-col px-8 h-full overflow-hidden relative">
       {/* ✅ Start date */}
       
       <div className=" flex flex-col">
@@ -188,9 +222,10 @@ export default function DateRangePicker() {
         onClick={() => {
             setShowStartPicker(!showStartPicker);
           }}
-     className=" flex py-5 gap-4 relative">
+     className=" flex py-5 gap-4 relative    justify-between ">
         <div
-          className="flex items-center gap-2 
+          className="flex items-center 
+       
           
           bg-gray-100 border border-gray-200 rounded-md px-3 py-2 cursor-pointer"
         >
@@ -210,7 +245,11 @@ export default function DateRangePicker() {
 <div className="bg-white rounded-xl shadow-lg p-4  flex">
             <DayPicker mode="range" 
               selected={range}
-              onSelect={setRange}
+               onSelect={(selectedRange) => {
+    if (!selectedRange) return; // 클릭 해제 시 무시
+    if (!selectedRange.from) return; // 시작일이 없는 경우도 무시
+    setRange(selectedRange);
+  }}
              />
           </div>
            <button
@@ -253,28 +292,39 @@ export default function DateRangePicker() {
       Auto generation
       </button>
         </div>
+        <div className="h-full  overflow-y-auto">
         {total_travel.tabs.length>0&&
              <Drawer change_category={(e) => Drawer_change(e)} tabs={total_travel.tabs}>
       {filter_comment.map((El, idx) => (
         <React.Fragment key={El.googlePlace}>
           {/* 장소 컴포넌트 */}
-          <Inner_compont data={El} />
+          <Inner_compont key={El.describe} data={El} />
 
           {/* 다음 장소가 존재할 때만 시간 표시 */}
           {Total_duration.length>0 && Total_duration?.[idx] && (
-            <div className="flex flex-col items-center my-2 text-gray-600 text-sm">
-              <span>
-                🚶‍♀️ Walk: {Total_duration[idx].WALK ?? "-"}s
+            <div className="flex flex-row gap-4 items-center my-2 text-gray-600 text-sm justify-center">
+              {Total_duration[idx].WALK>0 && 
+                
+                <span className="flex text-xs ">
+             <FaPersonWalking></FaPersonWalking>
+               :   {formatTime (Total_duration[idx].WALK) ?? "-"}
               </span>
-              <span>
-                🚌 Transit: {Total_duration[idx].TRANSIT ?? "-"}s
+}
+              {
+                Total_duration[idx].TRANSIT>0&&
+                <span className="flex text-xs">
+              
+                     <FaTrainSubway></FaTrainSubway>
+               : {formatTime (Total_duration[idx].TRANSIT) ?? "-"}
               </span>
+}
             </div>
           )}
         </React.Fragment>
       ))}
     </Drawer>
 }
+    </div>
     </div>
   );
 }

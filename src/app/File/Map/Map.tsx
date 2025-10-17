@@ -127,7 +127,7 @@ export default function Mappage({name}) {
      
      
             {
-            Check_check&&<Direction  key="filtered" check={true}  polylinesRef={polylinesRef}
+            Check_check>0 &&<Direction  key="filtered" check={true}  polylinesRef={polylinesRef}
              ></Direction>
              }
 

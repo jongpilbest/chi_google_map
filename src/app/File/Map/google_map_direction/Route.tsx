@@ -16,6 +16,9 @@ export default function Route({
 
   useEffect(() => {
     if (!map || didRun.current) return;
+
+    // 여기 줌인 하는거 넣어줘 
+
     didRun.current = true; // ✅ 최초 한 번만 실행
 
     const route_go = async () => {
@@ -41,10 +44,15 @@ export default function Route({
       });
 
       onDurationCalculated?.(Total_time);
+      map.panTo({
+        'lat':origin.latLng.latitude,
+        'lng':origin.latLng.longitude
+      });
+       map.setZoom(15);
     };
 
     route_go();
-  }, [map]);
+  }, []);
 
   if (!route) return null;
 

@@ -56,7 +56,7 @@ const controllerSlice= createSlice({
   name:'controller',
   initialState:{
  
-   Check_check: false,
+   Check_check: 0,
    select_mark_index:0,
    cancel_check:false,
    selectedMark:[] ,
@@ -76,7 +76,7 @@ const controllerSlice= createSlice({
     },
 
      change_check_Check(state,action){
-      state.Check_check= !state.Check_check
+      state.Check_check+=1
       
      },
      add_Selected_mark(state,action){
@@ -98,11 +98,11 @@ const controllerSlice= createSlice({
      clearDirection(state) {
       state.selectedMark = new Set();
       state.showDirection = false;
-      state.Check_check= false;
+      state.Check_check= 0;
     },
        change_search_state(state,action){
           state.show_search= action.payload
-          state.Check_check=false;
+          state.Check_check=0;
           // toggle 이니까 이딴식으로 해도 상관없는거 아님?
        } ,
 

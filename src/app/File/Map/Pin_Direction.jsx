@@ -26,7 +26,7 @@ export default function Pin_Direction() {
         
         
                {
-               Check_check&&<Direction color={colors_root[Find_index_mark_pin]} key="filtered" check={true}  comment={filteredComment} polylinesRef={polylinesRef}
+               Check_check>0 &&<Direction color={colors_root[Find_index_mark_pin]} key="filtered" check={true}  comment={filteredComment} polylinesRef={polylinesRef}
                 ></Direction>
                 }
    
