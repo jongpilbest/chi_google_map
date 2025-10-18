@@ -23,6 +23,7 @@ import WatchVideo from '../../Place_list/Watch_video'
 type MapViewerProps = Place & {
   handleMarkerClick: () => void; // id를 받아서 void 리턴하는 함수,
   marker: google.maps.marker.AdvancedMarkerElement | null
+  id:null|any
 };
  import { personal_like_place } from '../../Redux/store'
 
@@ -31,7 +32,7 @@ type MapViewerProps = Place & {
 const colors = ["text-red-400", "text-orange-400", "text-yellow-400","text-green-400"];
 
 
-export default function Map_viewer({id ,handleMarkerClick ,}:MapViewerProps  ) {
+export default function Map_viewer({id ,handleMarkerClick }:MapViewerProps  ) {
 
      const { like_location } = useSelector((state:any) => state.data_store);
   const dispatch= useDispatch()
