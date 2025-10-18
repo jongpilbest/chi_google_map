@@ -195,7 +195,7 @@ export default function DateRangePicker() {
       .find((item) => item.id === key)
   )
   .filter(Boolean);
-  console.log(comment_filter,'결과')
+ 
    if(comment_filter.length>0){
     set_filter_comment(comment_filter)
     // 제대로 나오니 이제 이거 결과넣어봐아아아아
