@@ -3,11 +3,10 @@ import React from 'react'
 export default function Pin_Direction() {
 
     
-        const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark )
-        const Find_index_mark_pin =  useSelector((state: any) => state.contorller.select_mark_index )
+        const Mark_Pin_set = useSelector((state) => state.contorller.selectedMark )
+        const Find_index_mark_pin =  useSelector((state) => state.contorller.select_mark_index )
       
-        const comment= useSelector((state:any)=>state.data_store.location_data,shallowEqual) as any[];
-     
+        const comment= useSelector((state)=>state.data_store.location_data,shallowEqual) 
     
     
     

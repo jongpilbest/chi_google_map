@@ -29,13 +29,12 @@ const { like_location, clicked_marker_id } = useSelector((state: any) => state.d
   return (
     <Make_Marker
       key={`${el.id}__${el.index}`}
-      describe={el.describe}
-      index={el.index}
+    
       id={el.id}
-      startTime={el.startTime}
+    
       emozi={el.emozi}
       location={el.location}
-      category={el.category}
+   
       color={colorCode[0]}
       opacity={colorCode[1]}
     />
