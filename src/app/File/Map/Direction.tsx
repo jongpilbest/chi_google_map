@@ -7,7 +7,7 @@ import Route from "./google_map_direction/Route";
 import { RoutesApi } from "./google_map_direction/routes-api";
 import { Time_Duration } from '@/app/Redux/store';
 interface Prop {
-  comment: Place[];
+  comment?: Place[];
   polylinesRef: React.MutableRefObject<google.maps.Polyline[]>;
   color?: string;
   check: boolean;
