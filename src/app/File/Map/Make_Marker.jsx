@@ -15,9 +15,6 @@ import { map_click_toggle } from '@/app/Redux/store'
 
 
 import {Place} from './MapType'
-type place_plus= Place&{
-  opacity:number
-}
 
 const colors = {"pink":"bg-[#F08AF4]", 
   "purple":"bg-[#9C6CFE]"};
@@ -26,18 +23,18 @@ import Map_viewer from './Map_viewer';
 
 
 
-export function Make_Marker({ location,id,color,opacity,emozi }: place_plus) {
+export function Make_Marker({ location,id,color,opacity,emozi }) {
     const [markerRef, marker] = useAdvancedMarkerRef();
 
     const dispatch= useDispatch()
   
   
-  const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark)
-  const { map_click, clicked_marker_id } = useSelector((state: any) => state.data_store);
+  const Mark_Pin_set = useSelector((state) => state.contorller.selectedMark)
+  const { map_click, clicked_marker_id } = useSelector((state) => state.data_store);
 
 
 
-   const indexWithId = Mark_Pin_set.findIndex((set: any) => {
+   const indexWithId = Mark_Pin_set.findIndex((set) => {
    return set.has(id)});
 
 
