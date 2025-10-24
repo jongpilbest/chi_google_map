@@ -19,8 +19,11 @@ import { FaPersonWalking } from "react-icons/fa6";
  //   { id: "food", label: "Food" },
  //   { id: "adventure", label: "Adventure" },
  //   { id: "shopping", label: "Shopping" },
+ import { useEffect } from "react";
  // ];
-import { chnage_original_route_data ,change_check_Check} from "../../Redux/store";
+ import { Time_Duration } from '@/app/Redux/store';
+
+import { chnage_original_route_data ,change_check_Check,personal_color_place} from "../../Redux/store";
 import { change_selected_mark } from "../../Redux/store";
 import { shallowEqual } from "react-redux";
  const formatTime = (seconds) => {
@@ -48,7 +51,7 @@ import { shallowEqual } from "react-redux";
 }
   function makeOrderedRoute(points) {
   if (points.length <= 2) return points;
-  console.log(points)
+
 
   // ✅ Haversine 기반 거리 계산
   let maxDist = 0;
@@ -56,7 +59,7 @@ import { shallowEqual } from "react-redux";
 
   for (let i = 0; i < points.length; i++) {
     for (let j = i + 1; j < points.length; j++) {
-      const dist = haversineDistance(points[i], points[j]);
+      const dist = haversineDistance(points[i], points[j]) **2;
       if (dist > maxDist) {
         maxDist = dist;
         endpoints = [points[i], points[j]];
@@ -79,11 +82,23 @@ import { shallowEqual } from "react-redux";
     .sort((a, b) => a.dist - b.dist)
     .map((d) => d.point);
 
-      console.log(origin, ...middlePoints, destination)
-
+     
   return [origin, ...middlePoints, destination];
 }
 
+const find_key= function(filter_data_day,like_location){
+ return   filter_data_day.map((d) => {
+  const found = Object.entries(like_location).find(
+    ([key, value]) =>
+      Array.isArray(value) &&
+      d[0] === value[0] &&
+      d[1] === value[1]
+  );
+  return found ? found[0] : null; // 매칭되는 key만 반환
+}).filter(Boolean);
+
+ 
+}
 
 
 export default function DateRangePicker() {
@@ -106,17 +121,26 @@ export default function DateRangePicker() {
 
   const[Daydata,setDaydata]=useState([]);
 
-   
+   useEffect(() => {
+  
+  if ( Total_duration.every(obj => Object.keys(obj).length !=0) ) {
+    // Duration이 갱신되면 강제로 렌더링 트리거 (state sync)
+  
+    set_filter_comment([...filter_comment]);
+  }
+}, [Total_duration]);
 
   const [showStartPicker, setShowStartPicker] = useState(false);
   
-     const { like_location } = useSelector((state) => state.data_store);
+    const { like_location } = useSelector((state) => state.data_store);
 
 
   // format date text
   const formatDate = (date) => (date ? format(date, "MM/dd/yyyy") : "");
   
   const Travel_Day= function(){
+
+      if(Object.values(like_location).length==0 || range.from ==null|| range.to ==null  ) return;
     const startDate = new Date(range.from);
     const endDate = new Date(range.to) 
     
@@ -137,10 +161,11 @@ export default function DateRangePicker() {
     settotal_Travel({
       day:diffDays,
       tabs: tabs})
-
+ 
+  
 
     Make_travel(Object.values(like_location),diffDays)
-    dispatch(change_check_Check())
+
     // 두개보내지말고 걍 .. 인덱스 보낼까..귀찮네 
    
 
@@ -160,31 +185,43 @@ export default function DateRangePicker() {
     });
 
    const final_data=results.map((el)=>makeOrderedRoute(el.points))
-   setDaydata(final_data)
-   //데이터 저장하는거
-   //여기 그 direction (map) 에 보내는곳 > map 에서 좀 수정 부탁요 
-     dispatch(chnage_original_route_data(final_data))
-     Drawer_change(1)
+   
+    final_data.map((el,index)=>{
+    const place_id= find_key(el, like_location)
+    //redux 으로 그 인덱스 값 뒤에 바꾸기 
+
+    place_id.map((el)=> dispatch(personal_color_place({key:el,index:index+1})))
+   })
+    
+    setDaydata(final_data)
+    dispatch(change_check_Check())
+    dispatch(chnage_original_route_data(final_data))
+
+  
+    //Drawer_change(1)
 
   }
   function Drawer_change(e){
-    // 여기서 인덱스 번호를 얻어와서 걍 filter 해주면 되는거아님????????????????
+ // ✅ undefined 검사 먼저
+
+   // 여기 기존이랑 똑같아서 안생기는거임. 그래서 이걸 고치ㅕㄴ되ㅣㄽ ;;
     dispatch(change_selected_mark(e-1))
     const filter_data_day= Daydata[e-1] 
-    // 여기 이중 배열 
+    /// 
+    if(!filter_data_day || !Array.isArray(filter_data_day)) return;
+
+    dispatch(Time_Duration({ first:filter_data_day.length-1}))
+    // 길이 구색 맞추기 
+
+  // ✅ 두 번째 방어: 비어 있는 배열 확인
+  if (!Array.isArray(filter_data_day) || filter_data_day.length === 0) {
+    console.warn("⚠️ Drawer_change: filter_data_day is empty", filter_data_day);
+    return;
+  }
    
 
-   const resultKeys = filter_data_day.map((d) => {
-  const found = Object.entries(like_location).find(
-    ([key, value]) =>
-      Array.isArray(value) &&
-      d[0] === value[0] &&
-      d[1] === value[1]
-  );
-  return found ? found[0] : null; // 매칭되는 key만 반환
-}).filter(Boolean);
- 
-  console.log(resultKeys,'정답은?')
+   const resultKeys = find_key(filter_data_day,like_location)
+
   
   
 
@@ -198,7 +235,7 @@ export default function DateRangePicker() {
  
    if(comment_filter.length>0){
     set_filter_comment(comment_filter)
-    // 제대로 나오니 이제 이거 결과넣어봐아아아아
+    //여기에 그냥 크기만 입력하는거 하나 만들???
    }
 
 
@@ -227,7 +264,7 @@ export default function DateRangePicker() {
           className="flex items-center 
        
           
-          bg-gray-100 border border-gray-200 rounded-md px-3 py-2 cursor-pointer"
+          bg-gray-100 border border-gray-200 rounded-md px-3 gap-2 py-2 cursor-pointer"
         >
           <FaRegCalendarAlt className="text-gray-500" />
           <input
@@ -241,8 +278,8 @@ export default function DateRangePicker() {
         <Portal>
         <div className="fixed 
         inset-0 z-[9999] bg-black/40 flex justify-center items-center">
-          <div>
-<div className="bg-white rounded-xl shadow-lg p-4  flex">
+          <div onClick={(e)=>e.stopPropagation()}>
+<div className="bg-white rounded-xl shadow-lg p-4 gap-2 flex">
             <DayPicker mode="range" 
               selected={range}
                onSelect={(selectedRange) => {
@@ -295,13 +332,13 @@ export default function DateRangePicker() {
         <div className="h-full  overflow-y-auto">
         {total_travel.tabs.length>0&&
              <Drawer change_category={(e) => Drawer_change(e)} tabs={total_travel.tabs}>
-      {filter_comment.map((El, idx) => (
+          {filter_comment.map((El, idx) => (
         <React.Fragment key={El.googlePlace}>
           {/* 장소 컴포넌트 */}
           <Inner_compont key={El.describe} data={El} />
 
           {/* 다음 장소가 존재할 때만 시간 표시 */}
-          {Total_duration.length>0 && Total_duration?.[idx] && (
+          {Total_duration?.[idx] && (
             <div className="flex flex-row gap-4 items-center my-2 text-gray-600 text-sm justify-center">
               {Total_duration[idx].WALK>0 && 
                 

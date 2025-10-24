@@ -56,7 +56,7 @@ const controllerSlice= createSlice({
   name:'controller',
   initialState:{
  
-   Check_check: 0,
+   Check_check: -1,
    select_mark_index:0,
    cancel_check:false,
    selectedMark:[] ,
@@ -71,7 +71,7 @@ const controllerSlice= createSlice({
     }  ,
     change_selected_mark(state,action){
       state.select_mark_index=action.payload
-      state.Duration_Time=[]
+     
       
     },
 
@@ -98,7 +98,7 @@ const controllerSlice= createSlice({
      clearDirection(state) {
       state.selectedMark = new Set();
       state.showDirection = false;
-      state.Check_check= 0;
+      state.Check_check= -1;
     },
        change_search_state(state,action){
           state.show_search= action.payload
@@ -107,8 +107,22 @@ const controllerSlice= createSlice({
        } ,
 
      Time_Duration(state,action){
-      state.Duration_Time.push(action.payload)
-     }  
+      if(action.payload.first>0){
+          state.Duration_Time = Array.from({ length: action.payload.first }, () => ({}));
+        return;
+
+      }
+      if( action.payload.first==-1){
+ const time= action.payload.time;
+      const index= action.payload.index;
+
+
+      state.Duration_Time[index]=time;
+      }
+     
+
+     
+    }  
 
     }
 })
@@ -126,7 +140,12 @@ const data_store_slice= createSlice({
       place:null,
       location:null
      },
-    like_location: {}
+    like_location: {},
+    poluline_location:{
+      "Day":[],
+      "Polyline":[]
+    },
+    color_location:{}
   },
   reducers:{ 
    data_Store_change(state, action) {
@@ -180,7 +199,20 @@ const data_store_slice= createSlice({
       else{
      state.like_location[key]=location
       }
-    }
+    },
+    personal_color_place(state,action){
+      
+       state.color_location[action.payload.key]=action.payload.index;
+
+
+    },
+
+    set_polyline_destion(state,action){
+      state.poluline_location= {
+        "Day":action.payload.Day,
+        "Polyline":action.payload.Polyline
+
+    }}
 
   }
 })
@@ -189,7 +221,7 @@ const data_store_slice= createSlice({
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
 export const{Time_Duration,chnage_original_route_data,chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
-export const {data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle,personal_like_place}= data_store_slice.actions
+export const {personal_color_place,set_polyline_destion, data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle,personal_like_place}= data_store_slice.actions
 export const store = configureStore({
   reducer: {
     url: counterSlice.reducer,

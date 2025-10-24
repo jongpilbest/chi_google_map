@@ -9,6 +9,7 @@ export default function Route({
   routeOptions,
   appearance,
   onDurationCalculated,
+  index
 }) {
   const [route, setRoute] = useState<any>(null);
   const map = useMap();
@@ -35,20 +36,22 @@ export default function Route({
       const data = await res.json();
       const [route] = data.routes;
       setRoute(route);
+ 
 
       const routeSteps: any[] = route.legs[0].steps;
+   
       const Total_time = { WALK: 0, TRANSIT: 0 };
       routeSteps.forEach((step) => {
         const sec = parseInt(step.staticDuration.replace("s", ""), 10);
         if (!isNaN(sec)) Total_time[step.travelMode] += sec;
       });
-
-      onDurationCalculated?.(Total_time);
-      map.panTo({
-        'lat':origin.latLng.latitude,
-        'lng':origin.latLng.longitude
-      });
-       map.setZoom(15);
+ 
+      onDurationCalculated?.(index,Total_time);
+     // map.panTo({
+     //   'lat':origin.latLng.latitude,
+     //   'lng':origin.latLng.longitude
+     // });
+     //  map.setZoom(15);
     };
 
     route_go();

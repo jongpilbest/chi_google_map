@@ -24,16 +24,20 @@ function splitWaypointsIntoSegments(waypoints: any[], maxWaypointsPerRequest: nu
 
 function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   const dispatch= useDispatch();
+   console.log('여기 왜 안되는이유가 뭔데?')
+   console.log('?????????????????????????')
+ 
 
-  const handleDurationCalculated= function(time){
+  const handleDurationCalculated= function(index,time){
    // console.log(time,'타임?//')
-  dispatch(Time_Duration(time))
+
+  dispatch(Time_Duration({ index:index,time:time,first:-1}))
   }
   const comment = useSelector((state: any) => state.contorller.original_route_data);
   const map = useMap();
   const routeLibrary = useMapsLibrary("routes");
  const Find_index_mark =  useSelector((state: any) => state.contorller.select_mark_index )
-
+ console.log(Find_index_mark,'마크여')
   const apiClient = new RoutesApi(process.env.GOOGLE_MAPS_API_KEYS);
 
   // ✅ comment 바뀔 때마다 segment 재계산
@@ -61,8 +65,14 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
 
   // ✅ Route 배열 memoization (comment 바뀔 때마다 새로 생성)
   const routesToRender = useMemo(() => {
-    const segment= comment[Find_index_mark]
+    if(comment.length==0) return ;
 
+    const segment= comment[Find_index_mark]
+      map.panTo({
+        'lat':segment[0][0],
+        'lng':segment[0][1]
+      });
+       map.setZoom(15);
       const routeList = [];
       for (let i = 0; i < segment.length - 1; i++) {
       
@@ -71,7 +81,8 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
 
         routeList.push(
           <Route
-          onDurationCalculated={(e)=>handleDurationCalculated(e)}
+          index={i}
+          onDurationCalculated={(index,e)=>handleDurationCalculated(index,e)}
             key={`route--${origin.latLng.latitude}`} // ✅ comment 변할 때마다 key 변경
             apiClient={apiClient}
             origin={origin}

@@ -9,7 +9,8 @@ import {Place} from './MapType'
 
 export default function Marker_set({ comment }: any) {
   
-const { like_location, clicked_marker_id } = useSelector((state: any) => state.data_store);
+const { like_location, clicked_marker_id,color_location } = useSelector((state: any) => state.data_store);
+
 
   // useMemo로 Marker 계산 (comment나 current_index 바뀔 때만 새로 계산)
   const markers = useMemo(() => {
@@ -21,8 +22,15 @@ const { like_location, clicked_marker_id } = useSelector((state: any) => state.d
   // ✅ 조건문은 JSX 밖에서 처리
  
    if(like_location.hasOwnProperty(el.id)){
-    colorCode = ['pink', 1];
+    if(color_location.hasOwnProperty(el.id)){
+      colorCode = [color_location[el.id], 1];
+    }
+    else{
+       colorCode = ['pink', 1];
+    }
+ 
   }
+
   else if (el.id === clicked_marker_id) {
     colorCode = ['purple', 1];
   } 
@@ -41,7 +49,7 @@ const { like_location, clicked_marker_id } = useSelector((state: any) => state.d
   );
      
     })
-  }, [comment, clicked_marker_id,like_location])
+  }, [comment, clicked_marker_id,like_location,color_location])
 
   return <>{markers}</>
 }

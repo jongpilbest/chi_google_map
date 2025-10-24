@@ -6,6 +6,7 @@ type PolylineCustomProps = {
   encodedPath?: string;
 };
 
+
 export type PolylineProps = google.maps.PolylineOptions & PolylineCustomProps;
 
 export const Polyline = (props: PolylineProps) => {

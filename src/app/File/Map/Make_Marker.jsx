@@ -17,13 +17,20 @@ import { map_click_toggle } from '@/app/Redux/store'
 import {Place} from './MapType'
 
 const colors = {"pink":"bg-[#F08AF4]", 
-  "purple":"bg-[#9C6CFE]"};
+  "purple":"bg-[#9C6CFE]",
+   1:"bg-[#00B8A9]",
+   2:"bg-[#FCE38A]",
+   3:"bg-[#EAFFD0]",
+   4:"bg-[#95E1D3]"
+};
 
 import Map_viewer from './Map_viewer';
 
 
 
 export function Make_Marker({ location,id,color,opacity,emozi }) {
+
+  console.log('color',color)
     const [markerRef, marker] = useAdvancedMarkerRef();
 
     const dispatch= useDispatch()
