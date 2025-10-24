@@ -1,4 +1,11 @@
-function haversineDistance(p1, p2) {
+ export const formatTime = (seconds) => {
+    if (!seconds || seconds <= 0) return null;
+    const minutes = Math.floor(seconds / 60);
+    const remainSeconds = Math.floor(seconds % 60);
+    return `${minutes}m ${remainSeconds}s`;
+  };
+
+  function haversineDistance(p1, p2) {
   const R = 6371; // 지구 반지름 (단위: km)
   const toRad = (deg) => (deg * Math.PI) / 180;
 
@@ -14,9 +21,9 @@ function haversineDistance(p1, p2) {
 
   return R * c; // km 단위 거리
 }
-  export function makeOrderedRoute(points) {
+ export function makeOrderedRoute(points) {
   if (points.length <= 2) return points;
-  console.log(points)
+
 
   // ✅ Haversine 기반 거리 계산
   let maxDist = 0;
@@ -24,7 +31,7 @@ function haversineDistance(p1, p2) {
 
   for (let i = 0; i < points.length; i++) {
     for (let j = i + 1; j < points.length; j++) {
-      const dist = haversineDistance(points[i], points[j]);
+      const dist = haversineDistance(points[i], points[j]) **2;
       if (dist > maxDist) {
         maxDist = dist;
         endpoints = [points[i], points[j]];
@@ -47,8 +54,20 @@ function haversineDistance(p1, p2) {
     .sort((a, b) => a.dist - b.dist)
     .map((d) => d.point);
 
-      console.log(origin, ...middlePoints, destination)
-
+     
   return [origin, ...middlePoints, destination];
 }
 
+export const find_key= function(filter_data_day,like_location){
+ return   filter_data_day.map((d) => {
+  const found = Object.entries(like_location).find(
+    ([key, value]) =>
+      Array.isArray(value) &&
+      d[0] === value[0] &&
+      d[1] === value[1]
+  );
+  return found ? found[0] : null; // 매칭되는 key만 반환
+}).filter(Boolean);
+
+ 
+}

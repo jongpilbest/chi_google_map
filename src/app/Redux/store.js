@@ -107,7 +107,7 @@ const controllerSlice= createSlice({
        } ,
 
      Time_Duration(state,action){
-      if(action.payload.first>0){
+      if(action.payload.first>=0){
           state.Duration_Time = Array.from({ length: action.payload.first }, () => ({}));
         return;
 
@@ -160,6 +160,10 @@ const data_store_slice= createSlice({
         state.location_data[el['id']].push([{ ...el, index: index }]);
       });
     }, // 
+    InnerComponent_zoom_in(state,action){
+    state.zoom_in_place= action.payload;
+      // 여기에 줌인해달라고 하는거 
+    },
    filter_data_location(state,action){
      
     if(state.location_data.length>0){
@@ -169,8 +173,6 @@ const data_store_slice= createSlice({
       // 필터링 된 데이터가 되었습니다. 
       state.zoom_in_place= filter_data
   
-  
-
     }
 
    },
@@ -221,7 +223,7 @@ const data_store_slice= createSlice({
 
 export const { write_new_url, Loading_state, change_video_chapter,url_plus,url_out} = counterSlice.actions;
 export const{Time_Duration,chnage_original_route_data,chanage_pin_Check, change_check_Check,change_selected_mark,clearDirection,toggleMark ,change_search_state ,add_Selected_mark}= controllerSlice.actions;
-export const {personal_color_place,set_polyline_destion, data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle,personal_like_place}= data_store_slice.actions
+export const {InnerComponent_zoom_in,personal_color_place,set_polyline_destion, data_Store_change,filter_data_location,filter_zoom_in,locality_place_change,map_click_toggle,personal_like_place}= data_store_slice.actions
 export const store = configureStore({
   reducer: {
     url: counterSlice.reducer,

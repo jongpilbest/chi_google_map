@@ -1,6 +1,7 @@
 import { Children, useState } from "react";
 import { useDispatch } from "react-redux";
 import Inner_compont from "./Inner_compont";
+
 export default function CategoryTabs({children,tabs,change_category }) {
 
   const [activeTab, setActiveTab] = useState(tabs[0].id);

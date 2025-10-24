@@ -20,20 +20,17 @@ const { like_location, clicked_marker_id,color_location } = useSelector((state: 
 
 
   // ✅ 조건문은 JSX 밖에서 처리
- 
-   if(like_location.hasOwnProperty(el.id)){
-    if(color_location.hasOwnProperty(el.id)){
-      colorCode = [color_location[el.id], 1];
-    }
-    else{
-       colorCode = ['pink', 1];
-    }
- 
+ if (el.id === clicked_marker_id) {
+  colorCode = ['purple', 1];
+}
+else if (like_location.hasOwnProperty(el.id)) {
+  if (color_location.hasOwnProperty(el.id)) {
+    colorCode = [color_location[el.id], 1];
+  } else {
+    colorCode = ['pink', 1];
   }
+}
 
-  else if (el.id === clicked_marker_id) {
-    colorCode = ['purple', 1];
-  } 
   return (
     <Make_Marker
       key={`${el.id}__${el.index}`}

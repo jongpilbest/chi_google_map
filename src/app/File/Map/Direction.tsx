@@ -24,8 +24,7 @@ function splitWaypointsIntoSegments(waypoints: any[], maxWaypointsPerRequest: nu
 
 function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   const dispatch= useDispatch();
-   console.log('여기 왜 안되는이유가 뭔데?')
-   console.log('?????????????????????????')
+
  
 
   const handleDurationCalculated= function(index,time){
@@ -37,7 +36,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   const map = useMap();
   const routeLibrary = useMapsLibrary("routes");
  const Find_index_mark =  useSelector((state: any) => state.contorller.select_mark_index )
- console.log(Find_index_mark,'마크여')
+
   const apiClient = new RoutesApi(process.env.GOOGLE_MAPS_API_KEYS);
 
   // ✅ comment 바뀔 때마다 segment 재계산

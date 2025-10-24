@@ -7,18 +7,19 @@ import {
 MapControl
 } from "@vis.gl/react-google-maps";
 import { IoMdPin } from "react-icons/io";
-import { LuMapPinned } from "react-icons/lu";
+
 import { MdOutlineCancel } from "react-icons/md";
 import { toggleMark} from '@/app/Redux/store';
 import { IoVideocamOutline } from "react-icons/io5";
 
 import { useDispatch,useSelector,shallowEqual } from 'react-redux';
-import { BiSolidDownArrow } from "react-icons/bi";
+
 import {Place} from './MapType'
 import { FaHeart } from "react-icons/fa";
 
 import WatchVideo from '../../Place_list/Watch_video'
 
+import Map_Viewr_inner from  './Map_Viewer_inner'
 
 type MapViewerProps = Place & {
   handleMarkerClick: () => void; // id를 받아서 void 리턴하는 함수,
@@ -38,7 +39,7 @@ export default function Map_viewer({id ,handleMarkerClick }:MapViewerProps  ) {
   const dispatch= useDispatch()
    const comment= useSelector((state:any)=>state.data_store.location_data,shallowEqual) as any[];
    const data= comment[id]
-
+  console.log(data[0][0].id)
  
    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark);
    // 이거 우선은 배열안에 new set 으로 만들어야되나? 
@@ -117,15 +118,8 @@ export default function Map_viewer({id ,handleMarkerClick }:MapViewerProps  ) {
   ))
 }
  
-    
-    <div className='bg-[#47D6A2] py-1.5 px-2 rounded-md flex gap-2 items-center justify-between'>
-      <div className='flex gap-2 items-center'>
-       <LuMapPinned className='text-white'></LuMapPinned>
-      <p className='text-white'> 여행에 추가하기 </p>
-      </div>
-      <BiSolidDownArrow className='text-white '></BiSolidDownArrow>
-     
- </div>
+   
+       {data[0][0].id&&<Map_Viewr_inner id_key={data[0][0].id}></Map_Viewr_inner>}
     <button 
      onClick={()=>dispatch(personal_like_place({key:data[0][0].id,location:[data[0][0].location.lat,data[0][0].location.lng]}))}
     className=' bg-gray-200 p-2 rounded-2xl mt-5 flex  '>

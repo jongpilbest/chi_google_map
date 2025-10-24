@@ -4,7 +4,9 @@ import WatchVideo from './Watch_video'
 import { LuMapPin } from 'react-icons/lu'
 import Image from 'next/image'
 import { useDispatch,useSelector } from 'react-redux'
-import { map_click_toggle ,personal_like_place } from '../Redux/store'
+import { map_click_toggle ,personal_like_place ,InnerComponent_zoom_in} from '../Redux/store'
+import { RiFindReplaceLine } from "react-icons/ri";
+
 export default function Inner_compont({data,index}) {
 
     const dispatch= useDispatch()
@@ -33,9 +35,22 @@ export default function Inner_compont({data,index}) {
             </header>
   
             <div className='flex w-full  justify-between '>
-              <div className='w-[45%] flex   '>
-                   <WatchVideo index={0} startTime={1531.196}></WatchVideo>
-              </div>
+              <button
+              onClick={()=>{dispatch(map_click_toggle(data.id))
+             dispatch(InnerComponent_zoom_in([
+    {
+      location: {
+        lat: data.location.lat,
+        lng: data.location.lng,
+      },
+    },
+  ]))
+
+              }}
+              className='hover:bg-green-300 bg-green-200 rounded-md h-6 w-[45%] px-2 flex items-center gap-3   '>
+                 <RiFindReplaceLine></RiFindReplaceLine>
+                 <p className='text-xs  '>Find</p>
+              </button>
           
               <button 
               onClick={()=>dispatch(map_click_toggle(data.id))}
