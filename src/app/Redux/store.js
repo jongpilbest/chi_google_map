@@ -203,8 +203,14 @@ const data_store_slice= createSlice({
       }
     },
     personal_color_place(state,action){
+      if(action.payload.index>4){
+        delete state.color_location[action.payload.key]
+      }
+      else{
+   state.color_location[action.payload.key]=action.payload.index;
+      }
       
-       state.color_location[action.payload.key]=action.payload.index;
+    
 
 
     },

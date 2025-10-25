@@ -9,6 +9,7 @@ export default function Map_Viewer_inner({id_key}) {
   const dispatch= useDispatch();
 
 const { color_location } = useSelector((state: any) => state.data_store);
+ console.log(color_location,'?')
 
   const [selected, setSelected] = useState<boolean>(false); // 선택된 날짜
 
@@ -17,6 +18,7 @@ const { color_location } = useSelector((state: any) => state.data_store);
     2,
     3,
     4,
+    100
   ];
 
   return (
@@ -79,9 +81,9 @@ const { color_location } = useSelector((state: any) => state.data_store);
                   index:index+1}))
                
               }}
-              className="w-full h-8 bg-white flex items-center hover:bg-gray-300  flex  justify-between p-2 "
+              className="w-full h-8 bg-white flex items-center hover:bg-gray-300    justify-between p-2 "
             >
-              <p className="font-bold text-md ">Day {day}</p>
+              <p className="font-bold text-md ">{ day <100 ? `Day ${day}` :'Day Delete'}</p>
               {color_location.hasOwnProperty(id_key) && color_location[id_key] === day &&<FaCheck className=" text-md text-green-500"></FaCheck> }
             </div>
           

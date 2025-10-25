@@ -1,11 +1,18 @@
 
 import React from "react";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import { Day_canlendar } from "./Day_Canceldner";
 import Drawer from '../../../Place_list/Drawer'
 import Inner_compont from "../../../Place_list/Inner_compont";
 import { isDateRange } from "react-day-picker";
-import { useSelector ,shallowEqual } from "react-redux";
+import { useSelector ,shallowEqual,useDispatch } from "react-redux";
+ import { Time_Duration } from '@/app/Redux/store';
+ import { FaTrainSubway } from "react-icons/fa6";
+import { FaPersonWalking } from "react-icons/fa6";
+import{formatTime} from '.././geoUtils'
+
+
+ import { change_selected_mark,chnage_original_route_data,change_check_Check  } from "../../../Redux/store";
 export const Travel2= function(){
 
      const tabs = [
@@ -14,60 +21,54 @@ export const Travel2= function(){
     { id: 2, label: "Day 3" },
     { id: 3, label: "Day 4" },
   ];
+  const dispatch= useDispatch();
 
-    
+    const [selectedDay, setSelectedDay] = useState(0);
      const[filter_comment, set_filter_comment]=useState([]);
     
      const [range, setRange] = useState(isDateRange);
      const comment= useSelector((state)=>state.data_store.location_data,shallowEqual) 
+       
+     const { color_location } = useSelector((state) => state.data_store); 
+      const Total_duration=useSelector((state)=>state.contorller.Duration_Time)  
 
               function Drawer_change(e){
-              // ✅ undefined 검사 먼저
+
+              
              
-                // 여기 기존이랑 똑같아서 안생기는거임. 그래서 이걸 고치ㅕㄴ되ㅣㄽ ;;
-              //  dispatch(change_selected_mark(e-1))
-              //  const filter_data_day= Daydata[e-1] 
-              //  /// 
-              //  if(!filter_data_day || !Array.isArray(filter_data_day)) return;
-             //
-              //  dispatch(Time_Duration({ first:filter_data_day.length-1}))
-              //  // 길이 구색 맞추기 
-             //
-              //// ✅ 두 번째 방어: 비어 있는 배열 확인
-              //if (!Array.isArray(filter_data_day) || filter_data_day.length === 0) {
-              //  console.warn("⚠️ Drawer_change: filter_data_day is empty", filter_data_day);
-              //  return;
-              //}
-              // 
-             //
-              // const resultKeys = find_key(filter_data_day,like_location)
-             //
-              //
-              //
-             //
-              //const comment_filter = resultKeys
-              //.map((key) =>
-              //  Object.values(comment)
-              //    .flat(Infinity)
-              //    .find((item) => item.id === key)
-              //)
-              //.filter(Boolean);
-              //
-              // if(comment_filter.length>0){
-              //  set_filter_comment(comment_filter)
-              //  //여기에 그냥 크기만 입력하는거 하나 만들???
-              // }
-             
-             
+                const resultKeys=Object.keys(color_location).filter(key => color_location[key] === e+1);
+      
+
+               const comment_filter = resultKeys
+              .map((key) =>
+                Object.values(comment)
+                  .flat(Infinity)
+                  .find((item) => item.id === key)
+                 )
+               set_filter_comment(comment_filter)
+              setSelectedDay(e);
+           
                }
              
+useEffect(() => {
+  Drawer_change(selectedDay);
+}, [color_location])
+
+const Travel_Day = function(){
+       dispatch(Time_Duration({ first:filter_comment.length-1}))
+       const Route_location= filter_comment.map((el)=>Object.values(el.location))
+       dispatch(chnage_original_route_data([Route_location]))
+       dispatch(change_selected_mark(0))
+       dispatch(change_check_Check())
+ 
+}
 
     return(
 
         <>
-         <div className=" flex flex-col">
+         <div className=" flex flex-col h-full">
                  <Day_canlendar range={range} setRange_fun={(e)=>setRange(e)}   ></Day_canlendar>
-             
+               <div className="h-full flex-1 pb-24  overflow-y-auto ">
           <Drawer change_category={(e) => Drawer_change(e)} tabs={tabs}>
                      {filter_comment.length>0 &&filter_comment.map((El, idx) => (
                    <React.Fragment key={El.googlePlace}>
@@ -95,11 +96,22 @@ export const Travel2= function(){
                        </div>
                      )}
                    </React.Fragment>
+                   
                  ))}
+                      { filter_comment.length>0 &&  <button 
+         onClick={()=> Travel_Day()}
+         className=" w-full
+         hover:bg-green-500  
+          h-8
+          mt-5
+         bg-[#47D6A2] rounded-md text-white  text-sm">
+         Route generation
+         </button>
+          }
                </Drawer>        
-               
+       
          </div>
-
+</div>
         </>
     )
 }

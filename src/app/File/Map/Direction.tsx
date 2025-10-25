@@ -33,6 +33,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   dispatch(Time_Duration({ index:index,time:time,first:-1}))
   }
   const comment = useSelector((state: any) => state.contorller.original_route_data);
+  console.log(comment,'데이터좀')
   const map = useMap();
   const routeLibrary = useMapsLibrary("routes");
  const Find_index_mark =  useSelector((state: any) => state.contorller.select_mark_index )
@@ -93,7 +94,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
       }
       return routeList;
     
-  }, [Find_index_mark]); // comment 바뀌면 Route 새로 생성
+  }, [Find_index_mark,comment]); // comment 바뀌면 Route 새로 생성
 
   // ✅ cleanup: polyline 제거
   useEffect(() => {
