@@ -29,11 +29,13 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
 
   const handleDurationCalculated= function(index,time){
    // console.log(time,'타임?//')
+   dispatch(Time_Duration({ index:index,time:time,first:-1}))
+  
 
-  dispatch(Time_Duration({ index:index,time:time,first:-1}))
+
   }
   const comment = useSelector((state: any) => state.contorller.original_route_data);
-  console.log(comment,'데이터좀')
+ 
   const map = useMap();
   const routeLibrary = useMapsLibrary("routes");
  const Find_index_mark =  useSelector((state: any) => state.contorller.select_mark_index )
@@ -66,6 +68,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   // ✅ Route 배열 memoization (comment 바뀔 때마다 새로 생성)
   const routesToRender = useMemo(() => {
     if(comment.length==0) return ;
+    if(Find_index_mark<0) return;
 
     const segment= comment[Find_index_mark]
       map.panTo({
@@ -83,7 +86,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
           <Route
           index={i}
           onDurationCalculated={(index,e)=>handleDurationCalculated(index,e)}
-            key={`route--${origin.latLng.latitude}`} // ✅ comment 변할 때마다 key 변경
+            key={`route--${origin.latLng.latitude}${routeList.length}${Date.now()}`} // ✅ comment 변할 때마다 key 변경
             apiClient={apiClient}
             origin={origin}
             destination={destination}
@@ -108,7 +111,7 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   useEffect(() => {
     polylinesRef.current.forEach((p) => p.setMap(null));
     polylinesRef.current = [];
-  }, [Find_index_mark]);
+  }, [Find_index_mark,comment]);
 
   return <>{routesToRender}</>;
 }

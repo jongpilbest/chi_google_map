@@ -9,7 +9,7 @@ import { useSelector ,shallowEqual,useDispatch } from "react-redux";
  import { Time_Duration } from '@/app/Redux/store';
  import { FaTrainSubway } from "react-icons/fa6";
 import { FaPersonWalking } from "react-icons/fa6";
-import{formatTime} from '.././geoUtils'
+import{formatTime,count_day} from '.././geoUtils'
 
 
  import { change_selected_mark,chnage_original_route_data,change_check_Check  } from "../../../Redux/store";
@@ -25,8 +25,10 @@ export const Travel2= function(){
 
     const [selectedDay, setSelectedDay] = useState(0);
      const[filter_comment, set_filter_comment]=useState([]);
+     const [ Check_day, setChek_day]=useState(0);
     
      const [range, setRange] = useState(isDateRange);
+
      const comment= useSelector((state)=>state.data_store.location_data,shallowEqual) 
        
      const { color_location } = useSelector((state) => state.data_store); 
@@ -67,7 +69,11 @@ const Travel_Day = function(){
 
         <>
          <div className=" flex flex-col h-full">
-                 <Day_canlendar range={range} setRange_fun={(e)=>setRange(e)}   ></Day_canlendar>
+                 <Day_canlendar range={range} setRange_fun={(e)=>{setRange(e)
+                  setChek_day(count_day(e.to,e.from));
+                 }}   ></Day_canlendar>
+
+                 {Check_day==4 &&
                <div className="h-full flex-1 pb-24  overflow-y-auto ">
           <Drawer change_category={(e) => Drawer_change(e)} tabs={tabs}>
                      {filter_comment.length>0 &&filter_comment.map((El, idx) => (
@@ -111,6 +117,7 @@ const Travel_Day = function(){
                </Drawer>        
        
          </div>
+}
 </div>
         </>
     )

@@ -14,7 +14,7 @@ export default function Route({
   const [route, setRoute] = useState<any>(null);
   const map = useMap();
   const didRun = useRef(false); // ✅ 실행 여부 체크
-
+ 
   useEffect(() => {
     if (!map || didRun.current) return;
 
@@ -45,6 +45,7 @@ export default function Route({
         const sec = parseInt(step.staticDuration.replace("s", ""), 10);
         if (!isNaN(sec)) Total_time[step.travelMode] += sec;
       });
+  
  
       onDurationCalculated?.(index,Total_time);
      // map.panTo({

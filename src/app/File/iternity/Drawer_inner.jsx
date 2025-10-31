@@ -11,7 +11,7 @@ export default function Drawer_inner({total_travel}) {
         /// 
         if(!filter_data_day || !Array.isArray(filter_data_day)) return;
     
-        dispatch(Time_Duration({ first:filter_data_day.length-1}))
+        dispatch(Time_Duration({ first:100},))
         // 길이 구색 맞추기 
     
       // ✅ 두 번째 방어: 비어 있는 배열 확인

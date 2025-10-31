@@ -33,9 +33,11 @@ export const Day_canlendar= function({setRange_fun,range}){
                    </div>
              {showStartPicker && (
                    <Portal>
-                   <div className="fixed 
+                   <div 
+                   onClick={(e)=>e.stopPropagation()}
+                   className="fixed 
                    inset-0 z-[9999] bg-black/40 flex justify-center items-center">
-                     <div onClick={(e)=>e.stopPropagation()}>
+                     <div >
            <div className="bg-white rounded-xl shadow-lg p-4 gap-2 flex">
                        <DayPicker mode="range" 
                          selected={range}

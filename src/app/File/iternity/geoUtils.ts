@@ -71,3 +71,10 @@ export const find_key= function(filter_data_day,like_location){
 
  
 }
+
+
+export const  count_day= function(to,from){
+const diffDays = (to - from) / (1000 * 60 * 60 * 24);
+return diffDays+1;
+
+}

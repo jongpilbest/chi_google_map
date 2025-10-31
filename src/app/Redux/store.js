@@ -57,13 +57,13 @@ const controllerSlice= createSlice({
   initialState:{
  
    Check_check: -1,
-   select_mark_index:0,
+   select_mark_index:-1,
    cancel_check:false,
    selectedMark:[] ,
    showDirection: false,
    show_search:false,
    original_route_data:[],
-   Duration_Time:[]
+   Duration_Time: [{},{},{},{}]
   },
   reducers:{
     chnage_original_route_data(state,action){
@@ -108,7 +108,7 @@ const controllerSlice= createSlice({
 
      Time_Duration(state,action){
       if(action.payload.first>=0){
-          state.Duration_Time = Array.from({ length: action.payload.first }, () => ({}));
+          state.Duration_Time = Array.from({ length: 30 }, () => ({}));
         return;
 
       }
@@ -199,7 +199,7 @@ const data_store_slice= createSlice({
           delete state.like_location[key]
       }
       else{
-     state.like_location[key]=location
+        state.like_location[key]=location
       }
     },
     personal_color_place(state,action){

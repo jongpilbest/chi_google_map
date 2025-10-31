@@ -14,37 +14,32 @@ export function extractVideoId(url: string): string | null {
 export default function Youtube_link_input({children}) {
   const dispatch = useDispatch();
   const url_youtube = useRef<HTMLInputElement | null>(null);
-// const handleSubmit = async () => {
-//    if (!url_youtube.current) return;
-//
-//    const link = url_youtube.current.value;
-//
-//    if (!check_list.includes(link)) {
-//      check_list.push(link);
-//      dispatch(url_plus(link));
-//
-//      const eventsource = new EventSource(
-//        `http://localhost:8000/script?video_url=${encodeURIComponent(link)}`
-//      );
-//
-//      eventsource.onmessage = (event) => {
-//        const comment_data = JSON.parse(event.data);
-//
-//        dispatch(
-//          data_Store_change({
-//            index: 2,
-//            data: comment_data,
-//          })
-//        );
-//      };
-//
-//      eventsource.onerror = (error) => {
-//        eventsource.close();
-//      };
-//    } else {
-//      console.log("이미 추가된 링크입니다.");
-//    }
-//  };
+ // const handleSubmit = async () => {
+ //  if (!url_youtube.current) return;
+ //  const link = url_youtube.current.value;
+ //  if (!check_list.includes(link)) {
+ //    check_list.push(link);
+ //    dispatch(url_plus(link));
+ //    const eventsource = new EventSource(
+ //      `http://localhost:8000/script?video_url=${encodeURIComponent(link)}`
+ //    );
+ //    eventsource.onmessage = (event) => {
+ //      const comment_data = JSON.parse(event.data);
+ //    //  dispatch(
+ //    //    data_Store_change({
+ //    //      index: 2,
+ //    //      data: comment_data,
+ //    //    })
+ //    //  );
+ //    };
+ //    eventsource.onerror = (error) => {
+ //      eventsource.close();
+ //    };
+ //  } else {
+ //    console.log("이미 추가된 링크입니다.");
+ //  }
+ //};
+//// 배포용
 
   const handleSubmit = async () => {
     if (!url_youtube.current) return;
