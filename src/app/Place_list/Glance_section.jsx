@@ -24,7 +24,7 @@ const fetchPhoto = async () => {
     setLoading(true)
 };
 
-  //fetchPhoto()
+  fetchPhoto()
 
 
    },[])
@@ -35,8 +35,7 @@ const fetchPhoto = async () => {
   const click_border= function(){
     modal_change(city_data.city)
     dispatch(locality_place_change({
-     
-     place:city_data.place_id,
+     place:city_data.city,
      location:city_data.location
     
   }))
@@ -62,7 +61,7 @@ const fetchPhoto = async () => {
         !loading &&  <FaSpinner className="animate-spin text-green-500 text-2xl" ></FaSpinner>
       }
         <img
-          src={city_data.image}
+          src={images}
           alt="Shinjuku"
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />

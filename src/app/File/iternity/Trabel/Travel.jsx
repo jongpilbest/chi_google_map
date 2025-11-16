@@ -48,7 +48,8 @@ export const Travel__= function(){
       const[Daydata,setDaydata]=useState([]);
     
        useEffect(() => {
-      
+            //dispatch(Time_Duration({ first:1}))
+
       if ( Total_duration.every(obj => Object.keys(obj).length !=0) ) {
         // Duration이 갱신되면 강제로 렌더링 트리거 (state sync)
       

@@ -37,7 +37,7 @@ export const Travel2= function(){
               function Drawer_change(e){
 
               
-             
+                dispatch(Time_Duration({ first:1}))
                 const resultKeys=Object.keys(color_location).filter(key => color_location[key] === e+1);
       
 

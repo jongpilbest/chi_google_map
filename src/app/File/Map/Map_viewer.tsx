@@ -39,7 +39,7 @@ export default function Map_viewer({id ,handleMarkerClick }:MapViewerProps  ) {
   const dispatch= useDispatch()
    const comment= useSelector((state:any)=>state.data_store.location_data,shallowEqual) as any[];
    const data= comment[id]
-  console.log(data[0][0].id)
+
  
    const Mark_Pin_set = useSelector((state: any) => state.contorller.selectedMark);
    // 이거 우선은 배열안에 new set 으로 만들어야되나? 

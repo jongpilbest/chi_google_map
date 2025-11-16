@@ -22,7 +22,7 @@ export default function CategoryTabs({children,tabs,change_category }) {
 
              change_category(tab.id)
           }}
-          className={`relative px-4  w-20   text-gray-600 text-xs transition-colors duration-200
+          className={`relative px-4  w-20   text-gray-600 text-xs  mx-5 transition-colors duration-200
             ${activeTab === tab.id ? "text-[#2BB67E]" : "hover:text-gray-800"}`}
         > 
           {tab.label}
