@@ -24,7 +24,7 @@ const fetchPhoto = async () => {
     setLoading(true)
 };
 
-  fetchPhoto()
+ // fetchPhoto()
 
 
    },[])
@@ -61,7 +61,7 @@ const fetchPhoto = async () => {
         !loading &&  <FaSpinner className="animate-spin text-green-500 text-2xl" ></FaSpinner>
       }
         <img
-          src={images}
+          src={city_data.image}
           alt="Shinjuku"
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />

@@ -109,12 +109,12 @@ export default function Mappage({name}) {
 
   
 
-        
+  
        <Map
          mapId='c6ee764519ee05b0312e3370'
          colorScheme='LIGHT'
-         defaultCenter={name=='newyork'?{lat: 40.7580, lng: -73.9855}:{lat: 35.68, lng: 139.69}}
-     defaultZoom={10}
+         defaultCenter={name=='newyork'?{lat: 40.7580, lng: -73.9855}:{lat: 48.87536488825122, lng: 2.3401}}
+     defaultZoom={13}
      gestureHandling={'greedy'}
      fullscreenControl={false}
       onClick={()=> dispatch(map_click_toggle(null))}

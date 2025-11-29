@@ -31,7 +31,7 @@
 
   for (let i = 0; i < points.length; i++) {
     for (let j = i + 1; j < points.length; j++) {
-      const dist = haversineDistance(points[i], points[j]) **2;
+      const dist = haversineDistance(points[i], points[j]) **4;
       if (dist > maxDist) {
         maxDist = dist;
         endpoints = [points[i], points[j]];

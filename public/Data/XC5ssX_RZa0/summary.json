@@ -63,22 +63,6 @@
     "id": "ChIJvzDrq_1x5kcRFc9gDmQac24",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/H%C3%B4tel%20de%20Sens/133900.jpg?raw=true"
   },
-  {"city": "Paris 4e Arrondissement",
-    "startTime": "136.0",
-    "endTime": "145.0",
-    "place": "파리 일 생루이 Île Saint-Louis",
-    "googlePlace": "Île Saint-Louis",
-    "describe": "센강 위의 조용한 섬, 산책 코스",
-    "realname": "확실함",
-    "emozi": "🌉🚶",
-    "category": "Attraction",
-    "location": {
-      "lat": 48.85155719999999,
-      "lng": 2.3574207
-    },
-    "id": "ChIJ5Y5Ovfxx5kcRMHVGaekEwFY",
-    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/%C3%8Ele%20Saint-Louis/136636.jpg?raw=true"
-  },
   {"city": "Paris 5e Arrondissement",
     "startTime": "145.0",
     "endTime": "175.0",
@@ -140,7 +124,7 @@
       "lat": 41.8986108,
       "lng": 12.4768729
     },
-    "id": "ChIJqUCGZ09gLxMRLM42IPpl0co",
+    "id": "ChIJc8mX0udx5kcRWKcjTwDr5QA",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Panth%C3%A9on/251584.jpg?raw=true"
   },
   {"city": "Paris 6e Arrondissement",
@@ -158,22 +142,6 @@
     },
     "id": "ChIJ-1qyjdlx5kcRMX6oCe8oXzg",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Chez%20P%C3%A9rd'Nam/310209.jpg?raw=true"
-  },
-  {"city": "Paris 18e Arrondissement",
-    "startTime": "377.0",
-    "endTime": "385.0",
-    "place": "파리 몽마르트르 Abbesses역",
-    "googlePlace": "Abbesses",
-    "describe": "파리 메트로 12호선 역(아르 누보 스타일 출입구로 유명)",
-    "realname": "확실함",
-    "emozi": "🚇🗺️",
-    "category": "Transportation",
-    "location": {
-      "lat": 48.884304,
-      "lng": 2.338559
-    },
-    "id": "ChIJtySO_kRu5kcRuCr9dsYyxv4",
-    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Abbesses/375975.jpg?raw=true"
   },
   {"city": "Paris 18e Arrondissement",
     "startTime": "385.0",
@@ -332,11 +300,11 @@
       "lat": 48.8575475,
       "lng": 2.3513765
     },
-    "id": "ChIJD7fiBh9u5kcRYJSMaMOCCwQ",
+    "id": "ChIJA0_DENNx5kcRKwTodl__GHU",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/La%20Grande%20%C3%89picerie%20de%20Paris/633566.jpg?raw=true"
   },
   {"city": "Paris 7e Arrondissement",
-    "startTime": "656.0",
+    "startTime": "660.0",
     "endTime": "682.0",
     "place": "파리 7구 Eiffel Tower (세느강 리버사이드 피크닉)",
     "googlePlace": "Eiffel Tower",
@@ -380,7 +348,7 @@
       "lat": 48.8606111,
       "lng": 2.337644
     },
-    "id": "ChIJD3uTd9hx5kcR1IQvGfr8dbk",
+    "id": "ChIJAQAAMCxu5kcRx--_4QnbGcI",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Tuileries%20Garden/794226.jpg?raw=true"
   },
   {"city": "Paris 1er Arrondissement",
@@ -525,8 +493,7 @@
       "lng": 2.2950275
     },
     "id": "ChIJjx37cOxv5kcRPWQuEW5ntdk",
-    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Arc%20de%20Triomphe/1146545.jpg?raw=true"
-  },
+    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Avenue%20des%20Champs-%C3%89lys%C3%A9es/1198463.jpg?raw=true"},
   {"city": "Paris 8e Arrondissement",
     "startTime": "1196.0",
     "endTime": "1229.0",
@@ -590,22 +557,6 @@
     },
     "id": "ChIJufChV9Bv5kcRT02XBr8yAOs",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Pont%20Alexandre%20III/1258190.jpg?raw=true"
-  },
-  {"city": "Paris 7e Arrondissement",
-    "startTime": "1273.0",
-    "endTime": "1283.0",
-    "place": "파리 7구 Hôtel des Invalides",
-    "googlePlace": "Hôtel des Invalides",
-    "describe": "나폴레옹의 무덤이 있는 역사적 복합 건축물",
-    "realname": "확실함",
-    "emozi": "🏛️⚔️",
-    "category": "Attraction",
-    "location": {
-      "lat": 48.85652899999999,
-      "lng": 2.3127059
-    },
-    "id": "ChIJUzCPuddv5kcRasGAnEUUWkU",
-    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/H%C3%B4tel%20des%20Invalides/1277909.jpg?raw=true"
   },
   {"city": "Paris 7e Arrondissement",
     "startTime": "1273.0",

@@ -39,7 +39,7 @@ export default function Youtube_link_input({children}) {
  //    console.log("이미 추가된 링크입니다.");
  //  }
  //};
-//// 배포용
+// 배포용
 
   const handleSubmit = async () => {
     if (!url_youtube.current) return;
