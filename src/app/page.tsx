@@ -8,7 +8,7 @@ export default function Intro() {
   
            <Link href="/Paris">
           <div className="w-40 h-40 bg-white shadow-lg rounded-2xl flex items-center justify-center text-xl font-bold cursor-pointer hover:scale-105 transition">
-            튜토리얼
+            파리
           </div>
         </Link>
 

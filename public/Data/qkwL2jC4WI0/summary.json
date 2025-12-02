@@ -13,10 +13,10 @@
     "emozi": "🍲🥖",
     "category": "Food and Beverage",
     "location": {
-      "lat": 45.522157,
-      "lng": -73.57446089999999
+      "lat": 48.863644615491985,
+      "lng":  2.3438723011865044
     },
-    "id": "ChIJD3Xvs84byUwR3Fs17jyjkjA",
+    "id": "ChIJQQtKZyJu5kcRhXhHvOUt3To",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/qkwL2jC4WI0/Au%20Pied%20de%20Cochon/81300.jpg?raw=true"
   },
   {"city": "Paris 2e Arrondissement",
@@ -83,7 +83,7 @@
     "id": "ChIJLU7jZClu5kcR4PcOOO6p3I0",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/qkwL2jC4WI0/Eiffel%20Tower/206866.jpg?raw=true"
   },
-  {"city": "Paris 7e Arrondissement",
+  {"city": "Paris 8e Arrondissement",
     "startTime": "221.04",
     "endTime": "227.12",
     "place": "파리 앵발리드 Pont Alexandre III",
@@ -115,7 +115,7 @@
     "id": "ChIJSUOPztFv5kcRnEbSPYG-9fM",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/qkwL2jC4WI0/Petit%20Palais/239333.jpg?raw=true"
   },
-  {"city": "Paris 1er Arrondissement",
+  {"city": "Paris 8e Arrondissement",
     "startTime": "239.12",
     "endTime": "244.56",
     "place": "파리 콩코르드 광장 Place de la Concorde",
@@ -157,8 +157,8 @@
     "emozi": "🥖🍷",
     "category": "Food and Beverage",
     "location": {
-      "lat": 46.2883,
-      "lng": -0.9469
+      "lat": 48.86756793314445,
+      "lng":  2.3349526839906147
     },
     "id": "ChIJYUweozpu5kcRTyO2eRFXxJU",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/qkwL2jC4WI0/Le%20Petit%20Vend%C3%B4me/277900.jpg?raw=true"
@@ -195,7 +195,7 @@
     "id": "ChIJixChAzdu5kcRkxWrzUU4d-Y",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/qkwL2jC4WI0/Galeries%20Lafayette%20Paris%20Haussmann/321700.jpg?raw=true"
   },
-  {"city": "Paris 18e Arrondissement",
+  {"city": "Paris 9e Arrondissement",
     "startTime": "329.44",
     "endTime": "334.88",
     "place": "파리 몽마르트 Place des Abbesses",
@@ -327,14 +327,14 @@
     "startTime": "489.68",
     "endTime": "499.92",
     "place": "파리 레 알 Église Saint-Eustache",
-    "googlePlace": "Église Saint-Eustache",
-    "describe": "레 알 인근의 고딕·르네상스 양식 대형 성당",
+    "googlePlace": "Église Saint-Eustae",
+    "describe": "레 알 인근의 고딕·르네상스 양ch식 대형 성당",
     "realname": "확실함",
     "emozi": "⛪️🎼",
     "category": "Attraction",
     "location": {
-      "lat": 48.86339030000001,
-      "lng": 2.3451211
+      "lat":48.86361612796474, 
+      "lng":2.3456468104466084
     },
     "id": "ChIJK6mOeCJu5kcRpE3-oj_GxD4",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/qkwL2jC4WI0/%C3%89glise%20Saint-Eustache/494633.jpg?raw=true"
@@ -349,10 +349,10 @@
     "emozi": "🗿📸",
     "category": "Attraction",
     "location": {
-      "lat": 48.8959094,
-      "lng": 2.2745262
+      "lat": 48.86311877491907,
+      "lng": 2.3451146398104155
     },
-    "id": "ChIJx_np0nhl5kcR-uQbikN9HQM",
+    "id": "ChIJZ2AIdyJu5kcRsdOy_L3mpaA",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/qkwL2jC4WI0/%C3%89coute/502900.jpg?raw=true"
   },
   {"city": "Paris 4e Arrondissement",
@@ -387,7 +387,7 @@
     "id": "ChIJi1uPs_1x5kcRbh8M8XJSNMA",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/H%C3%B4tel%20de%20Ville%20de%20Paris/123656.jpg?raw=true"
   },
-  {"city": "Paris 4e Arrondissement",
+  {"city": "Paris 3e Arrondissement",
     "startTime": "522.00",
     "endTime": "539.84",
     "place": "파리 르 마레 Rue des Rosiers",

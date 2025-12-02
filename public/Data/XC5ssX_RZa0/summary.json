@@ -111,22 +111,6 @@
     "id": "ChIJe2jeNttx5kcRi_mJsGHdkQc",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Jardin%20du%20Luxembourg/206739.jpg?raw=true"
   },
-  {"city": "Paris 5e Arrondissement",
-    "startTime": "244.0",
-    "endTime": "298.0",
-    "place": "파리 라탱 지구 Panthéon",
-    "googlePlace": "Panthéon",
-    "describe": "프랑스 위인들의 묘소, 그리스·로마 양식의 장엄한 건축",
-    "realname": "확실함",
-    "emozi": "🏛️⚰️",
-    "category": "Attraction",
-    "location": {
-      "lat": 41.8986108,
-      "lng": 12.4768729
-    },
-    "id": "ChIJc8mX0udx5kcRWKcjTwDr5QA",
-    "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Panth%C3%A9on/251584.jpg?raw=true"
-  },
   {"city": "Paris 6e Arrondissement",
     "startTime": "305.0",
     "endTime": "335.0",
@@ -287,7 +271,7 @@
     "id": "ChIJi_A1zgJw5kcRnmKa7ZJDJYk",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Pont%20de%20Bir-Hakeim/615548.jpg?raw=true"
   },
-  {"city": "Paris 7e Arrondissement",
+  {"city": "Paris 4e Arrondissement",
     "startTime": "624.0",
     "endTime": "633.0",
     "place": "파리 리브 고슈 La Grande Épicerie de Paris",
@@ -431,10 +415,10 @@
     "id": "ChIJixChAzdu5kcRkxWrzUU4d-Y",
     "image":"https://github.com/jongpilbest/image_iui_file/blob/main/Paris/XC5ssX_RZa0/Galeries%20Lafayette%20Paris%20Haussmann/939104.jpg?raw=true"
   },
-  {"city": "Paris 7e Arrondissement",
+  {"city": "Paris 5e Arrondissement",
     "startTime": "998.0",
     "endTime": "1034.0",
-    "place": "파리 7구 Chez Germaine",
+    "place": "파리 5구 Chez Germaine",
     "googlePlace": "Chez Germaine",
     "describe": "아늑한 프렌치 비스트로, 푸아그라·콩피 드 꺄나르·비프 타르타르",
     "realname": "확실함",
