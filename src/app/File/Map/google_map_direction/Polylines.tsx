@@ -44,7 +44,7 @@ export const Polyline = (props: PolylineProps) => {
   useEffect(() => {
     if (!map || !polyline) return;
 
-    console.log('adding polyline to map');
+    //console.log('adding polyline to map');
     polyline.setMap(map);
 
     return () => polyline.setMap(null);

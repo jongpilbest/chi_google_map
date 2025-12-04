@@ -9,7 +9,7 @@ export default function Map_Viewer_inner({id_key}) {
   const dispatch= useDispatch();
 
 const { color_location } = useSelector((state: any) => state.data_store);
- console.log(color_location,'?')
+
 
   const [selected, setSelected] = useState<boolean>(false); // 선택된 날짜
 

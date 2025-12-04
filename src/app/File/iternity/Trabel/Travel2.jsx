@@ -47,6 +47,7 @@ export const Travel2= function(){
                   .flat(Infinity)
                   .find((item) => item.id === key)
                  )
+                 console.log(comment_filter,'여기 코드에서 작동하는게 뭔데?')
                set_filter_comment(comment_filter)
               setSelectedDay(e);
            

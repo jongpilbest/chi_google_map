@@ -16,12 +16,12 @@ import { map_click_toggle } from '@/app/Redux/store'
 
 import {Place} from './MapType'
 
-const colors = {"pink":"bg-[#F08AF4]", 
-  "purple":"bg-[#9C6CFE]",
-   1:"bg-[#E57373]",
-   2:"bg-[#FFB74D]",
-   3:"bg-[#64B5F6]",
-   4:"bg-[#81C784]"
+const colors = {"pink":"bg-[#FA25F0]", 
+  "purple":"bg-[#974AF7]",
+   1:"bg-[#FF0000]",
+   2:"bg-[#FEFD48]",
+   3:"bg-[#6CFD33]",
+   4:"bg-[#0EFCFE]"
 };
 
 import Map_viewer from './Map_viewer';

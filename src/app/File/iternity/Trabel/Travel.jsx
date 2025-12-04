@@ -26,17 +26,20 @@ import {Day_canlendar} from './Day_Canceldner'
 export const Travel__= function(){
     
      const { color_location } = useSelector((state) => state.data_store); 
+     
+  //console.log(color_location,'엥?')
+
+     
     const dispatch= useDispatch()
       
       const comment= useSelector((state)=>state.data_store.location_data,shallowEqual) 
       const Total_duration=useSelector((state)=>state.contorller.Duration_Time)
+      
 
     
      const[filter_comment, set_filter_comment]=useState([]);
-     const[key_reamin,setkey_reamin]=useState([]);
      const [pick_day, set_pick_day]=useState(0);
 
-    
      const [range, setRange] = useState(isDateRange);
     
     
@@ -59,15 +62,16 @@ export const Travel__= function(){
     
   
       
-        const { like_location } = useSelector((state) => state.data_store);
+    const { like_location } = useSelector((state) => state.data_store);
     
     
       // format date text
   useEffect(() => {
-  if (!color_location || pick_day === 0) return;
+  //.log(pick_day,'픽데이')
+  if (!color_location || pick_day< 0) return;
 
   // 1. 현재 날짜의 장소만 추출
-  console.log(pick_day,'픽데이')
+
   const today_keys = Object.entries(color_location)
     .filter(([_, value]) => value === pick_day)
     .map(([key]) => key);
@@ -98,7 +102,10 @@ export const Travel__= function(){
 
   // 4. 기존 Daydata에 반영
   const updatedDaydata = [...Daydata];
+  //console.log('업데이트된 daydata라는데 뭐가?',updatedDaydata,Daydata,'데이데이터')
   updatedDaydata[pick_day - 1] = newRoute;
+
+//  console.log('업데이트 된데이터라는데 ', updatedDaydata)
   dispatch(chnage_original_route_data(updatedDaydata));
   setDaydata(updatedDaydata); // local state도 업데이트
 
@@ -115,7 +122,7 @@ export const Travel__= function(){
 
   set_filter_comment(comment_filter);
 
-}, [color_location]);
+}, [color_location,pick_day]);
 
 
       
@@ -125,10 +132,10 @@ export const Travel__= function(){
         const startDate = new Date(range.from);
         const endDate = new Date(range.to) 
         
-        // 2️⃣ 시간 차(밀리초 단위) 계산
+        //  시간 차(밀리초 단위) 계산
         const diffTime = endDate - startDate; // 밀리초(ms)
         
-        // 3️⃣ 일(day) 단위로 변환
+        //  일(day) 단위로 변환
         const diffDays = diffTime / (1000 * 60 * 60 * 24);
       
         // 여기 객체로 넣는법

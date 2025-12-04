@@ -40,6 +40,10 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
   const routeLibrary = useMapsLibrary("routes");
  const Find_index_mark =  useSelector((state: any) => state.contorller.select_mark_index )
 
+
+
+
+
   const apiClient = new RoutesApi(process.env.GOOGLE_MAPS_API_KEYS);
 
   // ✅ comment 바뀔 때마다 segment 재계산
@@ -71,6 +75,9 @@ function Direction({ polylinesRef, color = "#ff0000", check }: Prop) {
     if(Find_index_mark<0) return;
 
     const segment= comment[Find_index_mark]
+    //console.log(segment,'지금뭔데?',comment)
+
+
       map.panTo({
         'lat':segment[0][0],
         'lng':segment[0][1]

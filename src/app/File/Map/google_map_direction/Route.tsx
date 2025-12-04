@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Polyline } from "./Polylines";
 import { useMap } from "@vis.gl/react-google-maps";
 
-export default function Route({
+function Route({
   apiClient,
   origin,
   destination,
@@ -56,7 +56,7 @@ export default function Route({
     };
 
     route_go();
-  }, []);
+  }, [destination+""+origin]);
 
   if (!route) return null;
 
@@ -81,3 +81,6 @@ export default function Route({
 
   return <>{polylines}</>;
 }
+
+
+export default React.memo(Route)

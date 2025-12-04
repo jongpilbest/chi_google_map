@@ -49,7 +49,7 @@ export class RoutesApi {
         `Request failed with status: ${response.status} - ${response.statusText}`
       );
     }
-    console.log(response,'뭐임?')
+//    console.log(response,'뭐임?')
 
     return await response.json();
   }
